@@ -519,7 +519,7 @@ import SSZipArchive
         var files = [String]()
         files.removeAll()
         var fileCombine = URL(string: "")
-        var result = ""
+        var finalLogString = ""
         
         // getting files from Slog Function
         files = SLog.shared.listFilesFromDocumentsFolder()
@@ -550,9 +550,10 @@ import SSZipArchive
                 fileCombine = DirPath.appendingPathComponent(SLog.shared.finalLogFileNameAfterCombine)
 
                 do {
+                    let fileStartingString = "\n\n ******************************* \(file) *******************************\n"
+                    
                     let data = try String(contentsOf: newZipDirURL, encoding: .utf8)
-                    result = result + data
-                    print(result)
+                    finalLogString = finalLogString + fileStartingString + data
                 }
                 catch {
                     print(error.localizedDescription)
@@ -560,6 +561,8 @@ import SSZipArchive
                 }
             }
         }
+        
+        print ("finalLogFileString : \n\n\(finalLogString)")
         
         if fileManager.fileExists(atPath: fileCombine!.path)
         {
@@ -570,7 +573,7 @@ import SSZipArchive
                 fileUpdater.seekToEndOfFile()
 
                 // Which lets the caller move editing to any position within the file by supplying an offset
-                fileUpdater.write(result.data(using: .utf8)!)
+                fileUpdater.write(finalLogString.data(using: .utf8)!)
 
                 // Once we convert our new content to data and write it, we close the file and that’s it!
                 fileUpdater.closeFile()
@@ -584,7 +587,7 @@ import SSZipArchive
             {
                 print("File created successfully.")
                 do{
-                    try result.write(to: fileCombine!, atomically: true, encoding: String.Encoding.utf8)
+                    try finalLogString.write(to: fileCombine!, atomically: true, encoding: String.Encoding.utf8)
 
                     let pathURL = fileCombine! // URL
                     let pathString = pathURL.path // String
