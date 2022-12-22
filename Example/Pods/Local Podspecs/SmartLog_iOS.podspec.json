@@ -1,0 +1,22 @@
+{
+  "name": "SmartLog_iOS",
+  "version": "0.1.0",
+  "summary": "A short description of SmartLog_iOS.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Hamza Mughal/SmartLog_iOS",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Hamza Mughal": "hamza.mughal@whizpool.com"
+  },
+  "source": {
+    "git": "https://github.com/Hamza Mughal/SmartLog_iOS.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "SmartLog_iOS/Classes/**/*"
+}

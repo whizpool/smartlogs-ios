@@ -1,0 +1,16 @@
+PODS:
+  - SmartLog_iOS (0.1.0)
+
+DEPENDENCIES:
+  - SmartLog_iOS (from `../`)
+
+EXTERNAL SOURCES:
+  SmartLog_iOS:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SmartLog_iOS: f0af59caf7517d266cc300bc95c65a5a02c04880
+
+PODFILE CHECKSUM: 82008d2b26e2d9aa783397162335a4956962f9f3
+
+COCOAPODS: 1.11.3

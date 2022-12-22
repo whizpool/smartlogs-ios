@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'SmartLog_iOS_Example' do
+  pod 'SmartLog_iOS', :path => '../'
+
+  target 'SmartLog_iOS_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,6 @@
+framework module SmartLog_iOS {
+  umbrella header "SmartLog_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
