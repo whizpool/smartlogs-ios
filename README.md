@@ -1,9 +1,9 @@
-# SmartLog_iOS
+# SmartLog
 
-[![CI Status](https://img.shields.io/travis/Hamza Mughal/SmartLog_iOS.svg?style=flat)](https://travis-ci.org/Hamza Mughal/SmartLog_iOS)
-[![Version](https://img.shields.io/cocoapods/v/SmartLog_iOS.svg?style=flat)](https://cocoapods.org/pods/SmartLog_iOS)
-[![License](https://img.shields.io/cocoapods/l/SmartLog_iOS.svg?style=flat)](https://cocoapods.org/pods/SmartLog_iOS)
-[![Platform](https://img.shields.io/cocoapods/p/SmartLog_iOS.svg?style=flat)](https://cocoapods.org/pods/SmartLog_iOS)
+[![CI Status](https://img.shields.io/travis/Hamza Mughal/SmartLog.svg?style=flat)](https://travis-ci.org/Hamza Mughal/SmartLog)
+[![Version](https://img.shields.io/cocoapods/v/SmartLog.svg?style=flat)](https://cocoapods.org/pods/SmartLog)
+[![License](https://img.shields.io/cocoapods/l/SmartLog.svg?style=flat)](https://cocoapods.org/pods/SmartLog)
+[![Platform](https://img.shields.io/cocoapods/p/SmartLog.svg?style=flat)](https://cocoapods.org/pods/SmartLog)
 
 ## Example
 
@@ -106,18 +106,18 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         AlertViewController *VC = [[AlertViewController alloc] initWithNibName:@"AlertViewController" bundle:myBundle];
         [self presentViewController:VC animated:YES completion:nil];
         
-        
+ 
+
 ## Requirements
 
 ## Installation
 
-SmartLog_iOS is available through [CocoaPods](https://cocoapods.org). To install
+SmartLog is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SmartLog_iOS'
+pod 'SmartLog'
 ```
-
 ## Log Levels
 
 The following log levels are supported:
@@ -128,11 +128,15 @@ The following log levels are supported:
  - `Error`
  - `Message`
  
+## Author
+
+Hamza Mughal, hamza.mughal@whizpool.com
+
  ## Let's Log
 
 ```swift
  // let's import the logging API package
-import SystemSupport
+import SmartLog
 
  // initilization Sdk
 SLog.shared.initilization()
@@ -145,7 +149,6 @@ SLog.shared.summaryLog(text: "Hello World!!")
 SLog.shared.detailLog(text: "Hello World!!", writeIntoFile: false)
 ```
 
-
 # Output
 
 ```
@@ -155,4 +158,4 @@ SLog.shared.detailLog(text: "Hello World!!", writeIntoFile: false)
 
 ## License
 
-SmartLog_iOS is available under the MIT license. See the LICENSE file for more info.
+SmartLog is available under the MIT license. See the LICENSE file for more info.

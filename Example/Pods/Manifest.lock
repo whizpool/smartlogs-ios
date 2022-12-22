@@ -1,10 +1,10 @@
 PODS:
-  - SmartLog_iOS (0.1.0):
+  - SmartLog (0.1.0):
     - SSZipArchive (~> 2.4.2)
   - SSZipArchive (2.4.3)
 
 DEPENDENCIES:
-  - SmartLog_iOS (from `../`)
+  - SmartLog (from `../`)
   - SSZipArchive (~> 2.4.2)
 
 SPEC REPOS:
@@ -12,13 +12,13 @@ SPEC REPOS:
     - SSZipArchive
 
 EXTERNAL SOURCES:
-  SmartLog_iOS:
+  SmartLog:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SmartLog_iOS: 0d4cfa8a28e12679c1e9356853c177f645d7290e
+  SmartLog: c3dd036b66f1ea6a8bd21dd0f20f6e0750d08de8
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
 
-PODFILE CHECKSUM: b58d2d6a418cbe703b9cccd2cefdc1aae09e7527
+PODFILE CHECKSUM: 4ab9c2a6b73917bb5f1185be5062feb8ddc04a59
 
 COCOAPODS: 1.11.3

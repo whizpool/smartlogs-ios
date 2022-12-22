@@ -1,5 +1,5 @@
 import XCTest
-import SmartLog_iOS
+import SmartLog
 
 class Tests: XCTestCase {
     
