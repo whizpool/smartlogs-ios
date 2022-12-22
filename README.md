@@ -130,7 +130,7 @@ The following log levels are supported:
  
 ## Author
 
-Hamza Mughal, hamza.mughal@whizpool.com
+Hamza Mughal, zzeeshan@gmail.com
 
  ## Let's Log
 

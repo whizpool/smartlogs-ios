@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         //        SLog.shared.setDaysForLog(numberOfDays: 2)
         //
         //        // set email
-        //        SLog.shared.setEmail(text: "hamza.mughal@whizpool.com")
+        //        SLog.shared.setEmail(text: "")
         //
         //        // set email Subject
         //        SLog.shared.setSubjectToEmail(sub: "BUG REPORT ")
