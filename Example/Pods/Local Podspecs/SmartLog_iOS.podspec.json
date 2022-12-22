@@ -1,9 +1,9 @@
 {
   "name": "SmartLog_iOS",
   "version": "0.1.0",
-  "summary": "A short description of SmartLog_iOS.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Hamza Mughal/SmartLog_iOS",
+  "summary": "SmartLog_iOS will create a logfile and manage record of logfile",
+  "description": "'This project SmartLog_iOS will create a logfile and manage record of logfile, just import this library and check this pod'",
+  "homepage": "https://github.com/whizpool/SmartLog_iOS",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,19 @@
     "Hamza Mughal": "hamza.mughal@whizpool.com"
   },
   "source": {
-    "git": "https://github.com/Hamza Mughal/SmartLog_iOS.git",
+    "git": "https://github.com/whizpool/SmartLog_iOS.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "11.0"
   },
-  "source_files": "SmartLog_iOS/Classes/**/*"
+  "source_files": "Classes/**/*.swift",
+  "swift_versions": "5.0",
+  "resources": "Classes/**/*.{xib,xcassets,close}",
+  "dependencies": {
+    "SSZipArchive": [
+      "~> 2.4.2"
+    ]
+  },
+  "swift_version": "5.0"
 }

@@ -7,69 +7,174 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B7599984FA9761F1DF7BDFBCB6C8D09 /* Pods-SmartLog_iOS_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1606B13CFB11FED8EC9FBB6514FB70E7 /* Pods-SmartLog_iOS_Example-dummy.m */; };
-		2F6574F5D264245D71A4DD9F82DDAC14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		4BDECB946CE71CCC1C8C412CED2B35BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		66345AB062BCDCF7D46B9680D29E7E3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		78D8DA559121648DC82E69D1A740D38A /* SmartLog_iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9F0DB273C3D6B941738B42F74BD668 /* SmartLog_iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02AD91C5250ED7D91B06BEAC91A5E507 /* mz_os.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F787961E0994AA5934713C5C4D8A51F /* mz_os.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		059332136CAAB8014F2099D6AC105162 /* mz_strm_split.h in Headers */ = {isa = PBXBuildFile; fileRef = 640494BB684109D53C602648DC944F02 /* mz_strm_split.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0AE196DA421B10CE8EADF7027554CD5B /* mz_strm_split.c in Sources */ = {isa = PBXBuildFile; fileRef = 23ABD02F2CA5CB54AB141069B387FFDE /* mz_strm_split.c */; };
+		0C524450F5579F35CF05958F488670A4 /* mz_zip_rw.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDEBCA568A303501173CF9553E1851 /* mz_zip_rw.c */; };
+		0D87C4665F8AD43731710EBBD8CCFCF8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */; };
+		0EF3774AC45C05C24674C6F390E4B571 /* mz_strm_os.h in Headers */ = {isa = PBXBuildFile; fileRef = 473928B20B63CD5CABF18DB0785419CB /* mz_strm_os.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		138D5C92E017FCFC4671E77B7449EED9 /* mz_compat.c in Sources */ = {isa = PBXBuildFile; fileRef = BD48AE5C77737912F09E7C8AFA8D7702 /* mz_compat.c */; };
+		13D012F5E8F8E529984E00C5B5A280BF /* SmartLog_iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF658EF3F6209590E9405542D53B9 /* SmartLog_iOS-dummy.m */; };
+		19FA9B07CD47A1A2A8299E63070210D2 /* mz_strm_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A72147992643BBE15024E5BF9E86D1F /* mz_strm_mem.c */; };
+		1BC5207ED5AA2B6956BB9CD10C71C1AA /* mz_strm_pkcrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 17FCF959138302332352B5E8068E0AF1 /* mz_strm_pkcrypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1C789E086190CB49AD3473DD4B26450B /* mz.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5A3CE4FBB92CCA696E22CF3079EC34 /* mz.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		255CB9700C81C0AACEF38F42E802272B /* mz_strm_wzaes.c in Sources */ = {isa = PBXBuildFile; fileRef = C9E58B001EB497987FD1DFF3DE32CC3F /* mz_strm_wzaes.c */; };
+		2F5A871A6CECB6C7899BFE5FC2EEE18E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392A0E014EC79F811D3A254EF604C57 /* Constants.swift */; };
+		2FC2872B142B0F47E66B8CDA7F3C6E59 /* GrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DF1323AD06EEB5620AE2BEAAF26407 /* GrowingTextView.swift */; };
+		30D23C352773401AE1389972956969C4 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3F0D6223C1DCC995A43E311F3A801C /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38B9E9F82A988CAA21601B733C1E92B7 /* mz_strm_pkcrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 05BA496A8A0DBBF665E12DF6C1C7F5F2 /* mz_strm_pkcrypt.c */; };
+		3A4745ADCE8833BD55B9C1B635A0EB5F /* Pods-SmartLog_iOS_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4A77466B7C66BE59A4308E4313F1B6E /* Pods-SmartLog_iOS_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		474BCA01B0DD052C036416678D090D60 /* SLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A97FFC3A35B945446AEABA5FFBB9015 /* SLog.swift */; };
+		4BDECB946CE71CCC1C8C412CED2B35BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		534EDA976CDBE519C377D315BA3FD183 /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A1C41E24EBAD19D3B3B88B893E298A0F /* SSZipCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F800E52E1FE0F1A5F624C09F5BF2FD6 /* mz_zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 49CD09986F496C08770DC5BF839CE774 /* mz_zip.c */; };
+		687B7D9B4F7999B6C6376607CAAD65C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		7DB2C0596405DB863CF2B2A489AE2636 /* mz_zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C97796A68E3416C1E0F893499E1417B /* mz_zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7F58BE8838D03B2D5B30E68952FF1E4D /* SSZipArchive-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48F7904E29DC76AC92222DA3B2A9F96F /* SSZipArchive-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81CCDA1B60CF738AAF9247690B454B76 /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9866FE2F57E021AFD5A9E5DE207AC /* CommonMethods.swift */; };
+		891EB2952C2923C3526970B9415F2D0D /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C047E8E42FE271EAAAEC53C53AF32F /* AlertViewController.xib */; };
+		89AECD9F4931EA70C032C83AB105F415 /* mz_os.c in Sources */ = {isa = PBXBuildFile; fileRef = 50CC78E13C1B969AC2415BB6DE845C0E /* mz_os.c */; };
+		8AB091199F99F1C2E9E67030DAC50F6E /* mz_strm_mem.h in Headers */ = {isa = PBXBuildFile; fileRef = CE161202B7E79569F856E5E0E3269AD6 /* mz_strm_mem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8C4FBC2492C6DDE369B02AEE117ED2BF /* mz_strm.c in Sources */ = {isa = PBXBuildFile; fileRef = B612FAEFEA6DAF5ECDE4B48C7C4F428F /* mz_strm.c */; };
+		90DF670DC21B9EFD8DFEFC5081073963 /* mz_strm_buf.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FD0BACFCB3CC2F5223BD235163D45BF /* mz_strm_buf.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9D420997871F24FEB04C2A77D881E6C9 /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 427AA01759771C15EADA449A2961A778 /* SSZipArchive-dummy.m */; };
+		9D86A3A640CC0F7D4C0B72F89300CD72 /* asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FFEF4808D1005E77D2AFDB06342230 /* asset.xcassets */; };
+		A3D8835737145F193B53F66CE715439C /* Pods-SmartLog_iOS_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1606B13CFB11FED8EC9FBB6514FB70E7 /* Pods-SmartLog_iOS_Example-dummy.m */; };
+		A4F447FA7122B13300BD80CE080444F7 /* mz_strm.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CAF80929B8E8764AB09B4C9CDA97C55 /* mz_strm.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A683487829FB8F7FC1759A8946113052 /* Pods-SmartLog_iOS_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA81640EAE0FB63EB90E8BE604B0A4D5 /* Pods-SmartLog_iOS_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF77406BD0F119187675A12CF64F5351 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B127CD7C8C81D2049792AF1380F08805 /* ReplaceMe.swift */; };
-		E0814F199F05D1CFA18EB09D13B45223 /* Pods-SmartLog_iOS_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4A77466B7C66BE59A4308E4313F1B6E /* Pods-SmartLog_iOS_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A87F265168F263F2BB4361361BF616DF /* mz_crypt_apple.c in Sources */ = {isa = PBXBuildFile; fileRef = F86615AF86FD3D110F4C387667DF2EAA /* mz_crypt_apple.c */; };
+		AAB0384853C90088036B7501CA8ACFE0 /* mz_crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 813B931EBBD527AC2E04B07881966C70 /* mz_crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AF48F21F13058D4DA35F3BE185FE03D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		BB4782EE1267513C3BA8E6D226D245E5 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = F78F73AC1E27DF387460E6C9D3BFF7BD /* SSZipArchive.m */; };
+		BDCCA4A9A781026F988E16D64945E358 /* mz_strm_zlib.c in Sources */ = {isa = PBXBuildFile; fileRef = D2F48715569A09C217F3A798C152E1F5 /* mz_strm_zlib.c */; };
+		BEF4CC97D88ADCD73B93AA179F7E1802 /* mz_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA13501E27029FB75FE5945E2B98301 /* mz_compat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C30DB8F46569FBD4D1C7D7DA0E4B67EC /* mz_zip_rw.h in Headers */ = {isa = PBXBuildFile; fileRef = 57E95BB8727FBE207C72DB27C18DB28A /* mz_zip_rw.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C3D352F8B703F950FD32936D16968D12 /* mz_crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = CBA7C727700C05AE10A909260EBFDF1F /* mz_crypt.c */; };
+		CA97719543D82AC5A640C8DCA7CFCDEA /* SmartLog_iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35F54CF53473871BCD903EA9D41EA9BF /* SmartLog_iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3340EC887ADD4CCC83BF67712BC883A /* mz_strm_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 9423954ED25DDB008D2B61FC73D26B58 /* mz_strm_buf.c */; };
+		D9EED6FDF393033C942E5B2149E99B2F /* mz_os_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = 844712351A5F4BE39D77B65957E25C6F /* mz_os_posix.c */; };
+		EE424ECE443C88A654B2CC271E9F4874 /* mz_strm_wzaes.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E3D0066B7B182ABB8273F4D905110E3 /* mz_strm_wzaes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EF9C00E340B33BA67D9CEF5A2262D15E /* mz_strm_zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 246EE1920ED99537A3432AC5286A0221 /* mz_strm_zlib.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EFE936E5DBC6AEE0B47D92500218702C /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = F9A27455BD782250AC63D8A94365E34D /* ZipArchive.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F213058108BB9D9E86A99F1F64B14A20 /* Pods-SmartLog_iOS_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF04266A04D85E616D21EA6E220E3A0B /* Pods-SmartLog_iOS_Tests-dummy.m */; };
-		FD2339269D572D5945E10BE5C93AF00D /* SmartLog_iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B566F392585E13E42D6878C152218F6D /* SmartLog_iOS-dummy.m */; };
+		F67B06C56818828245ADC8F9B7983D96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		FE8BF7C7018EF47E97426B7D135691A3 /* mz_strm_os_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = C29F02B018B0DC44C2AC05DFCFFA3EDE /* mz_strm_os_posix.c */; };
+		FF124859FD505D7CD856DB294C114657 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FF07E4607CA30D681006D55BCCC26 /* AlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4796E83FC576F5DFD3378567B63939B6 /* PBXContainerItemProxy */ = {
+		05249EE450095BAE42C15703878129B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60E38364AFF5E1349FF07415B944396;
+			remoteInfo = SSZipArchive;
+		};
+		8365C7FC2F64F6AFCBDF989B14A0BB59 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 69717990885F45DE86E195C3A57AACE6;
 			remoteInfo = SmartLog_iOS;
 		};
-		594C107FBA82DFB54F62656F3D365123 /* PBXContainerItemProxy */ = {
+		C0D3D9BF648DE3EFFB5E31440173E83C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5EA79BACFFBA8AE69EADA5A5772ADCC5;
 			remoteInfo = "Pods-SmartLog_iOS_Example";
 		};
+		FB4E8A13C86DBFF502AB8B98C24F3CF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F60E38364AFF5E1349FF07415B944396;
+			remoteInfo = SSZipArchive;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00AD42DD38EB9B7C783101DD8A948C5D /* SmartLog_iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartLog_iOS-prefix.pch"; sourceTree = "<group>"; };
+		05BA496A8A0DBBF665E12DF6C1C7F5F2 /* mz_strm_pkcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_pkcrypt.c; path = SSZipArchive/minizip/mz_strm_pkcrypt.c; sourceTree = "<group>"; };
+		0A97FFC3A35B945446AEABA5FFBB9015 /* SLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLog.swift; path = Classes/SLog.swift; sourceTree = "<group>"; };
+		0D1553EE1540A6D6E2E25FC4D7D51D8E /* SmartLog_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartLog_iOS.debug.xcconfig; sourceTree = "<group>"; };
 		1606B13CFB11FED8EC9FBB6514FB70E7 /* Pods-SmartLog_iOS_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartLog_iOS_Example-dummy.m"; sourceTree = "<group>"; };
+		17FCF959138302332352B5E8068E0AF1 /* mz_strm_pkcrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_pkcrypt.h; path = SSZipArchive/minizip/mz_strm_pkcrypt.h; sourceTree = "<group>"; };
+		182DF658EF3F6209590E9405542D53B9 /* SmartLog_iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmartLog_iOS-dummy.m"; sourceTree = "<group>"; };
 		1B2959F2A316CB12CC31E32E8AB898F7 /* Pods-SmartLog_iOS_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartLog_iOS_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		23ABD02F2CA5CB54AB141069B387FFDE /* mz_strm_split.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_split.c; path = SSZipArchive/minizip/mz_strm_split.c; sourceTree = "<group>"; };
+		246EE1920ED99537A3432AC5286A0221 /* mz_strm_zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_zlib.h; path = SSZipArchive/minizip/mz_strm_zlib.h; sourceTree = "<group>"; };
+		26300559F7F090D67C782DF5165D33CF /* SmartLog_iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartLog_iOS-prefix.pch"; sourceTree = "<group>"; };
 		29F4EC78CA0C8AEC2BF35C1862E2F54E /* Pods-SmartLog_iOS_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartLog_iOS_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		319D8455FC7A18D424F698ABB45CFC61 /* SmartLog_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartLog_iOS.debug.xcconfig; sourceTree = "<group>"; };
+		2E3D0066B7B182ABB8273F4D905110E3 /* mz_strm_wzaes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_wzaes.h; path = SSZipArchive/minizip/mz_strm_wzaes.h; sourceTree = "<group>"; };
+		30FFEF4808D1005E77D2AFDB06342230 /* asset.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = asset.xcassets; path = Classes/asset.xcassets; sourceTree = "<group>"; };
 		33986161D575313859BE9C820CA7E650 /* Pods-SmartLog_iOS_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartLog_iOS_Example-Info.plist"; sourceTree = "<group>"; };
+		35F54CF53473871BCD903EA9D41EA9BF /* SmartLog_iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartLog_iOS-umbrella.h"; sourceTree = "<group>"; };
+		3A72147992643BBE15024E5BF9E86D1F /* mz_strm_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_mem.c; path = SSZipArchive/minizip/mz_strm_mem.c; sourceTree = "<group>"; };
+		3D3F0D6223C1DCC995A43E311F3A801C /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
 		3E3248D26783C81D2E6E7023D665D268 /* Pods-SmartLog_iOS_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartLog_iOS_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3E3BF4BF2521FA5808F989514C7EC9F6 /* SSZipArchive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.debug.xcconfig; sourceTree = "<group>"; };
+		427AA01759771C15EADA449A2961A778 /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
+		473928B20B63CD5CABF18DB0785419CB /* mz_strm_os.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_os.h; path = SSZipArchive/minizip/mz_strm_os.h; sourceTree = "<group>"; };
+		48F7904E29DC76AC92222DA3B2A9F96F /* SSZipArchive-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-umbrella.h"; sourceTree = "<group>"; };
+		49CD09986F496C08770DC5BF839CE774 /* mz_zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_zip.c; path = SSZipArchive/minizip/mz_zip.c; sourceTree = "<group>"; };
+		4C97796A68E3416C1E0F893499E1417B /* mz_zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_zip.h; path = SSZipArchive/minizip/mz_zip.h; sourceTree = "<group>"; };
+		4CDDEBCA568A303501173CF9553E1851 /* mz_zip_rw.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_zip_rw.c; path = SSZipArchive/minizip/mz_zip_rw.c; sourceTree = "<group>"; };
+		50CC78E13C1B969AC2415BB6DE845C0E /* mz_os.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_os.c; path = SSZipArchive/minizip/mz_os.c; sourceTree = "<group>"; };
+		57E95BB8727FBE207C72DB27C18DB28A /* mz_zip_rw.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_zip_rw.h; path = SSZipArchive/minizip/mz_zip_rw.h; sourceTree = "<group>"; };
+		5962E45E9EAB6E6B402E847FDA9E3214 /* SmartLog_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartLog_iOS.release.xcconfig; sourceTree = "<group>"; };
 		5D9037C6F2D7E27CC158305C8E2040AB /* Pods-SmartLog_iOS_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SmartLog_iOS_Tests"; path = Pods_SmartLog_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		640494BB684109D53C602648DC944F02 /* mz_strm_split.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_split.h; path = SSZipArchive/minizip/mz_strm_split.h; sourceTree = "<group>"; };
 		64E6C9C4CAF42CB2678C1B4D68C4EEF7 /* SmartLog_iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SmartLog_iOS; path = SmartLog_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EA86C753256A54850275D6B4CA7395 /* Pods-SmartLog_iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartLog_iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6C5A3CE4FBB92CCA696E22CF3079EC34 /* mz.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz.h; path = SSZipArchive/minizip/mz.h; sourceTree = "<group>"; };
+		6CAF80929B8E8764AB09B4C9CDA97C55 /* mz_strm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm.h; path = SSZipArchive/minizip/mz_strm.h; sourceTree = "<group>"; };
 		74B904D36CD77355C212592826964F88 /* Pods-SmartLog_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmartLog_iOS_Tests.modulemap"; sourceTree = "<group>"; };
-		77D8CB063F890C68C32E3E12E36A2F4F /* SmartLog_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartLog_iOS.release.xcconfig; sourceTree = "<group>"; };
-		79B4FB88C4EC8AD2D530711E5D3F77BE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		80371094A08FE34C7D154AC5EF812191 /* SmartLog_iOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SmartLog_iOS.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		8E7B41F14882369C41BA705230225DB0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7AE3274AE9BC305DC84991875A728E0C /* SSZipArchive.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSZipArchive.modulemap; sourceTree = "<group>"; };
+		7FD0BACFCB3CC2F5223BD235163D45BF /* mz_strm_buf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_buf.h; path = SSZipArchive/minizip/mz_strm_buf.h; sourceTree = "<group>"; };
+		813B931EBBD527AC2E04B07881966C70 /* mz_crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_crypt.h; path = SSZipArchive/minizip/mz_crypt.h; sourceTree = "<group>"; };
+		82E9866FE2F57E021AFD5A9E5DE207AC /* CommonMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommonMethods.swift; path = Classes/CommonMethods.swift; sourceTree = "<group>"; };
+		844712351A5F4BE39D77B65957E25C6F /* mz_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_os_posix.c; path = SSZipArchive/minizip/mz_os_posix.c; sourceTree = "<group>"; };
+		8CA13501E27029FB75FE5945E2B98301 /* mz_compat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_compat.h; path = SSZipArchive/minizip/mz_compat.h; sourceTree = "<group>"; };
+		8E4C938CE1F51A8A08DB7CD5E062499C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		8FF60AEA4A021CAD2835CC1F857378BF /* Pods-SmartLog_iOS_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartLog_iOS_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSZipArchive; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		928FF07E4607CA30D681006D55BCCC26 /* AlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertViewController.swift; path = Classes/AlertViewController.swift; sourceTree = "<group>"; };
+		92C047E8E42FE271EAAAEC53C53AF32F /* AlertViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = AlertViewController.xib; path = Classes/AlertViewController.xib; sourceTree = "<group>"; };
+		9423954ED25DDB008D2B61FC73D26B58 /* mz_strm_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_buf.c; path = SSZipArchive/minizip/mz_strm_buf.c; sourceTree = "<group>"; };
+		952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		976BE6EF156CE233211BE62C1AA5ACD4 /* Pods-SmartLog_iOS_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmartLog_iOS_Example.modulemap"; sourceTree = "<group>"; };
-		98F596421013C08AA81993B332C797B3 /* SmartLog_iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SmartLog_iOS-Info.plist"; sourceTree = "<group>"; };
+		9812DE9F7019735BD15DA11B4A874CBE /* SmartLog_iOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SmartLog_iOS.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F787961E0994AA5934713C5C4D8A51F /* mz_os.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_os.h; path = SSZipArchive/minizip/mz_os.h; sourceTree = "<group>"; };
+		A0DF1323AD06EEB5620AE2BEAAF26407 /* GrowingTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrowingTextView.swift; path = Classes/GrowingTextView.swift; sourceTree = "<group>"; };
+		A1610757E92EC78F6121B1CA0742912E /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
+		A1C41E24EBAD19D3B3B88B893E298A0F /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
+		A54C4BB32D5D51418952AED9D4618E87 /* SSZipArchive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.release.xcconfig; sourceTree = "<group>"; };
+		ADA8D6A54A176507F299C14F9DFE3140 /* SmartLog_iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SmartLog_iOS.modulemap; sourceTree = "<group>"; };
 		AF04266A04D85E616D21EA6E220E3A0B /* Pods-SmartLog_iOS_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartLog_iOS_Tests-dummy.m"; sourceTree = "<group>"; };
-		B127CD7C8C81D2049792AF1380F08805 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SmartLog_iOS/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		B4A77466B7C66BE59A4308E4313F1B6E /* Pods-SmartLog_iOS_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartLog_iOS_Example-umbrella.h"; sourceTree = "<group>"; };
-		B566F392585E13E42D6878C152218F6D /* SmartLog_iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmartLog_iOS-dummy.m"; sourceTree = "<group>"; };
 		B5CD0C3027B55C4CF139B019BC0735B7 /* Pods-SmartLog_iOS_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmartLog_iOS_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B612FAEFEA6DAF5ECDE4B48C7C4F428F /* mz_strm.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm.c; path = SSZipArchive/minizip/mz_strm.c; sourceTree = "<group>"; };
 		B7B3172059D707F73EBFFDED4351B491 /* Pods-SmartLog_iOS_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartLog_iOS_Tests-Info.plist"; sourceTree = "<group>"; };
-		BC9F0DB273C3D6B941738B42F74BD668 /* SmartLog_iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartLog_iOS-umbrella.h"; sourceTree = "<group>"; };
+		B9C9792493F427CE1B3F880539EAE334 /* SSZipArchive-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSZipArchive-Info.plist"; sourceTree = "<group>"; };
+		BD48AE5C77737912F09E7C8AFA8D7702 /* mz_compat.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_compat.c; path = SSZipArchive/minizip/mz_compat.c; sourceTree = "<group>"; };
 		BDA10AAD26B0B8995BCB57314659E134 /* Pods-SmartLog_iOS_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SmartLog_iOS_Example"; path = Pods_SmartLog_iOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C29F02B018B0DC44C2AC05DFCFFA3EDE /* mz_strm_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_os_posix.c; path = SSZipArchive/minizip/mz_strm_os_posix.c; sourceTree = "<group>"; };
 		C35072ED4D22E5F1F338FF25DDC00313 /* Pods-SmartLog_iOS_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartLog_iOS_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		C6429492827DE62A937B90530D6D6AEB /* SmartLog_iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SmartLog_iOS-Info.plist"; sourceTree = "<group>"; };
 		C9885EFD99114C48B16B79823010B33C /* Pods-SmartLog_iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartLog_iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C9E58B001EB497987FD1DFF3DE32CC3F /* mz_strm_wzaes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_wzaes.c; path = SSZipArchive/minizip/mz_strm_wzaes.c; sourceTree = "<group>"; };
+		CBA7C727700C05AE10A909260EBFDF1F /* mz_crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_crypt.c; path = SSZipArchive/minizip/mz_crypt.c; sourceTree = "<group>"; };
+		CE161202B7E79569F856E5E0E3269AD6 /* mz_strm_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_mem.h; path = SSZipArchive/minizip/mz_strm_mem.h; sourceTree = "<group>"; };
+		D2F48715569A09C217F3A798C152E1F5 /* mz_strm_zlib.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_zlib.c; path = SSZipArchive/minizip/mz_strm_zlib.c; sourceTree = "<group>"; };
+		D392A0E014EC79F811D3A254EF604C57 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Classes/Constants.swift; sourceTree = "<group>"; };
+		D78DD3DBFD1C2CBED40063B7DA632096 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		DA81640EAE0FB63EB90E8BE604B0A4D5 /* Pods-SmartLog_iOS_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartLog_iOS_Tests-umbrella.h"; sourceTree = "<group>"; };
 		E25E9E001BCA9CE162276880071F26AD /* Pods-SmartLog_iOS_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartLog_iOS_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		EE6AE3029B4E0FCE3E08D45897ABB914 /* SmartLog_iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SmartLog_iOS.modulemap; sourceTree = "<group>"; };
+		F78F73AC1E27DF387460E6C9D3BFF7BD /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
+		F86615AF86FD3D110F4C387667DF2EAA /* mz_crypt_apple.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_crypt_apple.c; path = SSZipArchive/minizip/mz_crypt_apple.c; sourceTree = "<group>"; };
+		F9A27455BD782250AC63D8A94365E34D /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/include/ZipArchive.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,25 +186,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D599C942FDD463DE65BD9DB1A8918B2 /* Frameworks */ = {
+		61FC36FBE958854ED700416B198B8479 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F6574F5D264245D71A4DD9F82DDAC14 /* Foundation.framework in Frameworks */,
+				687B7D9B4F7999B6C6376607CAAD65C8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B85743A69965AA21F744848CA5E03653 /* Frameworks */ = {
+		D95EA27797B56D642F96334D2D40384C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66345AB062BCDCF7D46B9680D29E7E3B /* Foundation.framework in Frameworks */,
+				AF48F21F13058D4DA35F3BE185FE03D0 /* Foundation.framework in Frameworks */,
+				0D87C4665F8AD43731710EBBD8CCFCF8 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E641854A76C7B0B4CEAFB51CD3B34374 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F67B06C56818828245ADC8F9B7983D96 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CE426AC267333500FABE7BA0A5A42A0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C2EFC1AA7AA397C59A05B54BB923DDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6763B28DAE5A018269BC667952753BB /* SSZipArchive */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4EFD8F454ADB73ADABB9BE9B6A390064 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADA8D6A54A176507F299C14F9DFE3140 /* SmartLog_iOS.modulemap */,
+				182DF658EF3F6209590E9405542D53B9 /* SmartLog_iOS-dummy.m */,
+				C6429492827DE62A937B90530D6D6AEB /* SmartLog_iOS-Info.plist */,
+				26300559F7F090D67C782DF5165D33CF /* SmartLog_iOS-prefix.pch */,
+				35F54CF53473871BCD903EA9D41EA9BF /* SmartLog_iOS-umbrella.h */,
+				0D1553EE1540A6D6E2E25FC4D7D51D8E /* SmartLog_iOS.debug.xcconfig */,
+				5962E45E9EAB6E6B402E847FDA9E3214 /* SmartLog_iOS.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SmartLog_iOS";
+			sourceTree = "<group>";
+		};
 		50AF58BB591FE17BB3929D38E6B9B258 /* Pods-SmartLog_iOS_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,22 +261,13 @@
 			path = "Target Support Files/Pods-SmartLog_iOS_Tests";
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		7CE426AC267333500FABE7BA0A5A42A0 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+				952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */,
+				C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		76CAEABF40FF1C06695449CD018EE37C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BDA10AAD26B0B8995BCB57314659E134 /* Pods-SmartLog_iOS_Example */,
-				5D9037C6F2D7E27CC158305C8E2040AB /* Pods-SmartLog_iOS_Tests */,
-				64E6C9C4CAF42CB2678C1B4D68C4EEF7 /* SmartLog_iOS */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		80D68F8C7F86F4130CC9967DB36ECD69 /* Targets Support Files */ = {
@@ -143,52 +279,86 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A4A16E9A8E21754C57B19824E50FC9AB /* SmartLog_iOS */ = {
+		C1D1D1EDF90588555D88374719682153 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B127CD7C8C81D2049792AF1380F08805 /* ReplaceMe.swift */,
-				C9296E83E95AC2803AB3510D6E91098B /* Pod */,
-				EE51F8EC99D56E755324649389C79F31 /* Support Files */,
+				BDA10AAD26B0B8995BCB57314659E134 /* Pods-SmartLog_iOS_Example */,
+				5D9037C6F2D7E27CC158305C8E2040AB /* Pods-SmartLog_iOS_Tests */,
+				64E6C9C4CAF42CB2678C1B4D68C4EEF7 /* SmartLog_iOS */,
+				91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C915673619171F0591E7A4E9AA6A47FB /* SmartLog_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				928FF07E4607CA30D681006D55BCCC26 /* AlertViewController.swift */,
+				92C047E8E42FE271EAAAEC53C53AF32F /* AlertViewController.xib */,
+				30FFEF4808D1005E77D2AFDB06342230 /* asset.xcassets */,
+				82E9866FE2F57E021AFD5A9E5DE207AC /* CommonMethods.swift */,
+				D392A0E014EC79F811D3A254EF604C57 /* Constants.swift */,
+				A0DF1323AD06EEB5620AE2BEAAF26407 /* GrowingTextView.swift */,
+				0A97FFC3A35B945446AEABA5FFBB9015 /* SLog.swift */,
+				ED3384352DA68867A85A6E924E8F6197 /* Pod */,
+				4EFD8F454ADB73ADABB9BE9B6A390064 /* Support Files */,
 			);
 			name = SmartLog_iOS;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		C9296E83E95AC2803AB3510D6E91098B /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				79B4FB88C4EC8AD2D530711E5D3F77BE /* LICENSE */,
-				8E7B41F14882369C41BA705230225DB0 /* README.md */,
-				80371094A08FE34C7D154AC5EF812191 /* SmartLog_iOS.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D5640EA60F7885F940ECC59CFB24C729 /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				76CAEABF40FF1C06695449CD018EE37C /* Products */,
+				F3756E8613899F14105A39B08BE737E6 /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				4C2EFC1AA7AA397C59A05B54BB923DDA /* Pods */,
+				C1D1D1EDF90588555D88374719682153 /* Products */,
 				80D68F8C7F86F4130CC9967DB36ECD69 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		D6763B28DAE5A018269BC667952753BB /* SSZipArchive */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				6C5A3CE4FBB92CCA696E22CF3079EC34 /* mz.h */,
+				BD48AE5C77737912F09E7C8AFA8D7702 /* mz_compat.c */,
+				8CA13501E27029FB75FE5945E2B98301 /* mz_compat.h */,
+				CBA7C727700C05AE10A909260EBFDF1F /* mz_crypt.c */,
+				813B931EBBD527AC2E04B07881966C70 /* mz_crypt.h */,
+				F86615AF86FD3D110F4C387667DF2EAA /* mz_crypt_apple.c */,
+				50CC78E13C1B969AC2415BB6DE845C0E /* mz_os.c */,
+				9F787961E0994AA5934713C5C4D8A51F /* mz_os.h */,
+				844712351A5F4BE39D77B65957E25C6F /* mz_os_posix.c */,
+				B612FAEFEA6DAF5ECDE4B48C7C4F428F /* mz_strm.c */,
+				6CAF80929B8E8764AB09B4C9CDA97C55 /* mz_strm.h */,
+				9423954ED25DDB008D2B61FC73D26B58 /* mz_strm_buf.c */,
+				7FD0BACFCB3CC2F5223BD235163D45BF /* mz_strm_buf.h */,
+				3A72147992643BBE15024E5BF9E86D1F /* mz_strm_mem.c */,
+				CE161202B7E79569F856E5E0E3269AD6 /* mz_strm_mem.h */,
+				473928B20B63CD5CABF18DB0785419CB /* mz_strm_os.h */,
+				C29F02B018B0DC44C2AC05DFCFFA3EDE /* mz_strm_os_posix.c */,
+				05BA496A8A0DBBF665E12DF6C1C7F5F2 /* mz_strm_pkcrypt.c */,
+				17FCF959138302332352B5E8068E0AF1 /* mz_strm_pkcrypt.h */,
+				23ABD02F2CA5CB54AB141069B387FFDE /* mz_strm_split.c */,
+				640494BB684109D53C602648DC944F02 /* mz_strm_split.h */,
+				C9E58B001EB497987FD1DFF3DE32CC3F /* mz_strm_wzaes.c */,
+				2E3D0066B7B182ABB8273F4D905110E3 /* mz_strm_wzaes.h */,
+				D2F48715569A09C217F3A798C152E1F5 /* mz_strm_zlib.c */,
+				246EE1920ED99537A3432AC5286A0221 /* mz_strm_zlib.h */,
+				49CD09986F496C08770DC5BF839CE774 /* mz_zip.c */,
+				4C97796A68E3416C1E0F893499E1417B /* mz_zip.h */,
+				4CDDEBCA568A303501173CF9553E1851 /* mz_zip_rw.c */,
+				57E95BB8727FBE207C72DB27C18DB28A /* mz_zip_rw.h */,
+				3D3F0D6223C1DCC995A43E311F3A801C /* SSZipArchive.h */,
+				F78F73AC1E27DF387460E6C9D3BFF7BD /* SSZipArchive.m */,
+				A1C41E24EBAD19D3B3B88B893E298A0F /* SSZipCommon.h */,
+				F9A27455BD782250AC63D8A94365E34D /* ZipArchive.h */,
+				F324569DC22301903DC55528E6F2E407 /* Support Files */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D5640EA60F7885F940ECC59CFB24C729 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A4A16E9A8E21754C57B19824E50FC9AB /* SmartLog_iOS */,
-			);
-			name = "Development Pods";
+			name = SSZipArchive;
+			path = SSZipArchive;
 			sourceTree = "<group>";
 		};
 		E12A01ED32EC6F32B921D6AAD0FE4304 /* Pods-SmartLog_iOS_Example */ = {
@@ -208,19 +378,37 @@
 			path = "Target Support Files/Pods-SmartLog_iOS_Example";
 			sourceTree = "<group>";
 		};
-		EE51F8EC99D56E755324649389C79F31 /* Support Files */ = {
+		ED3384352DA68867A85A6E924E8F6197 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				EE6AE3029B4E0FCE3E08D45897ABB914 /* SmartLog_iOS.modulemap */,
-				B566F392585E13E42D6878C152218F6D /* SmartLog_iOS-dummy.m */,
-				98F596421013C08AA81993B332C797B3 /* SmartLog_iOS-Info.plist */,
-				00AD42DD38EB9B7C783101DD8A948C5D /* SmartLog_iOS-prefix.pch */,
-				BC9F0DB273C3D6B941738B42F74BD668 /* SmartLog_iOS-umbrella.h */,
-				319D8455FC7A18D424F698ABB45CFC61 /* SmartLog_iOS.debug.xcconfig */,
-				77D8CB063F890C68C32E3E12E36A2F4F /* SmartLog_iOS.release.xcconfig */,
+				D78DD3DBFD1C2CBED40063B7DA632096 /* LICENSE */,
+				8E4C938CE1F51A8A08DB7CD5E062499C /* README.md */,
+				9812DE9F7019735BD15DA11B4A874CBE /* SmartLog_iOS.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F324569DC22301903DC55528E6F2E407 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7AE3274AE9BC305DC84991875A728E0C /* SSZipArchive.modulemap */,
+				427AA01759771C15EADA449A2961A778 /* SSZipArchive-dummy.m */,
+				B9C9792493F427CE1B3F880539EAE334 /* SSZipArchive-Info.plist */,
+				A1610757E92EC78F6121B1CA0742912E /* SSZipArchive-prefix.pch */,
+				48F7904E29DC76AC92222DA3B2A9F96F /* SSZipArchive-umbrella.h */,
+				3E3BF4BF2521FA5808F989514C7EC9F6 /* SSZipArchive.debug.xcconfig */,
+				A54C4BB32D5D51418952AED9D4618E87 /* SSZipArchive.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SmartLog_iOS";
+			path = "../Target Support Files/SSZipArchive";
+			sourceTree = "<group>";
+		};
+		F3756E8613899F14105A39B08BE737E6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C915673619171F0591E7A4E9AA6A47FB /* SmartLog_iOS */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,19 +422,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82AA5C8F001E79150CDC66EDE3AE35FD /* Headers */ = {
+		89EBC641C2313992D4BEDD4CE0CF8D28 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0814F199F05D1CFA18EB09D13B45223 /* Pods-SmartLog_iOS_Example-umbrella.h in Headers */,
+				CA97719543D82AC5A640C8DCA7CFCDEA /* SmartLog_iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B330FE47B7C08B3CE63A1B7C41A17141 /* Headers */ = {
+		9F2A66527CAC71F3ABEA93654BF09256 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78D8DA559121648DC82E69D1A740D38A /* SmartLog_iOS-umbrella.h in Headers */,
+				3A4745ADCE8833BD55B9C1B635A0EB5F /* Pods-SmartLog_iOS_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B54E98A0F78F689CE4DC8242F7B2A2DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C789E086190CB49AD3473DD4B26450B /* mz.h in Headers */,
+				BEF4CC97D88ADCD73B93AA179F7E1802 /* mz_compat.h in Headers */,
+				AAB0384853C90088036B7501CA8ACFE0 /* mz_crypt.h in Headers */,
+				02AD91C5250ED7D91B06BEAC91A5E507 /* mz_os.h in Headers */,
+				A4F447FA7122B13300BD80CE080444F7 /* mz_strm.h in Headers */,
+				90DF670DC21B9EFD8DFEFC5081073963 /* mz_strm_buf.h in Headers */,
+				8AB091199F99F1C2E9E67030DAC50F6E /* mz_strm_mem.h in Headers */,
+				0EF3774AC45C05C24674C6F390E4B571 /* mz_strm_os.h in Headers */,
+				1BC5207ED5AA2B6956BB9CD10C71C1AA /* mz_strm_pkcrypt.h in Headers */,
+				059332136CAAB8014F2099D6AC105162 /* mz_strm_split.h in Headers */,
+				EE424ECE443C88A654B2CC271E9F4874 /* mz_strm_wzaes.h in Headers */,
+				EF9C00E340B33BA67D9CEF5A2262D15E /* mz_strm_zlib.h in Headers */,
+				7DB2C0596405DB863CF2B2A489AE2636 /* mz_zip.h in Headers */,
+				C30DB8F46569FBD4D1C7D7DA0E4B67EC /* mz_zip_rw.h in Headers */,
+				30D23C352773401AE1389972956969C4 /* SSZipArchive.h in Headers */,
+				7F58BE8838D03B2D5B30E68952FF1E4D /* SSZipArchive-umbrella.h in Headers */,
+				534EDA976CDBE519C377D315BA3FD183 /* SSZipCommon.h in Headers */,
+				EFE936E5DBC6AEE0B47D92500218702C /* ZipArchive.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +478,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				72BE8DFFE70392882871DE7FD456CD3B /* PBXTargetDependency */,
+				DE3CABBF9FEE4F8BEA5CEBC0F176A0A8 /* PBXTargetDependency */,
 			);
 			name = "Pods-SmartLog_iOS_Tests";
 			productName = Pods_SmartLog_iOS_Tests;
@@ -274,17 +487,18 @@
 		};
 		5EA79BACFFBA8AE69EADA5A5772ADCC5 /* Pods-SmartLog_iOS_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A96574D5F283C0FB96611928D015A4C /* Build configuration list for PBXNativeTarget "Pods-SmartLog_iOS_Example" */;
+			buildConfigurationList = 625279F9516E0276440AAA25A6A41091 /* Build configuration list for PBXNativeTarget "Pods-SmartLog_iOS_Example" */;
 			buildPhases = (
-				82AA5C8F001E79150CDC66EDE3AE35FD /* Headers */,
-				E60228F0015F8F8C3726719916362762 /* Sources */,
-				B85743A69965AA21F744848CA5E03653 /* Frameworks */,
-				160CA8B812CC60EB15586D20B887EDEE /* Resources */,
+				9F2A66527CAC71F3ABEA93654BF09256 /* Headers */,
+				015870C3726219D8B87F93AF832E837B /* Sources */,
+				E641854A76C7B0B4CEAFB51CD3B34374 /* Frameworks */,
+				1F9E6056CCF9E285711E41ADB786C8C8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DAD19BD3264EF509A89DD0734C974F71 /* PBXTargetDependency */,
+				0288648AA50494ADA7FFC84A8708880A /* PBXTargetDependency */,
+				1713A7196719890CF9CC25F976671D32 /* PBXTargetDependency */,
 			);
 			name = "Pods-SmartLog_iOS_Example";
 			productName = Pods_SmartLog_iOS_Example;
@@ -293,20 +507,39 @@
 		};
 		69717990885F45DE86E195C3A57AACE6 /* SmartLog_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF926F2D65CC2345580F27C14FC1C2E7 /* Build configuration list for PBXNativeTarget "SmartLog_iOS" */;
+			buildConfigurationList = ADD07D5C1A2CD65AA0ADF9A57B32509A /* Build configuration list for PBXNativeTarget "SmartLog_iOS" */;
 			buildPhases = (
-				B330FE47B7C08B3CE63A1B7C41A17141 /* Headers */,
-				EB04424BC1CCE9EBD8517F8FA5FA979E /* Sources */,
-				9D599C942FDD463DE65BD9DB1A8918B2 /* Frameworks */,
-				6881819E6B39B39A5EF4E600767623A9 /* Resources */,
+				89EBC641C2313992D4BEDD4CE0CF8D28 /* Headers */,
+				88680FF2AC6D022B3B09D82C48F676A4 /* Sources */,
+				61FC36FBE958854ED700416B198B8479 /* Frameworks */,
+				DEA24EC9E0C7DA4BD3EC7AFDA62F2B94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD4BAE891EC315D89C765886E9BE105E /* PBXTargetDependency */,
+			);
+			name = SmartLog_iOS;
+			productName = SmartLog_iOS;
+			productReference = 64E6C9C4CAF42CB2678C1B4D68C4EEF7 /* SmartLog_iOS */;
+			productType = "com.apple.product-type.framework";
+		};
+		F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D0A1C5EC006615C1092F876C06EAF4D /* Build configuration list for PBXNativeTarget "SSZipArchive" */;
+			buildPhases = (
+				B54E98A0F78F689CE4DC8242F7B2A2DE /* Headers */,
+				5B98828D7A514D1398027374EC0F2A4A /* Sources */,
+				D95EA27797B56D642F96334D2D40384C /* Frameworks */,
+				A66CA23A56A2FF4A3BDDEDD5B1558478 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SmartLog_iOS;
-			productName = SmartLog_iOS;
-			productReference = 64E6C9C4CAF42CB2678C1B4D68C4EEF7 /* SmartLog_iOS */;
+			name = SSZipArchive;
+			productName = SSZipArchive;
+			productReference = 91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -327,26 +560,27 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 76CAEABF40FF1C06695449CD018EE37C /* Products */;
+			productRefGroup = C1D1D1EDF90588555D88374719682153 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				5EA79BACFFBA8AE69EADA5A5772ADCC5 /* Pods-SmartLog_iOS_Example */,
 				5BB066A73EEEC10E4B2632347319B6F6 /* Pods-SmartLog_iOS_Tests */,
 				69717990885F45DE86E195C3A57AACE6 /* SmartLog_iOS */,
+				F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		160CA8B812CC60EB15586D20B887EDEE /* Resources */ = {
+		1F9E6056CCF9E285711E41ADB786C8C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6881819E6B39B39A5EF4E600767623A9 /* Resources */ = {
+		A66CA23A56A2FF4A3BDDEDD5B1558478 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,9 +594,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEA24EC9E0C7DA4BD3EC7AFDA62F2B94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				891EB2952C2923C3526970B9415F2D0D /* AlertViewController.xib in Resources */,
+				9D86A3A640CC0F7D4C0B72F89300CD72 /* asset.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		015870C3726219D8B87F93AF832E837B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D8835737145F193B53F66CE715439C /* Pods-SmartLog_iOS_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B98828D7A514D1398027374EC0F2A4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				138D5C92E017FCFC4671E77B7449EED9 /* mz_compat.c in Sources */,
+				C3D352F8B703F950FD32936D16968D12 /* mz_crypt.c in Sources */,
+				A87F265168F263F2BB4361361BF616DF /* mz_crypt_apple.c in Sources */,
+				89AECD9F4931EA70C032C83AB105F415 /* mz_os.c in Sources */,
+				D9EED6FDF393033C942E5B2149E99B2F /* mz_os_posix.c in Sources */,
+				8C4FBC2492C6DDE369B02AEE117ED2BF /* mz_strm.c in Sources */,
+				D3340EC887ADD4CCC83BF67712BC883A /* mz_strm_buf.c in Sources */,
+				19FA9B07CD47A1A2A8299E63070210D2 /* mz_strm_mem.c in Sources */,
+				FE8BF7C7018EF47E97426B7D135691A3 /* mz_strm_os_posix.c in Sources */,
+				38B9E9F82A988CAA21601B733C1E92B7 /* mz_strm_pkcrypt.c in Sources */,
+				0AE196DA421B10CE8EADF7027554CD5B /* mz_strm_split.c in Sources */,
+				255CB9700C81C0AACEF38F42E802272B /* mz_strm_wzaes.c in Sources */,
+				BDCCA4A9A781026F988E16D64945E358 /* mz_strm_zlib.c in Sources */,
+				5F800E52E1FE0F1A5F624C09F5BF2FD6 /* mz_zip.c in Sources */,
+				0C524450F5579F35CF05958F488670A4 /* mz_zip_rw.c in Sources */,
+				BB4782EE1267513C3BA8E6D226D245E5 /* SSZipArchive.m in Sources */,
+				9D420997871F24FEB04C2A77D881E6C9 /* SSZipArchive-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88680FF2AC6D022B3B09D82C48F676A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF124859FD505D7CD856DB294C114657 /* AlertViewController.swift in Sources */,
+				81CCDA1B60CF738AAF9247690B454B76 /* CommonMethods.swift in Sources */,
+				2F5A871A6CECB6C7899BFE5FC2EEE18E /* Constants.swift in Sources */,
+				2FC2872B142B0F47E66B8CDA7F3C6E59 /* GrowingTextView.swift in Sources */,
+				474BCA01B0DD052C036416678D090D60 /* SLog.swift in Sources */,
+				13D012F5E8F8E529984E00C5B5A280BF /* SmartLog_iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBF2A3F9D7BF5189B96F0629673BEC0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,62 +659,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E60228F0015F8F8C3726719916362762 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B7599984FA9761F1DF7BDFBCB6C8D09 /* Pods-SmartLog_iOS_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB04424BC1CCE9EBD8517F8FA5FA979E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF77406BD0F119187675A12CF64F5351 /* ReplaceMe.swift in Sources */,
-				FD2339269D572D5945E10BE5C93AF00D /* SmartLog_iOS-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		72BE8DFFE70392882871DE7FD456CD3B /* PBXTargetDependency */ = {
+		0288648AA50494ADA7FFC84A8708880A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-SmartLog_iOS_Example";
-			target = 5EA79BACFFBA8AE69EADA5A5772ADCC5 /* Pods-SmartLog_iOS_Example */;
-			targetProxy = 594C107FBA82DFB54F62656F3D365123 /* PBXContainerItemProxy */;
+			name = SSZipArchive;
+			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
+			targetProxy = 05249EE450095BAE42C15703878129B0 /* PBXContainerItemProxy */;
 		};
-		DAD19BD3264EF509A89DD0734C974F71 /* PBXTargetDependency */ = {
+		1713A7196719890CF9CC25F976671D32 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SmartLog_iOS;
 			target = 69717990885F45DE86E195C3A57AACE6 /* SmartLog_iOS */;
-			targetProxy = 4796E83FC576F5DFD3378567B63939B6 /* PBXContainerItemProxy */;
+			targetProxy = 8365C7FC2F64F6AFCBDF989B14A0BB59 /* PBXContainerItemProxy */;
+		};
+		AD4BAE891EC315D89C765886E9BE105E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSZipArchive;
+			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
+			targetProxy = FB4E8A13C86DBFF502AB8B98C24F3CF5 /* PBXContainerItemProxy */;
+		};
+		DE3CABBF9FEE4F8BEA5CEBC0F176A0A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SmartLog_iOS_Example";
+			target = 5EA79BACFFBA8AE69EADA5A5772ADCC5 /* Pods-SmartLog_iOS_Example */;
+			targetProxy = C0D3D9BF648DE3EFFB5E31440173E83C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		38657F1CFC5104BD1DA2E303CD8C4EDE /* Release */ = {
+		0ED60F9A7C1B1828A7F800A92DB4777E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77D8CB063F890C68C32E3E12E36A2F4F /* SmartLog_iOS.release.xcconfig */;
+			baseConfigurationReference = A54C4BB32D5D51418952AED9D4618E87 /* SSZipArchive.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SmartLog_iOS/SmartLog_iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SmartLog_iOS/SmartLog_iOS-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSZipArchive/SSZipArchive-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SmartLog_iOS/SmartLog_iOS.modulemap";
-				PRODUCT_MODULE_NAME = SmartLog_iOS;
-				PRODUCT_NAME = SmartLog_iOS;
+				MODULEMAP_FILE = "Target Support Files/SSZipArchive/SSZipArchive.modulemap";
+				PRODUCT_MODULE_NAME = SSZipArchive;
+				PRODUCT_NAME = SSZipArchive;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -438,61 +719,25 @@
 			};
 			name = Release;
 		};
-		5329E7435A12BA9845EB1C1455EEE039 /* Release */ = {
+		6142F144AE42AEDE061520B680877783 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69EA86C753256A54850275D6B4CA7395 /* Pods-SmartLog_iOS_Example.release.xcconfig */;
+			baseConfigurationReference = 3E3BF4BF2521FA5808F989514C7EC9F6 /* SSZipArchive.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SmartLog_iOS_Example/Pods-SmartLog_iOS_Example-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSZipArchive/SSZipArchive-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SmartLog_iOS_Example/Pods-SmartLog_iOS_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		59C5C804F00AB75B699205E5225083FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 319D8455FC7A18D424F698ABB45CFC61 /* SmartLog_iOS.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SmartLog_iOS/SmartLog_iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SmartLog_iOS/SmartLog_iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SmartLog_iOS/SmartLog_iOS.modulemap";
-				PRODUCT_MODULE_NAME = SmartLog_iOS;
-				PRODUCT_NAME = SmartLog_iOS;
+				MODULEMAP_FILE = "Target Support Files/SSZipArchive/SSZipArchive.modulemap";
+				PRODUCT_MODULE_NAME = SSZipArchive;
+				PRODUCT_NAME = SSZipArchive;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -565,6 +810,73 @@
 			};
 			name = Release;
 		};
+		89EA5BEBF344B12F05C4EC9DE2E3B311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9885EFD99114C48B16B79823010B33C /* Pods-SmartLog_iOS_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SmartLog_iOS_Example/Pods-SmartLog_iOS_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SmartLog_iOS_Example/Pods-SmartLog_iOS_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A005DC4F6B810653E10807A408AACD1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69EA86C753256A54850275D6B4CA7395 /* Pods-SmartLog_iOS_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SmartLog_iOS_Example/Pods-SmartLog_iOS_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SmartLog_iOS_Example/Pods-SmartLog_iOS_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		AC4215B36F1EC9F7489F7E2F22BB3D2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 29F4EC78CA0C8AEC2BF35C1862E2F54E /* Pods-SmartLog_iOS_Tests.debug.xcconfig */;
@@ -632,11 +944,10 @@
 			};
 			name = Release;
 		};
-		D0F3B2B09F3A778DE03179739CC10A4C /* Debug */ = {
+		D1A65E79B5B72C7B02C6DBCD7EE2288A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9885EFD99114C48B16B79823010B33C /* Pods-SmartLog_iOS_Example.debug.xcconfig */;
+			baseConfigurationReference = 0D1553EE1540A6D6E2E25FC4D7D51D8E /* SmartLog_iOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -646,19 +957,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SmartLog_iOS_Example/Pods-SmartLog_iOS_Example-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SmartLog_iOS/SmartLog_iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SmartLog_iOS/SmartLog_iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SmartLog_iOS_Example/Pods-SmartLog_iOS_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SmartLog_iOS/SmartLog_iOS.modulemap";
+				PRODUCT_MODULE_NAME = SmartLog_iOS;
+				PRODUCT_NAME = SmartLog_iOS;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -731,18 +1041,41 @@
 			};
 			name = Debug;
 		};
+		FEE960E8FBD2AD235CCD80932E3C8339 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5962E45E9EAB6E6B402E847FDA9E3214 /* SmartLog_iOS.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SmartLog_iOS/SmartLog_iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SmartLog_iOS/SmartLog_iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SmartLog_iOS/SmartLog_iOS.modulemap";
+				PRODUCT_MODULE_NAME = SmartLog_iOS;
+				PRODUCT_NAME = SmartLog_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A96574D5F283C0FB96611928D015A4C /* Build configuration list for PBXNativeTarget "Pods-SmartLog_iOS_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D0F3B2B09F3A778DE03179739CC10A4C /* Debug */,
-				5329E7435A12BA9845EB1C1455EEE039 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -752,11 +1085,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DF926F2D65CC2345580F27C14FC1C2E7 /* Build configuration list for PBXNativeTarget "SmartLog_iOS" */ = {
+		5D0A1C5EC006615C1092F876C06EAF4D /* Build configuration list for PBXNativeTarget "SSZipArchive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59C5C804F00AB75B699205E5225083FD /* Debug */,
-				38657F1CFC5104BD1DA2E303CD8C4EDE /* Release */,
+				6142F144AE42AEDE061520B680877783 /* Debug */,
+				0ED60F9A7C1B1828A7F800A92DB4777E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		625279F9516E0276440AAA25A6A41091 /* Build configuration list for PBXNativeTarget "Pods-SmartLog_iOS_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89EA5BEBF344B12F05C4EC9DE2E3B311 /* Debug */,
+				A005DC4F6B810653E10807A408AACD1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADD07D5C1A2CD65AA0ADF9A57B32509A /* Build configuration list for PBXNativeTarget "SmartLog_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A65E79B5B72C7B02C6DBCD7EE2288A /* Debug */,
+				FEE960E8FBD2AD235CCD80932E3C8339 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

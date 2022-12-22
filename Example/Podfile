@@ -4,6 +4,7 @@ platform :ios, '10.0'
 
 target 'SmartLog_iOS_Example' do
   pod 'SmartLog_iOS', :path => '../'
+  pod 'SSZipArchive', '~> 2.4.2'
 
   target 'SmartLog_iOS_Tests' do
     inherit! :search_paths
