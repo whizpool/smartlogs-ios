@@ -141,7 +141,7 @@ Hamza Mughal, zzeeshan@gmail.com
 
 ```swift
  // let's import the logging API package
-import SmartLog
+import SmartLogs
 
  // initilization Sdk
 SLog.shared.initilization()
