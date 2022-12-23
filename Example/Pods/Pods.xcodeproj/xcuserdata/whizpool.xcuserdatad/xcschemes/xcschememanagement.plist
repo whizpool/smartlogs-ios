@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-SmartLog_Example.xcscheme</key>
+		<key>Pods-SmartLogs_Example.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SmartLog_Tests.xcscheme</key>
+		<key>Pods-SmartLogs_Tests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -19,7 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SmartLog.xcscheme</key>
+		<key>SmartLogs.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

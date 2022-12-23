@@ -1,9 +1,9 @@
-# SmartLog
+# SmartLogs
 
-[![CI Status](https://img.shields.io/travis/Hamza Mughal/SmartLog.svg?style=flat)](https://travis-ci.org/Hamza Mughal/SmartLog)
-[![Version](https://img.shields.io/cocoapods/v/SmartLog.svg?style=flat)](https://cocoapods.org/pods/SmartLog)
-[![License](https://img.shields.io/cocoapods/l/SmartLog.svg?style=flat)](https://cocoapods.org/pods/SmartLog)
-[![Platform](https://img.shields.io/cocoapods/p/SmartLog.svg?style=flat)](https://cocoapods.org/pods/SmartLog)
+[![CI Status](https://img.shields.io/travis/Hamza Mughal/SmartLogs.svg?style=flat)](https://travis-ci.org/Hamza Mughal/SmartLogs)
+[![Version](https://img.shields.io/cocoapods/v/SmartLogs.svg?style=flat)](https://cocoapods.org/pods/SmartLogs)
+[![License](https://img.shields.io/cocoapods/l/SmartLogs.svg?style=flat)](https://cocoapods.org/pods/SmartLogs)
+[![Platform](https://img.shields.io/cocoapods/p/SmartLogs.svg?style=flat)](https://cocoapods.org/pods/SmartLogs)
 
 ## Example
 
@@ -29,8 +29,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         // initilization sdk
         SLog.shared.initilization()
         
-        // Write Logs in Logs File with message
+        // Summary logs must write log into the files 
         SLog.shared.summaryLog(text: "Hello World!!")
+        
+        // Detail logs are optional to write in the file
+        SLog.shared.detailLog(text: "detail log here", writeIntoFile: true)
         
         // Set zip archive Password
         SLog.shared.setPassword(password: "Password12345")
@@ -43,6 +46,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         
         // set Title
         SLog.shared.setTitle(title: "Map App")
+        
+        // set main alert view background color
+        SLog.shared.setMainBackgroundColor(backgroundColor: .yellow)
         
         // Attachment Files
         SLog.shared.addAttachment(fileName: "icon", url: filePath, mimeType: "image/png")
@@ -96,28 +102,27 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         @import SmartLog_iOS;
         
         // initilization sdk
-        [ [SLog shared] initilization ];
+        [[SLog shared] initilization ];
 
         // use the function of the pods
-        [ [SLog shared] summaryLogWithText:@"LOL" ];
+        [[SLog shared] summaryLogWithText:@"summary log"];
 
         // call the alert view Controller
         NSBundle *myBundle = [NSBundle bundleForClass:[AlertViewController class]];
         AlertViewController *VC = [[AlertViewController alloc] initWithNibName:@"AlertViewController" bundle:myBundle];
         [self presentViewController:VC animated:YES completion:nil];
         
- 
-
 ## Requirements
 
 ## Installation
 
-SmartLog is available through [CocoaPods](https://cocoapods.org). To install
+SmartLogs is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SmartLog'
+pod 'SmartLogs'
 ```
+
 ## Log Levels
 
 The following log levels are supported:
@@ -127,7 +132,7 @@ The following log levels are supported:
  - `Warning`
  - `Error`
  - `Message`
- 
+
 ## Author
 
 Hamza Mughal, zzeeshan@gmail.com
@@ -158,4 +163,4 @@ SLog.shared.detailLog(text: "Hello World!!", writeIntoFile: false)
 
 ## License
 
-SmartLog is available under the MIT license. See the LICENSE file for more info.
+SmartLogs is available under the MIT license. See the LICENSE file for more info.

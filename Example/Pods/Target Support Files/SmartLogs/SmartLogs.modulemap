@@ -1,0 +1,6 @@
+framework module SmartLogs {
+  umbrella header "SmartLogs-umbrella.h"
+
+  export *
+  module * { export * }
+}

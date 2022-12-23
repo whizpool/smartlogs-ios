@@ -2,11 +2,11 @@ use_frameworks!
 
 platform :ios, '10.0'
 
-target 'SmartLog_Example' do
-  pod 'SmartLog', :path => '../'
+target 'SmartLogs_Example' do
+  pod 'SmartLogs', :path => '../'
   pod 'SSZipArchive', '~> 2.4.2'
-  
-  target 'SmartLog_Tests' do
+
+  target 'SmartLogs_Tests' do
     inherit! :search_paths
 
     
