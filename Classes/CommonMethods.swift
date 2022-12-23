@@ -1,6 +1,6 @@
 //
 //  CommonMethods.swift
-//  SmartLog_iOS
+//  SmartLogs
 //
 //  Created by Himy Mughal on 15/12/2022.
 //

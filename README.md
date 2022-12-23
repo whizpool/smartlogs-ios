@@ -65,8 +65,6 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         // set final log file name which is going to be emailed
         SLog.shared.setLogFileName(text: "finalLog")
         
-        // set image to the close button
-        SLog.shared.setSendBtnImage(img: UIImage(named: "testImg")!)
         
         //set nobe and line color
         SLog.shared.setKnobColor(color: .red)
@@ -84,12 +82,15 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         SLog.shared.setTitleFontSize(fontSize: 22)
         SLog.shared.setTitleColor(color: .purple)
 
-        // set send button view text, font name, font size, and text color
+        // set send button view text, icon, font name, font size, and text color
         SLog.shared.setSendButtonText(text: "Send Button Text")
         SLog.shared.setSendBtnFont(fontName: "Marker Felt Thin")
         SLog.shared.setSendBtnFontSize(fontSize: 30)
         SLog.shared.setSendBtnTextColor(color: .green)
         SLog.shared.setSendButtonBackgroundColor(backgroundColor: .black)
+        SLog.shared.setSendBtnImage(img: UIImage(named: "testImg")!)
+        SLog.shared.hideSendBtnIcon(bool: true)
+
         
         // Open Main View for Mailing Log Files on Button Action
         let amazingBundle = Bundle(for: AlertViewController.self)
@@ -99,7 +100,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Usage Objective C
 
         // import the pod file in .m file
-        @import SmartLog_iOS;
+        @import SmartLogs;
         
         // initilization sdk
         [[SLog shared] initilization ];

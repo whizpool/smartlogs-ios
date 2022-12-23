@@ -215,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 9PV5JNS8R9;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 9PV5JNS8R9;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -484,6 +486,7 @@
 			baseConfigurationReference = 07E7167A94EF1B069EC697BF /* Pods-SmartLogs_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9PV5JNS8R9;
 				INFOPLIST_FILE = SmartLogs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -499,6 +502,7 @@
 			baseConfigurationReference = F7B5E2C22A2F771F9CC47A8A /* Pods-SmartLogs_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9PV5JNS8R9;
 				INFOPLIST_FILE = SmartLogs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -513,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA00D2C593D6268382C903E9 /* Pods-SmartLogs_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9PV5JNS8R9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -535,6 +540,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C04D2646BCE1B688B08940D1 /* Pods-SmartLogs_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9PV5JNS8R9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

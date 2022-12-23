@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SmartLogs'
-  s.version          = '0.4.0'
-  s.summary          = 'SmartLog will create a logfile and manage record of logfile'
+  s.version          = '0.5.0'
+  s.summary          = 'SmartLogs will create a logfile and manage record of logfile'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  'This project SmartLog will create a logfile and manage record of logfile, just import this library and check this pod'
+  'This project SmartLogs will create a logfile and manage record of logfile, just import this library and check this pod'
                        DESC
 
   s.homepage         = 'https://github.com/whizpool/SmartLog_iOS.git'

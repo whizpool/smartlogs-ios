@@ -1,6 +1,6 @@
 //
 //  GrowingTextView.swift
-//  SmartLog_iOS
+//  SmartLogs
 //
 //  Created by Himy Mughal on 13/12/2022.
 

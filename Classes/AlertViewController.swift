@@ -1,6 +1,6 @@
 //
 //  AlertViewController.swift
-//  SmartLog_iOS
+//  SmartLogs
 //
 //  Created by Himy Mughal on 13/12/2022.
 //
@@ -20,7 +20,9 @@ public class AlertViewController: UIViewController {
     @IBOutlet weak var titleLbl: UILabel!
 
     // Send Button outlet
+    @IBOutlet weak var sendBtnImage : UIImageView!
     @IBOutlet weak var sendBtnLbl: UILabel!
+    @IBOutlet weak var sendBtnImgView: UIView!
     @IBOutlet weak var sendBtnView: UIView!
 
     // main view outlet
@@ -33,10 +35,6 @@ public class AlertViewController: UIViewController {
     
     // Bugs TextView Outlet
     @IBOutlet weak var bugsTextview: GrowingTextView!
-
-    // send button image view outlet
-    @IBOutlet weak var sendBtnImage : UIImageView!
-    
     
     var bDarkMode = false
     
@@ -79,7 +77,7 @@ public class AlertViewController: UIViewController {
             
             let filePath = SLog.shared.getRootDirPath()
             let url = URL(string: filePath)
-            let zipPath = url!.appendingPathComponent("/\(SLog.shared.logFileNewFolderName)")
+            let zipPath = url!.appendingPathComponent("/\(Constants.logFileNewFolderName)")
             
             do {
                 self.createPasswordProtectedZipLogFile(at: zipPath.path, composer: composer)
@@ -273,17 +271,19 @@ extension AlertViewController:UITextViewDelegate {
             
             
             // set the image of the send Btn
-            if SLog.shared.sendBtnImage != nil
+            self.sendBtnImgView.isHidden = SLog.shared.bSendBtnIconHidden
+            
+            if !SLog.shared.bSendBtnIconHidden && SLog.shared.sendBtnImage != nil// icon hidden
             {
                 self.sendBtnImage.image = SLog.shared.sendBtnImage
             }
-
             
             // set line and knob color
             if SLog.shared.knobColor != nil
             {
                 self.lineView.backgroundColor = SLog.shared.lineColor
             }
+            
             
             self.knobView.layer.cornerRadius = Constants.knobRadius
             if SLog.shared.lineColor != nil

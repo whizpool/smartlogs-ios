@@ -1,6 +1,6 @@
 //
 //  Constants.swift
-//  SmartLog_iOS
+//  SmartLogs
 //
 //  Created by Himy Mughal on 13/12/2022.
 //
@@ -20,7 +20,6 @@ public class Constants
     static let logFileNewFolderName = "NewZip"
     static let logFileDateFormat = "yyyy-MM-dd"
     static let finalLogFileNameAfterCombine = "finalLog"
-    static let tempZipFileName = "logFileData.zip"
     static let deviceInfo = "deviceInfo"
     
     

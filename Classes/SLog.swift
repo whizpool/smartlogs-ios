@@ -1,6 +1,6 @@
 //
 //  SLog.swift
-//  SmartLog_iOS
+//  SmartLogs
 //
 //  Created by Himy Mughal on 13/12/2022.
 //
@@ -37,6 +37,7 @@ import SSZipArchive
     var knobColor : UIColor?
     
     // send button Text, color, font and font size
+    var bSendBtnIconHidden = false
     var sendButtonBackgroundColor : UIColor?
     var sendBtnText      : String = Constants.defaultSendBtnText
     var SendBtntextColor = UIColor.white
@@ -56,13 +57,15 @@ import SSZipArchive
     private var filesDeletionAfterDays:Int = Constants.defaultDaysForFileDeletion
     
     // Main Directory Folder name
-    private var logFileRootDirectoryName:String = Constants.logFileRootDirectoryName
+//    private var logFileRootDirectoryName:String = Constants.logFileRootDirectoryName
     
     // Zip Folder name
-    var logFileNewFolderName:String = Constants.logFileNewFolderName
+//    var logFileNewFolderName:String = Constants.logFileNewFolderName
     
     // date Formate
-    private var logFileDateFormat:String = Constants.logFileDateFormat
+//    private var logFileDateFormat:String = Constants.logFileDateFormat
+    
+    
     
     // app version name string
     private var versionName:String = ""
@@ -78,12 +81,6 @@ import SSZipArchive
     
     // after combine log file name
     var finalLogFileNameAfterCombine = Constants.finalLogFileNameAfterCombine
-    
-    // zip attach file name
-    //    var zipFileName = "LogFile.zip"
-    
-    // zip temporary save file name
-    var tempZipFileName = Constants.tempZipFileName
     
     // Textview Placeholder
     var textViewPlaceHolder = Constants.textViewPlaceHolder
@@ -112,18 +109,18 @@ import SSZipArchive
         let url = NSURL(fileURLWithPath: path)
         print(path)
         
-        if let pathComponent = url.appendingPathComponent(logFileRootDirectoryName)
+        if let pathComponent = url.appendingPathComponent(Constants.logFileRootDirectoryName)
         {
             _ = Date()
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = logFileDateFormat
+            dateFormatter.dateFormat = Constants.logFileDateFormat
             
             let filePath = pathComponent.path
             let fileManager = FileManager.default
             if !fileManager.fileExists(atPath: filePath)
             {
                 let DocumentDirectory = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
-                let DirPath = DocumentDirectory.appendingPathComponent(logFileRootDirectoryName)
+                let DirPath = DocumentDirectory.appendingPathComponent(Constants.logFileRootDirectoryName)
                 do
                 {
                     try FileManager.default.createDirectory(atPath: DirPath!.path, withIntermediateDirectories: true, attributes: nil)
@@ -279,6 +276,14 @@ import SSZipArchive
         self.sendBtnImage = img
     }
     
+    //****************************************************
+    
+    // setting text field Font
+    @objc public func hideSendBtnIcon (bool: Bool)
+    {
+        self.bSendBtnIconHidden = bool
+    }
+    
     // ****************************************************
     
     // setting background color for alert view
@@ -416,11 +421,11 @@ import SSZipArchive
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
         
-        if let pathComponent = url.appendingPathComponent(logFileRootDirectoryName)
+        if let pathComponent = url.appendingPathComponent(Constants.logFileRootDirectoryName)
         {
             let date = Date()
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = logFileDateFormat
+            dateFormatter.dateFormat = Constants.logFileDateFormat
             let currentDate = dateFormatter.string(from: date)
             
             let LongDate = getCurrentDate()
@@ -488,7 +493,7 @@ import SSZipArchive
             {
                 print("Folder NOT AVAILABLE")
                 let DocumentDirectory = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
-                let DirPath = DocumentDirectory.appendingPathComponent(logFileRootDirectoryName)
+                let DirPath = DocumentDirectory.appendingPathComponent(Constants.logFileRootDirectoryName)
                 do
                 {
                     try FileManager.default.createDirectory(atPath: DirPath!.path, withIntermediateDirectories: true, attributes: nil)
@@ -513,7 +518,7 @@ import SSZipArchive
     func combineLogFiles(completion: (String, Error?) -> ())
     {
         // Delete Zip Folder
-        _ = SLog.shared.deleteFile(fileName: SLog.shared.logFileNewFolderName)
+        _ = SLog.shared.deleteFile(fileName: Constants.logFileNewFolderName)
 
         let fileManager = FileManager.default
         var files = [String]()
@@ -532,8 +537,8 @@ import SSZipArchive
             if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
             {
                 //prepare file url
-                let fileURL = dir.appendingPathComponent("\(logFileRootDirectoryName)/")
-                let DirPath = fileURL.appendingPathComponent(SLog.shared.logFileNewFolderName)
+                let fileURL = dir.appendingPathComponent("\(Constants.logFileRootDirectoryName)/")
+                let DirPath = fileURL.appendingPathComponent(Constants.logFileNewFolderName)
 
                 do
                 {
@@ -666,7 +671,7 @@ import SSZipArchive
         
         if let url = urls.first
         {
-            var fileURL = url.appendingPathComponent("\(logFileRootDirectoryName)/")
+            var fileURL = url.appendingPathComponent("\(Constants.logFileRootDirectoryName)/")
             let zipFolder = fileURL.appendingPathComponent("\(Constants.logFileNewFolderName)/")
             let zipFolderUrl = zipFolder.appendingPathComponent(filename)
             fileURL = zipFolderUrl.appendingPathExtension("json")
@@ -769,11 +774,11 @@ import SSZipArchive
         if dirs != []
         {
             let dir = dirs[0]
-            let fileList = try! FileManager.default.contentsOfDirectory(atPath: dir + "/\(logFileRootDirectoryName)")
+            let fileList = try! FileManager.default.contentsOfDirectory(atPath: dir + "/\(Constants.logFileRootDirectoryName)")
             
             for list in fileList
             {
-                if list == ".DS_Store" || list == logFileNewFolderName
+                if list == ".DS_Store" || list == Constants.logFileNewFolderName
                 {
                     continue
                 }
@@ -798,7 +803,7 @@ import SSZipArchive
         let fileManager = FileManager.default
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
-        if let pathComponent = url.appendingPathComponent("\(logFileRootDirectoryName)" + "/" + fileName)
+        if let pathComponent = url.appendingPathComponent("\(Constants.logFileRootDirectoryName)" + "/" + fileName)
         {
             do {
                 try fileManager.removeItem(at: pathComponent)
@@ -840,10 +845,10 @@ import SSZipArchive
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
         
-        if let pathComponent = url.appendingPathComponent(logFileRootDirectoryName)
+        if let pathComponent = url.appendingPathComponent(Constants.logFileRootDirectoryName)
         {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = logFileDateFormat
+            dateFormatter.dateFormat = Constants.logFileDateFormat
             
             let filePath = pathComponent.path
             PATH = filePath
