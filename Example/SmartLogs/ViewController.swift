@@ -8,6 +8,7 @@
 
 import UIKit
 import SmartLogs
+import MessageUI
 
 class ViewController: UIViewController {
     
@@ -104,13 +105,11 @@ class ViewController: UIViewController {
     
     @IBAction func sendLOgBtn(_ sender : UIButton)
     {
-        //        SLog.shared.summaryLog(text: "summary log here")
+        // SLog.shared.summaryLog(text: "summary log here")
         SLog.shared.detailLog(text: "detail log here", writeIntoFile: true)
         
-        
-        let bundle = Bundle(for: AlertViewController.self)
-        let controllerView = AlertViewController(nibName: "AlertViewController", bundle: bundle)
-        self.present(controllerView, animated: true, completion: nil)
+        SLog.shared.hideReportDialogue(bool: true)
+        SLog.shared.sendReport(controller: self)
     }
 }
 

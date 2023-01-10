@@ -11,29 +11,39 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Features
 
- 1) create new log file Everyday with current date name.
- 2) compress zip and Make password on it (optional).
- 3) Delete old files depending on the no. of days provided to by developer
- 4) Display a alert which take textual input from user about the issue / bug they are facing
- 5) The theme of alert view can be customizable
- 6) The send-to email should be provided by developer
- 7) A JSON file should also get attached with following information:
+ 1) create new log file everyday with current date name.
+ 2) compress zip and make password on it (optional).
+ 3) Delete old files depending on the number of days provided to by developer
+ 4) Display an alert which take textual input from user about the issue / bug they are facing
+ 5) Hide the report alert view if you dont want the end user comment
+ 6) The theme of alert view can be customizable
+ 7) The send-to email should be provided by developer
+ 8) A JSON file should also get attached with following information:
         -> Device manufacturer
         -> Device model
         -> OS installed on device
         -> Currently running app version
         -> Free storage space available
 
-## Usage Swift
+## Swift
+## Initization 
 
+        // call initilization in the app delegate 
         // initilization sdk
+        
         SLog.shared.initilization()
         
+        
+## Write Logs to file 
+
         // Summary logs must write log into the files 
         SLog.shared.summaryLog(text: "Hello World!!")
         
         // Detail logs are optional to write in the file
         SLog.shared.detailLog(text: "detail log here", writeIntoFile: true)
+
+
+## Setup log file
         
         // Set zip archive Password
         SLog.shared.setPassword(password: "Password12345")
@@ -44,13 +54,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         // delete logs files forcefully
         SLog.shared.deleteOldLogs(forcefullyDelete: true)
         
-        // set Title
-        SLog.shared.setTitle(title: "Map App")
-        
-        // set main alert view background color
-        SLog.shared.setMainBackgroundColor(backgroundColor: .yellow)
-        
-        // Attachment Files
+        // Attachment Files     
         SLog.shared.addAttachment(fileName: "icon", url: filePath, mimeType: "image/png")
         
         // set email
@@ -58,6 +62,15 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         
         // set email Subject
         SLog.shared.setSubjectToEmail(sub: "BUG REPORT ")
+        
+
+## Report Alert (end user UI)
+        
+        // set Title
+        SLog.shared.setTitle(title: "Map App")
+        
+        // set main alert view background color
+        SLog.shared.setMainBackgroundColor(backgroundColor: .yellow)
         
         // set place holder for the text views
         SLog.shared.setPlaceHolder(text: "Enter Your Bug Detail")
@@ -91,13 +104,19 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         SLog.shared.setSendBtnImage(img: UIImage(named: "testImg")!)
         SLog.shared.hideSendBtnIcon(bool: true)
 
+## Hide Show Report View
+
+        // report alert view is true by default make the bool true 
+        // if you want to hide the report view and open the mail directly 
+        SLog.shared.hideReportDialogue(bool: false)
         
-        // Open Main View for Mailing Log Files on Button Action
-        let amazingBundle = Bundle(for: AlertViewController.self)
-        let secondView = AlertViewController(nibName: "AlertViewController", bundle: amazingBundle)
-        self.present(secondView, animated: true, completion: nil)
+## Send Report
+
+        // Send Report
+        SLog.shared.sendReport(controller: self)
         
-## Usage Objective C
+        
+## Objective C Usage
 
         // import the pod file in .m file
         @import SmartLogs;
@@ -107,13 +126,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
         // use the function of the pods
         [[SLog shared] summaryLogWithText:@"summary log"];
+        [[SLog shared] detailLogWithText:@"detail log"];
 
         // call the alert view Controller
-        NSBundle *myBundle = [NSBundle bundleForClass:[AlertViewController class]];
-        AlertViewController *VC = [[AlertViewController alloc] initWithNibName:@"AlertViewController" bundle:myBundle];
-        [self presentViewController:VC animated:YES completion:nil];
+        [[SLog shared] sendReportWithController: self];
         
-## Requirements
 
 ## Installation
 
@@ -136,7 +153,7 @@ The following log levels are supported:
 
 ## Author
 
-Hamza Mughal, zzeeshan@gmail.com
+Whizpool, zzeeshan@gmail.com
 
  ## Let's Log
 

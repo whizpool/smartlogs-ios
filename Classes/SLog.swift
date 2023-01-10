@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import SSZipArchive
-
+import MessageUI
 
 @objc public class SLog : NSObject {
     
@@ -36,6 +36,9 @@ import SSZipArchive
     var lineColor : UIColor?
     var knobColor : UIColor?
     
+    // present report view
+    var hideReportBugView = false
+    
     // send button Text, color, font and font size
     var bSendBtnIconHidden = false
     var sendButtonBackgroundColor : UIColor?
@@ -55,17 +58,6 @@ import SSZipArchive
     
     // Days after log files deleted
     private var filesDeletionAfterDays:Int = Constants.defaultDaysForFileDeletion
-    
-    // Main Directory Folder name
-//    private var logFileRootDirectoryName:String = Constants.logFileRootDirectoryName
-    
-    // Zip Folder name
-//    var logFileNewFolderName:String = Constants.logFileNewFolderName
-    
-    // date Formate
-//    private var logFileDateFormat:String = Constants.logFileDateFormat
-    
-    
     
     // app version name string
     private var versionName:String = ""
@@ -87,7 +79,6 @@ import SSZipArchive
     
     // close button icon
     var sendBtnImage : UIImage?
-    
     
     struct AttachmentDetail {
         var fileName = ""
@@ -284,6 +275,14 @@ import SSZipArchive
         self.bSendBtnIconHidden = bool
     }
     
+    //****************************************************
+    
+    // setting text field Font
+    @objc public func hideReportDialogue(bool: Bool)
+    {
+        self.hideReportBugView = bool
+    }
+    
     // ****************************************************
     
     // setting background color for alert view
@@ -411,6 +410,23 @@ import SSZipArchive
         addAttachmentArray.append(attachmentItem)
     }
     
+    //****************************************************
+    
+    // Send email to developer
+    @objc public func sendReport(controller : UIViewController)
+    {
+        if hideReportBugView
+        {
+            emailComposer(controller: controller)
+        }
+        else
+        {
+            let bundle = Bundle(for: AlertViewController.self)
+            let controllerView = AlertViewController(nibName: "AlertViewController", bundle: bundle)
+            controller.present(controllerView, animated: true, completion: nil)
+        }
+    }
+    
     // MARK: - ********************* Private Functions *********************// -
     
     // Function For Writing Logs files locally and store them on the phone
@@ -511,6 +527,110 @@ import SSZipArchive
     }
     
     // MARK: - ********************* Functions *********************// -
+    
+    func emailComposer(controller : UIViewController)
+    {
+        let recieverEmail = SLog.shared.sendToEmail
+        guard MFMailComposeViewController.canSendMail()  else {
+            //
+            CommonMethods.showAlertWith(csTitle: Constants.alertTitle, csMessage: Constants.emailNotConfigureText, viewController: controller)
+            return
+        }
+        
+        let composer = MFMailComposeViewController()
+        composer.mailComposeDelegate = self
+        composer.setToRecipients([recieverEmail])
+        composer.setSubject(SLog.shared.emailSubject)
+        composer.setMessageBody("", isHTML: true)
+        
+        let filePath = SLog.shared.getRootDirPath()
+        let url = URL(string: filePath)
+        let zipPath = url!.appendingPathComponent("/\(Constants.logFileNewFolderName)")
+        
+        do {
+            CommonMethods.createPasswordProtectedZipLogFile(at: zipPath.path, composer: composer, controller: controller)
+            CommonMethods.checkAttachedFiles(composer: composer)
+            controller.present(composer, animated: true)
+        }
+    }
+    
+//    //****************************************************
+//
+//    func checkAttachedFiles(composer viewController: MFMailComposeViewController)
+//    {
+//        for file in SLog.shared.addAttachmentArray
+//        {
+//            if let fileData = NSData(contentsOfFile: file.url)
+//            {
+//                viewController.addAttachmentData(fileData as Data, mimeType: file.mimeType, fileName: file.fileName)
+//            }
+//        }
+//    }
+//
+//    //****************************************************
+//
+//    /// func will combine the all the log files which are being created every day into one final log file
+//    /// when we report the bug of wants the log fiels it will combine all the log files
+//    /// then zip it and post it at the given email address
+//    /// Function create zip and create password on it
+//    func createPasswordProtectedZipLogFile(at logfilePath: String, composer viewController: MFMailComposeViewController, controller : UIViewController)
+//    {
+//        var isZipped:Bool = false
+//        // calling combine all files into one file
+//        SLog.shared.combineLogFiles { filePath, combineFileErr in
+//            //
+//            if combineFileErr != nil
+//            {
+//                CommonMethods.showAlertWithHandler(viewContoller: controller, title: Constants.alertTitle, message: combineFileErr!.localizedDescription, leftButtonText: Constants.ok, rightButtonText: "") {
+//                    return
+//                } rightButtonActionHandler: {
+//                    //
+//                }
+//            }
+//            else
+//            {
+//                SLog.shared.makeJsonFile { jsonfilePath, jsonErr in
+//                    //
+//                    let contentsPath = logfilePath
+//
+//                    if jsonErr != nil
+//                    {
+//                        CommonMethods.showAlertWithHandler(viewContoller: controller, title: Constants.alertTitle, message: jsonErr!.localizedDescription, leftButtonText: Constants.ok, rightButtonText: "") {
+//                            return
+//                        } rightButtonActionHandler: {
+//                            //
+//                        }
+//                    }
+//                    else
+//                    {
+//                        // create a json file and call a function of makeJsonFile
+//                        if FileManager.default.fileExists(atPath: contentsPath)
+//                        {
+//                            let createZipPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(SLog.shared.finalLogFileNameAfterCombine).zip").path
+//
+//                            if SLog.shared.password.isEmpty {
+//                                isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath)
+//                            }
+//                            else{
+//                                isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath, keepParentDirectory: true, withPassword: SLog.shared.password)
+//                            }
+//
+//                            if isZipped {
+//                                var data = NSData(contentsOfFile: createZipPath) as Data?
+//                                if let data = data
+//                                {
+//                                    viewController.addAttachmentData(data, mimeType: "application/zip", fileName: ("\(SLog.shared.finalLogFileNameAfterCombine).zip"))
+//                                }
+//                                data = nil
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+    
+    //****************************************************
     
     /// func will combine the all the log files which are being created every day into one final log file
     /// when we report the bug of wants the log fiels it will combine all the log files
@@ -1014,5 +1134,32 @@ public struct Units {
         default:
             return "\(bytes) bytes"
         }
+    }
+}
+
+// ********************* Extensions *********************//
+
+// Extension for mail composing delegate
+extension SLog:MFMailComposeViewControllerDelegate
+{
+    public func mailComposeController (_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+        if let _ = error
+        {
+            controller.dismiss(animated: true, completion: nil)
+        }
+        switch result {
+        case .cancelled:
+            print("cancel")
+        case .saved:
+            print("saved")
+        case .sent:
+            print("sent")
+        case .failed:
+            print("failed")
+        default:
+            print("default")
+        }
+        controller.dismiss(animated: true, completion: nil)
     }
 }

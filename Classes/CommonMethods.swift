@@ -5,7 +5,10 @@
 //  Created by Himy Mughal on 15/12/2022.
 //
 
+import UIKit
 import Foundation
+import MessageUI
+import SSZipArchive
 
 class CommonMethods
 {
@@ -58,5 +61,81 @@ class CommonMethods
     // Screen height.
     static func screenHeight () -> CGFloat{
         return UIScreen.main.bounds.height
+    }
+    
+    // ****************************************
+    
+    static func checkAttachedFiles(composer viewController: MFMailComposeViewController)
+    {
+        for file in SLog.shared.addAttachmentArray
+        {
+            if let fileData = NSData(contentsOfFile: file.url)
+            {
+                viewController.addAttachmentData(fileData as Data, mimeType: file.mimeType, fileName: file.fileName)
+            }
+        }
+    }
+    
+    //****************************************************
+    
+    /// func will combine the all the log files which are being created every day into one final log file
+    /// when we report the bug of wants the log fiels it will combine all the log files
+    /// then zip it and post it at the given email address
+    /// Function create zip and create password on it
+    static func createPasswordProtectedZipLogFile(at logfilePath: String, composer viewController: MFMailComposeViewController, controller : UIViewController)
+    {
+        var isZipped:Bool = false
+        // calling combine all files into one file
+        SLog.shared.combineLogFiles { filePath, combineFileErr in
+            //
+            if combineFileErr != nil
+            {
+                CommonMethods.showAlertWithHandler(viewContoller: controller, title: Constants.alertTitle, message: combineFileErr!.localizedDescription, leftButtonText: Constants.ok, rightButtonText: "") {
+                    return
+                } rightButtonActionHandler: {
+                    //
+                }
+            }
+            else
+            {
+                SLog.shared.makeJsonFile { jsonfilePath, jsonErr in
+                    //
+                    let contentsPath = logfilePath
+                    
+                    if jsonErr != nil
+                    {
+                        CommonMethods.showAlertWithHandler(viewContoller: controller, title: Constants.alertTitle, message: jsonErr!.localizedDescription, leftButtonText: Constants.ok, rightButtonText: "") {
+                            return
+                        } rightButtonActionHandler: {
+                            //
+                        }
+                    }
+                    else
+                    {
+                        // create a json file and call a function of makeJsonFile
+                        if FileManager.default.fileExists(atPath: contentsPath)
+                        {
+                            let createZipPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(SLog.shared.finalLogFileNameAfterCombine).zip").path
+                            
+                            if SLog.shared.password.isEmpty {
+                                isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath)
+                            }
+                            else{
+                                isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath, keepParentDirectory: true, withPassword: SLog.shared.password)
+                            }
+                            
+                            if isZipped {
+                                var data = NSData(contentsOfFile: createZipPath) as Data?
+                                if let data = data
+                                {
+                                    viewController.addAttachmentData(data, mimeType: "application/zip", fileName: ("\(SLog.shared.finalLogFileNameAfterCombine).zip"))
+                                }
+                                data = nil
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

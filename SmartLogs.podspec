@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SmartLogs'
-  s.version          = '0.5.0'
+  s.version          = '0.6.0'
   s.summary          = 'SmartLogs will create a logfile and manage record of logfile'
 
 # This description is used to generate tags and improve search results.
