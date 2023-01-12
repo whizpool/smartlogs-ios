@@ -108,7 +108,7 @@ class ViewController: UIViewController {
         // SLog.shared.summaryLog(text: "summary log here")
         SLog.shared.detailLog(text: "detail log here", writeIntoFile: true)
         
-        SLog.shared.hideReportDialogue(bool: true)
+        SLog.shared.hideReportDialogue(bool: false)
         SLog.shared.sendReport(controller: self)
     }
 }

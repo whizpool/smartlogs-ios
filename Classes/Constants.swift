@@ -29,7 +29,7 @@ public class Constants
     
     static let ok = "Ok"
     static let alertTitle = "Alert"
-    static let bugDetailMissingText = "Bug Detail is Missing"
+    static let bugDetailMissingText = "Atleast 10 characters required for bug report"
     static let emailNotConfigureText = "Email not configure"
     
     static let knobRadius = 3.0
