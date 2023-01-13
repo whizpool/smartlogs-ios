@@ -1,5 +1,5 @@
 //
-//  AlertViewController.swift
+//  SLAlertViewController.swift
 //  SmartLogs
 //
 //  Created by Himy Mughal on 13/12/2022.
@@ -10,7 +10,7 @@ import SSZipArchive
 import Foundation
 import MessageUI
 
-class AlertViewController: UIViewController {
+class SLAlertViewController: UIViewController {
     
     
     // ********************* Outlets *********************//
@@ -34,7 +34,7 @@ class AlertViewController: UIViewController {
     @IBOutlet weak var knobView: UIView!
     
     // Bugs TextView Outlet
-    @IBOutlet weak var bugsTextview: GrowingTextView!
+    @IBOutlet weak var bugsTextview: SLGrowingTextView!
     
     var bDarkMode = false
     
@@ -58,14 +58,14 @@ class AlertViewController: UIViewController {
         if bugsTextview.text.isEmpty || bugsTextview.text == SLog.shared.textViewPlaceHolder || bugsTextview.text.count <= 10
         {
             // show alert when textview is empty
-            CommonMethods.showAlertWith(csTitle: Constants.alertTitle, csMessage: Constants.bugDetailMissingText, viewController: self)
+            SLCommonMethods.showAlertWith(csTitle: SLConstants.alertTitle, csMessage: SLConstants.bugDetailMissingText, viewController: self)
         }
         else
         {
             let recieverEmail = SLog.shared.sendToEmail
             guard MFMailComposeViewController.canSendMail()  else {
                 //
-                CommonMethods.showAlertWith(csTitle: Constants.alertTitle, csMessage: Constants.emailNotConfigureText, viewController: self)
+                SLCommonMethods.showAlertWith(csTitle: SLConstants.alertTitle, csMessage: SLConstants.emailNotConfigureText, viewController: self)
                 return
             }
             
@@ -77,11 +77,11 @@ class AlertViewController: UIViewController {
             
             let filePath = SLog.shared.getRootDirPath()
             let url = URL(string: filePath)
-            let zipPath = url!.appendingPathComponent("/\(Constants.logFileNewFolderName)")
+            let zipPath = url!.appendingPathComponent("/\(SLConstants.logFileNewFolderName)")
             
             do {
-                CommonMethods.createPasswordProtectedZipLogFile(at: zipPath.path, composer: composer, controller: self)
-                CommonMethods.checkAttachedFiles(composer: composer)
+                SLCommonMethods.createPasswordProtectedZipLogFile(at: zipPath.path, composer: composer, controller: self)
+                SLCommonMethods.checkAttachedFiles(composer: composer)
                 
 //                self.createPasswordProtectedZipLogFile(at: zipPath.path, composer: composer)
 //                self.checkAttachedFiles(composer: composer)
@@ -211,7 +211,7 @@ class AlertViewController: UIViewController {
 // ********************* Extensions *********************//
 
 // Extension for mail composing delegate
-extension AlertViewController:MFMailComposeViewControllerDelegate
+extension SLAlertViewController:MFMailComposeViewControllerDelegate
 {
     public func mailComposeController (_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         
@@ -237,7 +237,7 @@ extension AlertViewController:MFMailComposeViewControllerDelegate
 
 
 // Extension for Textview Editing or Delegate
-extension AlertViewController:UITextViewDelegate {
+extension SLAlertViewController:UITextViewDelegate {
     
     // setting textview, buttons colors and set app name to tittle label
     func textviewEditing() {
@@ -245,7 +245,7 @@ extension AlertViewController:UITextViewDelegate {
         DispatchQueue.main.async {
             //
             self.bugsTextview.delegate = self
-            self.bugsTextview.layer.cornerRadius = Constants.defaultRadius
+            self.bugsTextview.layer.cornerRadius = SLConstants.defaultRadius
 //            self.bugsTextview.maxHeight = (UIScreen.main.bounds.size.height / 2) - 140
 //            self.bugsTextview.minHeight = (UIScreen.main.bounds.size.height / 2) - 140
             self.bugsTextview.trimWhiteSpaceWhenEndEditing = true
@@ -261,14 +261,14 @@ extension AlertViewController:UITextViewDelegate {
             
             
             // main view corner radius
-            self.textFieldView.layer.cornerRadius = Constants.defaultRadius
+            self.textFieldView.layer.cornerRadius = SLConstants.defaultRadius
             
             if SLog.shared.textViewBackgroundColor != nil
             {
                 self.textFieldView.backgroundColor = SLog.shared.textViewBackgroundColor
             }
             
-            self.mainAlertView.layer.cornerRadius = Constants.defaultRadius
+            self.mainAlertView.layer.cornerRadius = SLConstants.defaultRadius
 //            self.mainAlertView.backgroundColor = SLog.shared.alertBackgroundColor
 //            self.titile_lbl.textColor = SLog.shared.textColor
             
@@ -288,7 +288,7 @@ extension AlertViewController:UITextViewDelegate {
             }
             
             
-            self.knobView.layer.cornerRadius = Constants.knobRadius
+            self.knobView.layer.cornerRadius = SLConstants.knobRadius
             if SLog.shared.lineColor != nil
             {
                 self.knobView.backgroundColor = SLog.shared.knobColor
@@ -301,7 +301,7 @@ extension AlertViewController:UITextViewDelegate {
             
             
             // Send Button corner radius, text and text color
-            self.sendBtnView.layer.cornerRadius = Constants.defaultRadius
+            self.sendBtnView.layer.cornerRadius = SLConstants.defaultRadius
             
             if SLog.shared.sendButtonBackgroundColor != nil
             {
@@ -327,7 +327,7 @@ extension AlertViewController:UITextViewDelegate {
             // set Send button Lable
             if SLog.shared.sendBtnText.isEmpty
             {
-                self.sendBtnLbl.text = Constants.defaultSendBtnText
+                self.sendBtnLbl.text = SLConstants.defaultSendBtnText
             }
             else
             {

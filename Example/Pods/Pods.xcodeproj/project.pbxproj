@@ -10,7 +10,7 @@
 		02AD91C5250ED7D91B06BEAC91A5E507 /* mz_os.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F787961E0994AA5934713C5C4D8A51F /* mz_os.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		059332136CAAB8014F2099D6AC105162 /* mz_strm_split.h in Headers */ = {isa = PBXBuildFile; fileRef = 640494BB684109D53C602648DC944F02 /* mz_strm_split.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0AE196DA421B10CE8EADF7027554CD5B /* mz_strm_split.c in Sources */ = {isa = PBXBuildFile; fileRef = 23ABD02F2CA5CB54AB141069B387FFDE /* mz_strm_split.c */; };
-		0BC2857D4FCEA33DD165E655F0B7B9B9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3279C7DD20707F5C4BDCF41814248B3F /* Constants.swift */; };
+		0BC2857D4FCEA33DD165E655F0B7B9B9 /* SLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3279C7DD20707F5C4BDCF41814248B3F /* SLConstants.swift */; };
 		0C524450F5579F35CF05958F488670A4 /* mz_zip_rw.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDEBCA568A303501173CF9553E1851 /* mz_zip_rw.c */; };
 		0D87C4665F8AD43731710EBBD8CCFCF8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */; };
 		0EF3774AC45C05C24674C6F390E4B571 /* mz_strm_os.h in Headers */ = {isa = PBXBuildFile; fileRef = 473928B20B63CD5CABF18DB0785419CB /* mz_strm_os.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -22,7 +22,7 @@
 		255CB9700C81C0AACEF38F42E802272B /* mz_strm_wzaes.c in Sources */ = {isa = PBXBuildFile; fileRef = C9E58B001EB497987FD1DFF3DE32CC3F /* mz_strm_wzaes.c */; };
 		25C768DB9A9DE63FB50E418BFE580708 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
 		30D23C352773401AE1389972956969C4 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3F0D6223C1DCC995A43E311F3A801C /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3558FFF72552CC843FC021BC6A62A20D /* GrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B64B714DA3222E400AF8880201C7B90 /* GrowingTextView.swift */; };
+		3558FFF72552CC843FC021BC6A62A20D /* SLGrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B64B714DA3222E400AF8880201C7B90 /* SLGrowingTextView.swift */; };
 		38B9E9F82A988CAA21601B733C1E92B7 /* mz_strm_pkcrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 05BA496A8A0DBBF665E12DF6C1C7F5F2 /* mz_strm_pkcrypt.c */; };
 		395D878D435F050716941B65B94388A5 /* SmartLogs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A41D6E60842A9D8E0561F022B5145A /* SmartLogs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		480517B7F31727DC0BB499F71E91F9B9 /* asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF51C6C88963AF5D0389A7DF4086102 /* asset.xcassets */; };
@@ -48,17 +48,17 @@
 		BEF4CC97D88ADCD73B93AA179F7E1802 /* mz_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA13501E27029FB75FE5945E2B98301 /* mz_compat.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C30DB8F46569FBD4D1C7D7DA0E4B67EC /* mz_zip_rw.h in Headers */ = {isa = PBXBuildFile; fileRef = 57E95BB8727FBE207C72DB27C18DB28A /* mz_zip_rw.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C3D352F8B703F950FD32936D16968D12 /* mz_crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = CBA7C727700C05AE10A909260EBFDF1F /* mz_crypt.c */; };
-		C986A0B8BE479B2752B4E1A5B961371C /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79E0B4093B4A2EF3C6283E0EA79297 /* CommonMethods.swift */; };
+		C986A0B8BE479B2752B4E1A5B961371C /* SLCommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79E0B4093B4A2EF3C6283E0EA79297 /* SLCommonMethods.swift */; };
 		C9B5C89A8401DE5B4C8101FF25867A5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
 		D3340EC887ADD4CCC83BF67712BC883A /* mz_strm_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 9423954ED25DDB008D2B61FC73D26B58 /* mz_strm_buf.c */; };
 		D7CE8E38408882FC7A8714F02565852C /* Pods-SmartLogs_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F3E27A5F13F050A9C663BAE5EAA7A9 /* Pods-SmartLogs_Example-dummy.m */; };
 		D9EED6FDF393033C942E5B2149E99B2F /* mz_os_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = 844712351A5F4BE39D77B65957E25C6F /* mz_os_posix.c */; };
-		E1B9C0874A212E97AF3F603B056F58D0 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D174CDA0A073FDD8FB6907CC407444 /* AlertViewController.xib */; };
+		E1B9C0874A212E97AF3F603B056F58D0 /* SLAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D174CDA0A073FDD8FB6907CC407444 /* SLAlertViewController.xib */; };
 		EE424ECE443C88A654B2CC271E9F4874 /* mz_strm_wzaes.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E3D0066B7B182ABB8273F4D905110E3 /* mz_strm_wzaes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EF9C00E340B33BA67D9CEF5A2262D15E /* mz_strm_zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 246EE1920ED99537A3432AC5286A0221 /* mz_strm_zlib.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EFE936E5DBC6AEE0B47D92500218702C /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = F9A27455BD782250AC63D8A94365E34D /* ZipArchive.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F195D8428D6B04E8C685EDD580E1D0A3 /* Pods-SmartLogs_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1841ECA9D5DE60E15480E083C61DF306 /* Pods-SmartLogs_Tests-dummy.m */; };
-		F86F7688E36416E2FA1A64A16CE8654C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77DB391FAF51FBE01CA19A8F58E93E /* AlertViewController.swift */; };
+		F86F7688E36416E2FA1A64A16CE8654C /* SLAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77DB391FAF51FBE01CA19A8F58E93E /* SLAlertViewController.swift */; };
 		FE8BF7C7018EF47E97426B7D135691A3 /* mz_strm_os_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = C29F02B018B0DC44C2AC05DFCFFA3EDE /* mz_strm_os_posix.c */; };
 /* End PBXBuildFile section */
 
@@ -103,11 +103,11 @@
 		1841ECA9D5DE60E15480E083C61DF306 /* Pods-SmartLogs_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartLogs_Tests-dummy.m"; sourceTree = "<group>"; };
 		23ABD02F2CA5CB54AB141069B387FFDE /* mz_strm_split.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_split.c; path = SSZipArchive/minizip/mz_strm_split.c; sourceTree = "<group>"; };
 		246EE1920ED99537A3432AC5286A0221 /* mz_strm_zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_zlib.h; path = SSZipArchive/minizip/mz_strm_zlib.h; sourceTree = "<group>"; };
-		27D174CDA0A073FDD8FB6907CC407444 /* AlertViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = AlertViewController.xib; path = Classes/AlertViewController.xib; sourceTree = "<group>"; };
+		27D174CDA0A073FDD8FB6907CC407444 /* SLAlertViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SLAlertViewController.xib; path = Classes/SLAlertViewController.xib; sourceTree = "<group>"; };
 		2C01C7BC48F9C059F36BE9382A4F195D /* Pods-SmartLogs_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartLogs_Example-umbrella.h"; sourceTree = "<group>"; };
 		2E3D0066B7B182ABB8273F4D905110E3 /* mz_strm_wzaes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_wzaes.h; path = SSZipArchive/minizip/mz_strm_wzaes.h; sourceTree = "<group>"; };
 		318F6701EBA9A8BC9B37EE09402F2D98 /* SLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLog.swift; path = Classes/SLog.swift; sourceTree = "<group>"; };
-		3279C7DD20707F5C4BDCF41814248B3F /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Classes/Constants.swift; sourceTree = "<group>"; };
+		3279C7DD20707F5C4BDCF41814248B3F /* SLConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLConstants.swift; path = Classes/SLConstants.swift; sourceTree = "<group>"; };
 		3A72147992643BBE15024E5BF9E86D1F /* mz_strm_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_mem.c; path = SSZipArchive/minizip/mz_strm_mem.c; sourceTree = "<group>"; };
 		3D3F0D6223C1DCC995A43E311F3A801C /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
 		3E3BF4BF2521FA5808F989514C7EC9F6 /* SSZipArchive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.debug.xcconfig; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		9A808F414FD0C6F721392FBD2C8144FA /* SmartLogs-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SmartLogs-Info.plist"; sourceTree = "<group>"; };
 		9ABFB26506D2B985E96418482B8EB907 /* Pods-SmartLogs_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartLogs_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9AD4A6EDDBE062F8B67609F7A6C691C6 /* Pods-SmartLogs_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartLogs_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9B64B714DA3222E400AF8880201C7B90 /* GrowingTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrowingTextView.swift; path = Classes/GrowingTextView.swift; sourceTree = "<group>"; };
+		9B64B714DA3222E400AF8880201C7B90 /* SLGrowingTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLGrowingTextView.swift; path = Classes/SLGrowingTextView.swift; sourceTree = "<group>"; };
 		9D41D56C0ABF7427177914378110A66A /* SmartLogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartLogs.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F32A0A290EB0BA505AF1FB4F1F3E04A /* SmartLogs.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SmartLogs.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -167,14 +167,14 @@
 		CBA7C727700C05AE10A909260EBFDF1F /* mz_crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_crypt.c; path = SSZipArchive/minizip/mz_crypt.c; sourceTree = "<group>"; };
 		CE161202B7E79569F856E5E0E3269AD6 /* mz_strm_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_mem.h; path = SSZipArchive/minizip/mz_strm_mem.h; sourceTree = "<group>"; };
 		D2F48715569A09C217F3A798C152E1F5 /* mz_strm_zlib.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_zlib.c; path = SSZipArchive/minizip/mz_strm_zlib.c; sourceTree = "<group>"; };
-		EC79E0B4093B4A2EF3C6283E0EA79297 /* CommonMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommonMethods.swift; path = Classes/CommonMethods.swift; sourceTree = "<group>"; };
+		EC79E0B4093B4A2EF3C6283E0EA79297 /* SLCommonMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLCommonMethods.swift; path = Classes/SLCommonMethods.swift; sourceTree = "<group>"; };
 		EF943F9DE9BA8E515BF65736B5B9F444 /* Pods-SmartLogs_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SmartLogs_Tests"; path = Pods_SmartLogs_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F695523190812C78E0545050C9707A60 /* SmartLogs */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SmartLogs; path = SmartLogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78F73AC1E27DF387460E6C9D3BFF7BD /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
 		F86615AF86FD3D110F4C387667DF2EAA /* mz_crypt_apple.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_crypt_apple.c; path = SSZipArchive/minizip/mz_crypt_apple.c; sourceTree = "<group>"; };
 		F9A27455BD782250AC63D8A94365E34D /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/include/ZipArchive.h; sourceTree = "<group>"; };
 		FA3B1C52991C7B6184D813127BAFF166 /* Pods-SmartLogs_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmartLogs_Example-frameworks.sh"; sourceTree = "<group>"; };
-		FA77DB391FAF51FBE01CA19A8F58E93E /* AlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertViewController.swift; path = Classes/AlertViewController.swift; sourceTree = "<group>"; };
+		FA77DB391FAF51FBE01CA19A8F58E93E /* SLAlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLAlertViewController.swift; path = Classes/SLAlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,11 +298,11 @@
 			isa = PBXGroup;
 			children = (
 				318F6701EBA9A8BC9B37EE09402F2D98 /* SLog.swift */,
-				EC79E0B4093B4A2EF3C6283E0EA79297 /* CommonMethods.swift */,
-				3279C7DD20707F5C4BDCF41814248B3F /* Constants.swift */,
-				9B64B714DA3222E400AF8880201C7B90 /* GrowingTextView.swift */,
-				FA77DB391FAF51FBE01CA19A8F58E93E /* AlertViewController.swift */,
-				27D174CDA0A073FDD8FB6907CC407444 /* AlertViewController.xib */,
+				EC79E0B4093B4A2EF3C6283E0EA79297 /* SLCommonMethods.swift */,
+				3279C7DD20707F5C4BDCF41814248B3F /* SLConstants.swift */,
+				9B64B714DA3222E400AF8880201C7B90 /* SLGrowingTextView.swift */,
+				FA77DB391FAF51FBE01CA19A8F58E93E /* SLAlertViewController.swift */,
+				27D174CDA0A073FDD8FB6907CC407444 /* SLAlertViewController.xib */,
 				5AF51C6C88963AF5D0389A7DF4086102 /* asset.xcassets */,
 				1E1D93E5D9FB1B32085D96894677C5E1 /* Pod */,
 				A51D45B142D96F238E070689DE67E31D /* Support Files */,
@@ -597,7 +597,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1B9C0874A212E97AF3F603B056F58D0 /* AlertViewController.xib in Resources */,
+				E1B9C0874A212E97AF3F603B056F58D0 /* SLAlertViewController.xib in Resources */,
 				480517B7F31727DC0BB499F71E91F9B9 /* asset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,10 +649,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F86F7688E36416E2FA1A64A16CE8654C /* AlertViewController.swift in Sources */,
-				C986A0B8BE479B2752B4E1A5B961371C /* CommonMethods.swift in Sources */,
-				0BC2857D4FCEA33DD165E655F0B7B9B9 /* Constants.swift in Sources */,
-				3558FFF72552CC843FC021BC6A62A20D /* GrowingTextView.swift in Sources */,
+				F86F7688E36416E2FA1A64A16CE8654C /* SLAlertViewController.swift in Sources */,
+				C986A0B8BE479B2752B4E1A5B961371C /* SLCommonMethods.swift in Sources */,
+				0BC2857D4FCEA33DD165E655F0B7B9B9 /* SLConstants.swift in Sources */,
+				3558FFF72552CC843FC021BC6A62A20D /* SLGrowingTextView.swift in Sources */,
 				AB4D55B3DBC14513C1DA5B3D93D7946D /* SLog.swift in Sources */,
 				24D6D2A32D82582F6823B2A35FEDCAFF /* SmartLogs-dummy.m in Sources */,
 			);

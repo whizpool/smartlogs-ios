@@ -1,5 +1,5 @@
 //
-//  Constants.swift
+//  SLConstants.swift
 //  SmartLogs
 //
 //  Created by Himy Mughal on 13/12/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Constants
+public class SLConstants
 {
     static let defaultFontName = "Helvetica Neue Medium"
     static let defaultTitle = "Report a bug"

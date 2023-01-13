@@ -27,10 +27,10 @@ import MessageUI
     var alertBackgroundColor : UIColor?
     
     // Title Text, color, font and font size
-    var titleText      : String = Constants.defaultTitle
+    var titleText      : String = SLConstants.defaultTitle
     var titleTextColor : UIColor?
-    var titleFont      = Constants.defaultFontName
-    var titleFontSize  = Constants.defaultSendBtnFontSize
+    var titleFont      = SLConstants.defaultFontName
+    var titleFontSize  = SLConstants.defaultSendBtnFontSize
     
     // line and knob color
     var lineColor : UIColor?
@@ -42,22 +42,22 @@ import MessageUI
     // send button Text, color, font and font size
     var bSendBtnIconHidden = false
     var sendButtonBackgroundColor : UIColor?
-    var sendBtnText      : String = Constants.defaultSendBtnText
+    var sendBtnText      : String = SLConstants.defaultSendBtnText
     var SendBtntextColor = UIColor.white
-    var sendBtnFont      = Constants.defaultFontName
-    var sendBtnFontSize  = Constants.defaultSendBtnFontSize
+    var sendBtnFont      = SLConstants.defaultFontName
+    var sendBtnFontSize  = SLConstants.defaultSendBtnFontSize
     
     var textViewBackgroundColor : UIColor?
     var textViewTextColor : UIColor?
-    var textViewFont      = Constants.defaultFontName
-    var textViewFontSize  = Constants.defaultTextViewFontSize
+    var textViewFont      = SLConstants.defaultFontName
+    var textViewFontSize  = SLConstants.defaultTextViewFontSize
     
     // default cg color
     var defaultColorWhite = #colorLiteral(red: 0.8509805202, green: 0.8509805799, blue: 0.8509805202, alpha: 1)
     var defaultColorBlack = #colorLiteral(red: 0.1098999158, green: 0.1096580997, blue: 0.1184011772, alpha: 1)
     
     // Days after log files deleted
-    private var filesDeletionAfterDays:Int = Constants.defaultDaysForFileDeletion
+    private var filesDeletionAfterDays:Int = SLConstants.defaultDaysForFileDeletion
     
     // app version name string
     private var versionName:String = ""
@@ -69,13 +69,13 @@ import MessageUI
     var sendToEmail: String = ""
     
     // Email Subject for mail composer
-    var emailSubject = Constants.emailSubject
+    var emailSubject = SLConstants.emailSubject
     
     // after combine log file name
-    var finalLogFileNameAfterCombine = Constants.finalLogFileNameAfterCombine
+    var finalLogFileNameAfterCombine = SLConstants.finalLogFileNameAfterCombine
     
     // Textview Placeholder
-    var textViewPlaceHolder = Constants.textViewPlaceHolder
+    var textViewPlaceHolder = SLConstants.textViewPlaceHolder
     
     // close button icon
     var sendBtnImage : UIImage?
@@ -100,18 +100,18 @@ import MessageUI
         let url = NSURL(fileURLWithPath: path)
         print(path)
         
-        if let pathComponent = url.appendingPathComponent(Constants.logFileRootDirectoryName)
+        if let pathComponent = url.appendingPathComponent(SLConstants.logFileRootDirectoryName)
         {
             _ = Date()
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = Constants.logFileDateFormat
+            dateFormatter.dateFormat = SLConstants.logFileDateFormat
             
             let filePath = pathComponent.path
             let fileManager = FileManager.default
             if !fileManager.fileExists(atPath: filePath)
             {
                 let DocumentDirectory = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
-                let DirPath = DocumentDirectory.appendingPathComponent(Constants.logFileRootDirectoryName)
+                let DirPath = DocumentDirectory.appendingPathComponent(SLConstants.logFileRootDirectoryName)
                 do
                 {
                     try FileManager.default.createDirectory(atPath: DirPath!.path, withIntermediateDirectories: true, attributes: nil)
@@ -421,8 +421,8 @@ import MessageUI
         }
         else
         {
-            let bundle = Bundle(for: AlertViewController.self)
-            let controllerView = AlertViewController(nibName: "AlertViewController", bundle: bundle)
+            let bundle = Bundle(for: SLAlertViewController.self)
+            let controllerView = SLAlertViewController(nibName: "SLAlertViewController", bundle: bundle)
             controller.present(controllerView, animated: true, completion: nil)
         }
     }
@@ -437,11 +437,11 @@ import MessageUI
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
         
-        if let pathComponent = url.appendingPathComponent(Constants.logFileRootDirectoryName)
+        if let pathComponent = url.appendingPathComponent(SLConstants.logFileRootDirectoryName)
         {
             let date = Date()
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = Constants.logFileDateFormat
+            dateFormatter.dateFormat = SLConstants.logFileDateFormat
             let currentDate = dateFormatter.string(from: date)
             
             let LongDate = getCurrentDate()
@@ -509,7 +509,7 @@ import MessageUI
             {
                 print("Folder NOT AVAILABLE")
                 let DocumentDirectory = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
-                let DirPath = DocumentDirectory.appendingPathComponent(Constants.logFileRootDirectoryName)
+                let DirPath = DocumentDirectory.appendingPathComponent(SLConstants.logFileRootDirectoryName)
                 do
                 {
                     try FileManager.default.createDirectory(atPath: DirPath!.path, withIntermediateDirectories: true, attributes: nil)
@@ -533,7 +533,7 @@ import MessageUI
         let recieverEmail = SLog.shared.sendToEmail
         guard MFMailComposeViewController.canSendMail()  else {
             //
-            CommonMethods.showAlertWith(csTitle: Constants.alertTitle, csMessage: Constants.emailNotConfigureText, viewController: controller)
+            SLCommonMethods.showAlertWith(csTitle: SLConstants.alertTitle, csMessage: SLConstants.emailNotConfigureText, viewController: controller)
             return
         }
         
@@ -545,11 +545,11 @@ import MessageUI
         
         let filePath = SLog.shared.getRootDirPath()
         let url = URL(string: filePath)
-        let zipPath = url!.appendingPathComponent("/\(Constants.logFileNewFolderName)")
+        let zipPath = url!.appendingPathComponent("/\(SLConstants.logFileNewFolderName)")
         
         do {
-            CommonMethods.createPasswordProtectedZipLogFile(at: zipPath.path, composer: composer, controller: controller)
-            CommonMethods.checkAttachedFiles(composer: composer)
+            SLCommonMethods.createPasswordProtectedZipLogFile(at: zipPath.path, composer: composer, controller: controller)
+            SLCommonMethods.checkAttachedFiles(composer: composer)
             controller.present(composer, animated: true)
         }
     }
@@ -638,7 +638,7 @@ import MessageUI
     func combineLogFiles(completion: (String, Error?) -> ())
     {
         // Delete Zip Folder
-        _ = SLog.shared.deleteFile(fileName: Constants.logFileNewFolderName)
+        _ = SLog.shared.deleteFile(fileName: SLConstants.logFileNewFolderName)
 
         let fileManager = FileManager.default
         var files = [String]()
@@ -657,8 +657,8 @@ import MessageUI
             if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
             {
                 //prepare file url
-                let fileURL = dir.appendingPathComponent("\(Constants.logFileRootDirectoryName)/")
-                let DirPath = fileURL.appendingPathComponent(Constants.logFileNewFolderName)
+                let fileURL = dir.appendingPathComponent("\(SLConstants.logFileRootDirectoryName)/")
+                let DirPath = fileURL.appendingPathComponent(SLConstants.logFileNewFolderName)
 
                 do
                 {
@@ -761,7 +761,7 @@ import MessageUI
         myDict = ["appVersion":appVersion,"OSInstalled":OSInstalled,"deviceModel":deviceModel,"manufacture":manufacture,"freeSpace":freeSpace]
         
         do {
-            try saveJsonFileInDirectory(jsonObject: myDict, toFilename: Constants.deviceInfo, completion: { filePath, saveJsonErr in
+            try saveJsonFileInDirectory(jsonObject: myDict, toFilename: SLConstants.deviceInfo, completion: { filePath, saveJsonErr in
                 
                 if saveJsonErr != nil
                 {
@@ -791,8 +791,8 @@ import MessageUI
         
         if let url = urls.first
         {
-            var fileURL = url.appendingPathComponent("\(Constants.logFileRootDirectoryName)/")
-            let zipFolder = fileURL.appendingPathComponent("\(Constants.logFileNewFolderName)/")
+            var fileURL = url.appendingPathComponent("\(SLConstants.logFileRootDirectoryName)/")
+            let zipFolder = fileURL.appendingPathComponent("\(SLConstants.logFileNewFolderName)/")
             let zipFolderUrl = zipFolder.appendingPathComponent(filename)
             fileURL = zipFolderUrl.appendingPathExtension("json")
             let data = try JSONSerialization.data(withJSONObject: jsonObject, options: [.prettyPrinted])
@@ -894,11 +894,11 @@ import MessageUI
         if dirs != []
         {
             let dir = dirs[0]
-            let fileList = try! FileManager.default.contentsOfDirectory(atPath: dir + "/\(Constants.logFileRootDirectoryName)")
+            let fileList = try! FileManager.default.contentsOfDirectory(atPath: dir + "/\(SLConstants.logFileRootDirectoryName)")
             
             for list in fileList
             {
-                if list == ".DS_Store" || list == Constants.logFileNewFolderName
+                if list == ".DS_Store" || list == SLConstants.logFileNewFolderName
                 {
                     continue
                 }
@@ -923,7 +923,7 @@ import MessageUI
         let fileManager = FileManager.default
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
-        if let pathComponent = url.appendingPathComponent("\(Constants.logFileRootDirectoryName)" + "/" + fileName)
+        if let pathComponent = url.appendingPathComponent("\(SLConstants.logFileRootDirectoryName)" + "/" + fileName)
         {
             do {
                 try fileManager.removeItem(at: pathComponent)
@@ -965,10 +965,10 @@ import MessageUI
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
         
-        if let pathComponent = url.appendingPathComponent(Constants.logFileRootDirectoryName)
+        if let pathComponent = url.appendingPathComponent(SLConstants.logFileRootDirectoryName)
         {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = Constants.logFileDateFormat
+            dateFormatter.dateFormat = SLConstants.logFileDateFormat
             
             let filePath = pathComponent.path
             PATH = filePath

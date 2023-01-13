@@ -1,5 +1,5 @@
 //
-//  CommonMethods.swift
+//  SLCommonMethods.swift
 //  SmartLogs
 //
 //  Created by Himy Mughal on 15/12/2022.
@@ -10,12 +10,12 @@ import Foundation
 import MessageUI
 import SSZipArchive
 
-class CommonMethods
+class SLCommonMethods
 {
     static func showAlertWith(csTitle:String, csMessage:String, viewController:UIViewController)
     {
         let alertVC = UIAlertController(title: csTitle, message: csMessage, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: Constants.ok, style: .default, handler: { action in
+        alertVC.addAction(UIAlertAction(title: SLConstants.ok, style: .default, handler: { action in
             //
             
         }))
@@ -90,7 +90,7 @@ class CommonMethods
             //
             if combineFileErr != nil
             {
-                CommonMethods.showAlertWithHandler(viewContoller: controller, title: Constants.alertTitle, message: combineFileErr!.localizedDescription, leftButtonText: Constants.ok, rightButtonText: "") {
+                SLCommonMethods.showAlertWithHandler(viewContoller: controller, title: SLConstants.alertTitle, message: combineFileErr!.localizedDescription, leftButtonText: SLConstants.ok, rightButtonText: "") {
                     return
                 } rightButtonActionHandler: {
                     //
@@ -104,7 +104,7 @@ class CommonMethods
                     
                     if jsonErr != nil
                     {
-                        CommonMethods.showAlertWithHandler(viewContoller: controller, title: Constants.alertTitle, message: jsonErr!.localizedDescription, leftButtonText: Constants.ok, rightButtonText: "") {
+                        SLCommonMethods.showAlertWithHandler(viewContoller: controller, title: SLConstants.alertTitle, message: jsonErr!.localizedDescription, leftButtonText: SLConstants.ok, rightButtonText: "") {
                             return
                         } rightButtonActionHandler: {
                             //
