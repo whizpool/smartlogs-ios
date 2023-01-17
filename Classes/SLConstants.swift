@@ -23,7 +23,7 @@ public class SLConstants
     static let deviceInfo = "deviceInfo"
     
     
-    static let emailSubject = "Bug Report Sends To Developers"
+    static let emailSubject = "Bug Report"
     
     static let textViewPlaceHolder = "Write here about your bug detail"
     
@@ -34,5 +34,7 @@ public class SLConstants
     
     static let knobRadius = 3.0
     static let defaultRadius = 12.0
+    
+    static let dismissReportViewObserver = NSNotification.Name("dismissReportViewObserver")
     
 }

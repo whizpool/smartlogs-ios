@@ -133,6 +133,8 @@ import MessageUI
         
         // calling delete log file function
         _ = deleteOldLogs(forcefullyDelete: false)
+        
+        writeLogInFile(message: "")
     }
     
     // MARK: - ********************* Public Functions *********************// -
@@ -554,82 +556,6 @@ import MessageUI
         }
     }
     
-//    //****************************************************
-//
-//    func checkAttachedFiles(composer viewController: MFMailComposeViewController)
-//    {
-//        for file in SLog.shared.addAttachmentArray
-//        {
-//            if let fileData = NSData(contentsOfFile: file.url)
-//            {
-//                viewController.addAttachmentData(fileData as Data, mimeType: file.mimeType, fileName: file.fileName)
-//            }
-//        }
-//    }
-//
-//    //****************************************************
-//
-//    /// func will combine the all the log files which are being created every day into one final log file
-//    /// when we report the bug of wants the log fiels it will combine all the log files
-//    /// then zip it and post it at the given email address
-//    /// Function create zip and create password on it
-//    func createPasswordProtectedZipLogFile(at logfilePath: String, composer viewController: MFMailComposeViewController, controller : UIViewController)
-//    {
-//        var isZipped:Bool = false
-//        // calling combine all files into one file
-//        SLog.shared.combineLogFiles { filePath, combineFileErr in
-//            //
-//            if combineFileErr != nil
-//            {
-//                CommonMethods.showAlertWithHandler(viewContoller: controller, title: Constants.alertTitle, message: combineFileErr!.localizedDescription, leftButtonText: Constants.ok, rightButtonText: "") {
-//                    return
-//                } rightButtonActionHandler: {
-//                    //
-//                }
-//            }
-//            else
-//            {
-//                SLog.shared.makeJsonFile { jsonfilePath, jsonErr in
-//                    //
-//                    let contentsPath = logfilePath
-//
-//                    if jsonErr != nil
-//                    {
-//                        CommonMethods.showAlertWithHandler(viewContoller: controller, title: Constants.alertTitle, message: jsonErr!.localizedDescription, leftButtonText: Constants.ok, rightButtonText: "") {
-//                            return
-//                        } rightButtonActionHandler: {
-//                            //
-//                        }
-//                    }
-//                    else
-//                    {
-//                        // create a json file and call a function of makeJsonFile
-//                        if FileManager.default.fileExists(atPath: contentsPath)
-//                        {
-//                            let createZipPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(SLog.shared.finalLogFileNameAfterCombine).zip").path
-//
-//                            if SLog.shared.password.isEmpty {
-//                                isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath)
-//                            }
-//                            else{
-//                                isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath, keepParentDirectory: true, withPassword: SLog.shared.password)
-//                            }
-//
-//                            if isZipped {
-//                                var data = NSData(contentsOfFile: createZipPath) as Data?
-//                                if let data = data
-//                                {
-//                                    viewController.addAttachmentData(data, mimeType: "application/zip", fileName: ("\(SLog.shared.finalLogFileNameAfterCombine).zip"))
-//                                }
-//                                data = nil
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-    
     //****************************************************
     
     /// func will combine the all the log files which are being created every day into one final log file
@@ -689,39 +615,42 @@ import MessageUI
         
         print ("finalLogFileString : \n\n\(finalLogString)")
         
-        if fileManager.fileExists(atPath: fileCombine!.path)
+        if (fileCombine != nil)
         {
-            // File Available
-            if let fileUpdater = try? FileHandle(forUpdating: fileCombine!)
+            if fileManager.fileExists(atPath: fileCombine!.path)
             {
-                // Function which when called will cause all updates to start from end of the file
-                fileUpdater.seekToEndOfFile()
+                // File Available
+                if let fileUpdater = try? FileHandle(forUpdating: fileCombine!)
+                {
+                    // Function which when called will cause all updates to start from end of the file
+                    fileUpdater.seekToEndOfFile()
 
-                // Which lets the caller move editing to any position within the file by supplying an offset
-                fileUpdater.write(finalLogString.data(using: .utf8)!)
+                    // Which lets the caller move editing to any position within the file by supplying an offset
+                    fileUpdater.write(finalLogString.data(using: .utf8)!)
 
-                // Once we convert our new content to data and write it, we close the file and that’s it!
-                fileUpdater.closeFile()
+                    // Once we convert our new content to data and write it, we close the file and that’s it!
+                    fileUpdater.closeFile()
 
-                completion(fileCombine!.path, nil)
-            }
-        }
-        else
-        {
-            if (FileManager.default.createFile(atPath: fileCombine!.path, contents: nil, attributes: nil))
-            {
-                print("File created successfully.")
-                do{
-                    try finalLogString.write(to: fileCombine!, atomically: true, encoding: String.Encoding.utf8)
-
-                    let pathURL = fileCombine! // URL
-                    let pathString = pathURL.path // String
-
-                    completion(pathString, nil)
+                    completion(fileCombine!.path, nil)
                 }
-                catch {
-                    print(error.localizedDescription)
-                    completion("", error)
+            }
+            else
+            {
+                if (FileManager.default.createFile(atPath: fileCombine!.path, contents: nil, attributes: nil))
+                {
+                    print("File created successfully.")
+                    do{
+                        try finalLogString.write(to: fileCombine!, atomically: true, encoding: String.Encoding.utf8)
+
+                        let pathURL = fileCombine! // URL
+                        let pathString = pathURL.path // String
+
+                        completion(pathString, nil)
+                    }
+                    catch {
+                        print(error.localizedDescription)
+                        completion("", error)
+                    }
                 }
             }
         }
@@ -777,7 +706,6 @@ import MessageUI
             print(error.localizedDescription)
             completion("",error)
         }
-        
     }
     
     // ****************************************************

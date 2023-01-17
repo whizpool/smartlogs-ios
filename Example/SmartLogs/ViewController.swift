@@ -105,8 +105,8 @@ class ViewController: UIViewController {
     
     @IBAction func sendLOgBtn(_ sender : UIButton)
     {
-        // SLog.shared.summaryLog(text: "summary log here")
-        SLog.shared.detailLog(text: "detail log here", writeIntoFile: true)
+//        SLog.shared.summaryLog(text: "Summary Log Here")
+//        SLog.shared.detailLog(text: "detail log here", writeIntoFile: true)
         
         SLog.shared.hideReportDialogue(bool: false)
         SLog.shared.sendReport(controller: self)

@@ -82,91 +82,12 @@ class SLAlertViewController: UIViewController {
             do {
                 SLCommonMethods.createPasswordProtectedZipLogFile(at: zipPath.path, composer: composer, controller: self)
                 SLCommonMethods.checkAttachedFiles(composer: composer)
-                
-//                self.createPasswordProtectedZipLogFile(at: zipPath.path, composer: composer)
-//                self.checkAttachedFiles(composer: composer)
                 self.present(composer, animated: true)
             }
         }
     }
     
     // MARK: - // ********************* Methods *********************// -
-    
-//    func checkAttachedFiles(composer viewController: MFMailComposeViewController)
-//    {
-//        for file in SLog.shared.addAttachmentArray
-//        {
-//            if let fileData = NSData(contentsOfFile: file.url)
-//            {
-//                viewController.addAttachmentData(fileData as Data, mimeType: file.mimeType, fileName: file.fileName)
-//            }
-//        }
-//    }
-    
-    //****************************************************
-    
-    /// func will combine the all the log files which are being created every day into one final log file
-    /// when we report the bug of wants the log fiels it will combine all the log files
-    /// then zip it and post it at the given email address
-    /// Function create zip and create password on it
-//    func createPasswordProtectedZipLogFile(at logfilePath: String, composer viewController: MFMailComposeViewController)
-//    {
-//        var isZipped:Bool = false
-//        // calling combine all files into one file
-//        SLog.shared.combineLogFiles { filePath, combineFileErr in
-//            //
-//            if combineFileErr != nil
-//            {
-//                CommonMethods.showAlertWithHandler(viewContoller: self, title: Constants.alertTitle, message: combineFileErr!.localizedDescription, leftButtonText: Constants.ok, rightButtonText: "") {
-//                    return
-//                } rightButtonActionHandler: {
-//                    //
-//                }
-//            }
-//            else
-//            {
-//                SLog.shared.makeJsonFile { jsonfilePath, jsonErr in
-//                    //
-//                    let contentsPath = logfilePath
-//
-//                    if jsonErr != nil
-//                    {
-//                        CommonMethods.showAlertWithHandler(viewContoller: self, title: Constants.alertTitle, message: jsonErr!.localizedDescription, leftButtonText: Constants.ok, rightButtonText: "") {
-//                            return
-//                        } rightButtonActionHandler: {
-//                            //
-//                        }
-//                    }
-//                    else
-//                    {
-//                        // create a json file and call a function of makeJsonFile
-//                        if FileManager.default.fileExists(atPath: contentsPath)
-//                        {
-//                            let createZipPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(SLog.shared.finalLogFileNameAfterCombine).zip").path
-//
-//                            if SLog.shared.password.isEmpty {
-//                                isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath)
-//                            }
-//                            else{
-//                                isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath, keepParentDirectory: true, withPassword: SLog.shared.password)
-//                            }
-//
-//                            if isZipped {
-//                                var data = NSData(contentsOfFile: createZipPath) as Data?
-//                                if let data = data
-//                                {
-//                                    viewController.addAttachmentData(data, mimeType: "application/zip", fileName: ("\(SLog.shared.finalLogFileNameAfterCombine).zip"))
-//                                }
-//                                data = nil
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-    
-    //****************************************************
     
     /// this fuction executed right after when phone enables or disables the dark mode \
     /// upone that we have to update the uicolors of views
@@ -217,7 +138,9 @@ extension SLAlertViewController:MFMailComposeViewControllerDelegate
         
         if let _ = error
         {
-            controller.dismiss(animated: true, completion: nil)
+            controller.dismiss(animated: true) {
+                self.dismiss(animated: true)
+            }
         }
         switch result {
         case .cancelled:
@@ -231,7 +154,9 @@ extension SLAlertViewController:MFMailComposeViewControllerDelegate
         default:
             print("default")
         }
-        controller.dismiss(animated: true, completion: nil)
+        controller.dismiss(animated: true) {
+            self.dismiss(animated: true)
+        }
     }
 }
 
