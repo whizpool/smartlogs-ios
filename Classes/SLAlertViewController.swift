@@ -182,7 +182,9 @@ extension SLAlertViewController:UITextViewDelegate {
             self.bugsTextview.translatesAutoresizingMaskIntoConstraints = false
             self.bugsTextview.becomeFirstResponder()
 
-            self.mainTextFieldViewHeight.constant = (self.view.bounds.size.height * 0.39)
+            
+            /// set the height of the text view on the alert view
+            self.mainTextFieldViewHeight.constant = (UIScreen.main.bounds.size.height * 0.39)
             
             
             // main view corner radius
