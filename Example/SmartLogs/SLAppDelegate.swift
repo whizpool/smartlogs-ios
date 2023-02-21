@@ -1,15 +1,15 @@
 //
-//  AppDelegate.swift
+//  SLAppDelegate.swift
 //  SmartLogs
 //
-//  Created by Hamza Mughal on 12/23/2022.
-//  Copyright (c) 2022 Hamza Mughal. All rights reserved.
+//  Created by Whizpool on 12/23/2022.
+//  Copyright (c) 2022 Whizpool. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class SLAppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 

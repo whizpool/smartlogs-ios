@@ -2,7 +2,7 @@
 //  SLConstants.swift
 //  SmartLogs
 //
-//  Created by Himy Mughal on 13/12/2022.
+//  Created by Whizpool on 13/12/2022.
 //
 
 import Foundation

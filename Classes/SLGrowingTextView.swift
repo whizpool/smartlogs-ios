@@ -2,7 +2,7 @@
 //  SLGrowingTextView.swift
 //  SmartLogs
 //
-//  Created by Himy Mughal on 13/12/2022.
+//  Created by Whizpool on 13/12/2022.
 
 //
 //  Created by Kenneth Tsang on 17/2/2016.

@@ -2,7 +2,7 @@
 //  SLCommonMethods.swift
 //  SmartLogs
 //
-//  Created by Himy Mughal on 15/12/2022.
+//  Created by Whizpool on 15/12/2022.
 //
 
 import UIKit

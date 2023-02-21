@@ -1,16 +1,16 @@
 //
-//  ViewController.swift
+//  SLViewController.swift
 //  SmartLogs
 //
-//  Created by Hamza Mughal on 12/13/2022.
-//  Copyright (c) 2022 Hamza Mughal. All rights reserved.
+//  Created by Whizpool on 12/13/2022.
+//  Copyright (c) 2022 Whizpool. All rights reserved.
 //
 
 import UIKit
 import SmartLogs
 import MessageUI
 
-class ViewController: UIViewController {
+class SLViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

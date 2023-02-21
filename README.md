@@ -1,6 +1,6 @@
 # SmartLogs
 
-[![CI Status](https://img.shields.io/travis/Hamza Mughal/SmartLogs.svg?style=flat)](https://travis-ci.org/Hamza Mughal/SmartLogs)
+[![CI Status](https://img.shields.io/travis/Whizpool/SmartLogs.svg?style=flat)](https://travis-ci.org/Wizpool/SmartLogs)
 [![Version](https://img.shields.io/cocoapods/v/SmartLogs.svg?style=flat)](https://cocoapods.org/pods/SmartLogs)
 [![License](https://img.shields.io/cocoapods/l/SmartLogs.svg?style=flat)](https://cocoapods.org/pods/SmartLogs)
 [![Platform](https://img.shields.io/cocoapods/p/SmartLogs.svg?style=flat)](https://cocoapods.org/pods/SmartLogs)
@@ -25,7 +25,50 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         -> Currently running app version
         -> Free storage space available
 
-## Swift
+
+## Installation
+
+SmartLogs is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'SmartLogs'
+```
+
+
+ ## SamrtLogs Example
+
+```swift
+ // let's import the logging API package
+import SmartLogs
+
+ // initilization Sdk in 
+SLog.shared.initilization()
+
+ // we're now ready to use it
+ // summary log is used to print in console and it will also write the log into file 
+SLog.shared.summaryLog(text: "summary log will be saved in final log file")
+
+ // detail log is used to print in console and it will also write the log into final log file (optional)
+SLog.shared.detailLog(text: "detail log will be saved in final log file (optional)", writeIntoFile: false)
+```
+
+# Output Final Log File Contains
+
+```
+2022-03-02 15:12:19.507 summary log will be saved in final log file
+
+```
+
+
+## Swift Implementation
+
+## Import SDK 
+
+    // import the SDK first 
+    import SmartLogs
+
+    
 ## Initization 
 
         // call initilization in the app delegate 
@@ -37,7 +80,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Write Logs to file 
 
         // Summary logs must write log into the files 
-        SLog.shared.summaryLog(text: "Hello World!!")
+        SLog.shared.summaryLog(text: "summary log here")
         
         // Detail logs are optional to write in the file
         SLog.shared.detailLog(text: "detail log here", writeIntoFile: true)
@@ -104,11 +147,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         SLog.shared.setSendBtnImage(img: UIImage(named: "testImg")!)
         SLog.shared.hideSendBtnIcon(bool: true)
 
+
 ## Hide Show Report View
 
         // report alert view is true by default make the bool true 
         // if you want to hide the report view and open the mail directly 
         SLog.shared.hideReportDialogue(bool: false)
+        
         
 ## Send Report
 
@@ -126,20 +171,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
         // use the function of the pods
         [[SLog shared] summaryLogWithText:@"summary log"];
-        [[SLog shared] detailLogWithText:@"detail log"];
+        [[SLog shared] detailLogWithText:@"detail log" writeIntoFile:false];
 
         // call the alert view Controller
         [[SLog shared] sendReportWithController: self];
         
-
-## Installation
-
-SmartLogs is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'SmartLogs'
-```
 
 ## Log Levels
 
@@ -151,33 +187,11 @@ The following log levels are supported:
  - `Error`
  - `Message`
 
+
 ## Author
 
 Whizpool, zzeeshan@gmail.com
 
- ## Let's Log
-
-```swift
- // let's import the logging API package
-import SmartLogs
-
- // initilization Sdk
-SLog.shared.initilization()
-
- // we're now ready to use it
- // summary log is used to print in console and it will also write the log into file 
-SLog.shared.summaryLog(text: "Hello World!!")
-
- // detail log is used to print in console and it will also write the log into file (optional)
-SLog.shared.detailLog(text: "Hello World!!", writeIntoFile: false)
-```
-
-# Output
-
-```
-2022-03-02 15:12:19.507 Hello World!!
-
-```
 
 ## License
 
