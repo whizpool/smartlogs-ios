@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SmartLogs'
-  s.version          = '0.10.0'
+  s.version          = '0.11.0'
   s.summary          = 'SmartLogs will create a logfile and manage record of logfile'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
   'This project SmartLogs will create a logfile and manage record of logfile, just import this library and check this pod'
                        DESC
                        
-  s.homepage         = 'https://github.com/whizpool/smartlogs-ios.git'
+  s.homepage         = 'https://github.com/whizpool/SmartLog_iOS..git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Whizpool' => 'zzeeshan@gmail.com' }
-  s.source           = { :git => 'https://github.com/whizpool/smartlogs-ios.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/whizpool/SmartLog_iOS..git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '11.0'
