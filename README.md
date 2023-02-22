@@ -1,6 +1,5 @@
 # SmartLogs
 
-[![CI Status](https://img.shields.io/travis/Whizpool/SmartLogs.svg?style=flat)](https://travis-ci.org/Wizpool/SmartLogs)
 [![Version](https://img.shields.io/cocoapods/v/SmartLogs.svg?style=flat)](https://cocoapods.org/pods/SmartLogs)
 [![License](https://img.shields.io/cocoapods/l/SmartLogs.svg?style=flat)](https://cocoapods.org/pods/SmartLogs)
 [![Platform](https://img.shields.io/cocoapods/p/SmartLogs.svg?style=flat)](https://cocoapods.org/pods/SmartLogs)

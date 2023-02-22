@@ -98,41 +98,77 @@ class SLCommonMethods
             }
             else
             {
-                SLog.shared.makeJsonFile { jsonfilePath, jsonErr in
-                    //
-                    let contentsPath = logfilePath
-                    
-                    if jsonErr != nil
-                    {
-                        SLCommonMethods.showAlertWithHandler(viewContoller: controller, title: SLConstants.alertTitle, message: jsonErr!.localizedDescription, leftButtonText: SLConstants.ok, rightButtonText: "") {
-                            return
-                        } rightButtonActionHandler: {
-                            //
-                        }
+                /// we are not using the
+                let contentsPath = logfilePath
+
+                // create a json file and call a function of makeJsonFile
+                if FileManager.default.fileExists(atPath: contentsPath)
+                {
+                    let createZipPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(SLog.shared.finalLogFileNameAfterCombine).zip").path
+
+                    if SLog.shared.password.isEmpty {
+                        isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath)
                     }
                     else
                     {
-                        // create a json file and call a function of makeJsonFile
-                        if FileManager.default.fileExists(atPath: contentsPath)
+                        isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath, keepParentDirectory: true, withPassword: SLog.shared.password)
+                    }
+
+                    if isZipped {
+                        var data = NSData(contentsOfFile: createZipPath) as Data?
+                        if let data = data
                         {
-                            let createZipPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(SLog.shared.finalLogFileNameAfterCombine).zip").path
-                            
-                            if SLog.shared.password.isEmpty {
-                                isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath)
-                            }
-                            else{
-                                isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath, keepParentDirectory: true, withPassword: SLog.shared.password)
-                            }
-                            
-                            if isZipped {
-                                var data = NSData(contentsOfFile: createZipPath) as Data?
-                                if let data = data
-                                {
-                                    viewController.addAttachmentData(data, mimeType: "application/zip", fileName: ("\(SLog.shared.finalLogFileNameAfterCombine).zip"))
-                                }
-                                data = nil
-                            }
+                            viewController.addAttachmentData(data, mimeType: "application/zip", fileName: ("\(SLog.shared.finalLogFileNameAfterCombine).zip"))
                         }
+                        data = nil
+                    }
+                }
+            }
+        }
+    }
+
+
+    //****************************************************
+
+    static func createPasswordProtectedZipJsonFile(at logfilePath: String, composer viewController: MFMailComposeViewController, controller : UIViewController)
+    {
+        var isZipped:Bool = false
+
+        SLog.shared.makeJsonFile { jsonfilePath, jsonErr in
+            //
+            if jsonErr != nil
+            {
+                SLCommonMethods.showAlertWithHandler(viewContoller: controller, title: SLConstants.alertTitle, message: jsonErr!.localizedDescription, leftButtonText: SLConstants.ok, rightButtonText: "") {
+                    return
+                } rightButtonActionHandler: {
+                    //
+                }
+            }
+            else
+            {
+                /// we are not using the
+                let contentsPath = logfilePath
+
+                // create a json file and call a function of makeJsonFile
+                if FileManager.default.fileExists(atPath: contentsPath)
+                {
+                    let createZipPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(SLConstants.deviceInfo).zip").path
+
+                    if SLog.shared.password.isEmpty {
+                        isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath)
+                    }
+                    else
+                    {
+                        isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath, keepParentDirectory: true, withPassword: SLog.shared.password)
+                    }
+
+                    if isZipped {
+                        var data = NSData(contentsOfFile: createZipPath) as Data?
+                        if let data = data
+                        {
+                            viewController.addAttachmentData(data, mimeType: "application/zip", fileName: ("\(SLConstants.deviceInfo).zip"))
+                        }
+                        data = nil
                     }
                 }
             }

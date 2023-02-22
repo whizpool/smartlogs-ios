@@ -75,12 +75,17 @@ class SLAlertViewController: UIViewController {
             composer.setSubject(SLog.shared.emailSubject)
             composer.setMessageBody(bugsTextview.text, isHTML: true)
             
-            let filePath = SLog.shared.getRootDirPath()
-            let url = URL(string: filePath)
-            let zipPath = url!.appendingPathComponent("/\(SLConstants.logFileNewFolderName)")
+            let logFilePath = SLog.shared.getRootDirLogFilesPath()
+            let logFileUrl = URL(string: logFilePath)
+            let logFileZipPath = logFileUrl!.appendingPathComponent("/\(SLConstants.logFileNewFolderName)")
+            
+            let jsonFilePath = SLog.shared.getRootDirJsonFilesPath()
+            let jsonFileUrl = URL(string: jsonFilePath)
+//            let jsonPath = jsonFileUrl!.appendingPathComponent("/\(SLConstants.jsonFileFolderName)")
             
             do {
-                SLCommonMethods.createPasswordProtectedZipLogFile(at: zipPath.path, composer: composer, controller: self)
+                SLCommonMethods.createPasswordProtectedZipLogFile(at: logFileZipPath.path, composer: composer, controller: self)
+                SLCommonMethods.createPasswordProtectedZipJsonFile(at: jsonFileUrl!.path, composer: composer, controller: self)
                 SLCommonMethods.checkAttachedFiles(composer: composer)
                 self.present(composer, animated: true)
             }

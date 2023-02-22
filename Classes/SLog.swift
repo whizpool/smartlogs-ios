@@ -545,12 +545,17 @@ import MessageUI
         composer.setSubject(SLog.shared.emailSubject)
         composer.setMessageBody("", isHTML: true)
         
-        let filePath = SLog.shared.getRootDirPath()
-        let url = URL(string: filePath)
-        let zipPath = url!.appendingPathComponent("/\(SLConstants.logFileNewFolderName)")
+        let logFilePath = SLog.shared.getRootDirLogFilesPath()
+        let logFileUrl = URL(string: logFilePath)
+        let logFileZipPath = logFileUrl!.appendingPathComponent("/\(SLConstants.logFileNewFolderName)")
+        
+        let jsonFilePath = SLog.shared.getRootDirJsonFilesPath()
+        let jsonFileUrl = URL(string: jsonFilePath)
+//            let jsonPath = jsonFileUrl!.appendingPathComponent("/\(SLConstants.jsonFileFolderName)")
         
         do {
-            SLCommonMethods.createPasswordProtectedZipLogFile(at: zipPath.path, composer: composer, controller: controller)
+            SLCommonMethods.createPasswordProtectedZipLogFile(at: logFileZipPath.path, composer: composer, controller: controller)
+            SLCommonMethods.createPasswordProtectedZipJsonFile(at: jsonFileUrl!.path, composer: composer, controller: controller)
             SLCommonMethods.checkAttachedFiles(composer: composer)
             controller.present(composer, animated: true)
         }
@@ -719,20 +724,55 @@ import MessageUI
         
         if let url = urls.first
         {
-            var fileURL = url.appendingPathComponent("\(SLConstants.logFileRootDirectoryName)/")
-            let zipFolder = fileURL.appendingPathComponent("\(SLConstants.logFileNewFolderName)/")
-            let zipFolderUrl = zipFolder.appendingPathComponent(filename)
-            fileURL = zipFolderUrl.appendingPathExtension("json")
+//            var fileURL = url.appendingPathComponent("\(SLConstants.logFileRootDirectoryName)/")
+            var zipFolderPath = url.appendingPathComponent("\(SLConstants.jsonFileFolderName)/")
+            let zipFolderUrl = zipFolderPath.appendingPathComponent(filename)
+            zipFolderPath = zipFolderUrl.appendingPathExtension("json")
             let data = try JSONSerialization.data(withJSONObject: jsonObject, options: [.prettyPrinted])
             
-            do {
-                try data.write(to: fileURL, options: [.atomicWrite])
-                completion(fileURL.path, nil)
+            if FileManager.default.fileExists(atPath: zipFolderPath.path)
+            {
+                print("FILE EXIST")
+                
+                do {
+                    try data.write(to: zipFolderPath, options: [.atomicWrite])
+                    completion(zipFolderPath.path, nil)
+                }
+                catch {
+                    print(error.localizedDescription)
+                    completion("", error)
+                }
             }
-            catch {
-                print(error.localizedDescription)
-                jsonErr = error
-                completion("", jsonErr)
+            else
+            {
+                if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+                {
+                    //prepare file url
+//                    let fileURL = dir.appendingPathComponent("\(SLConstants.logFileRootDirectoryName)/")
+                    let DirPath = dir.appendingPathComponent(SLConstants.jsonFileFolderName)
+                    
+                    do
+                    {
+                        try FileManager.default.createDirectory(atPath: DirPath.path, withIntermediateDirectories: true, attributes: nil)
+                    }
+                    catch let error as NSError
+                    {
+                        print("Unable to create directory \(error.debugDescription)")
+                    }
+                    
+                    print("Dir Path = \(DirPath)")
+                }
+                
+                
+                print("File created successfully.")
+                do {
+                    try data.write(to: zipFolderPath, options: [.atomicWrite])
+                    completion(zipFolderPath.path, nil)
+                }
+                catch {
+                    print(error.localizedDescription)
+                    completion("", error)
+                }
             }
         }
         else
@@ -888,12 +928,32 @@ import MessageUI
     // ****************************************************
     
     // Function For Getting root Directory folder path
-    func getRootDirPath() -> String {
+    func getRootDirLogFilesPath() -> String {
         var PATH = ""
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
         
         if let pathComponent = url.appendingPathComponent(SLConstants.logFileRootDirectoryName)
+        {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = SLConstants.logFileDateFormat
+            
+            let filePath = pathComponent.path
+            PATH = filePath
+            return PATH
+        }
+        return PATH
+    }
+    
+    // ****************************************************
+    
+    // Function For Getting root Directory folder path
+    func getRootDirJsonFilesPath() -> String {
+        var PATH = ""
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+        let url = NSURL(fileURLWithPath: path)
+        
+        if let pathComponent = url.appendingPathComponent(SLConstants.jsonFileFolderName)
         {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = SLConstants.logFileDateFormat

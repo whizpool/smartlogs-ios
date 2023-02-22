@@ -18,6 +18,7 @@ public class SLConstants
     static let defaultDaysForFileDeletion = 7
     static let logFileRootDirectoryName = "Logs"
     static let logFileNewFolderName = "NewZip"
+    static let jsonFileFolderName = "jsonFile"
     static let logFileDateFormat = "yyyy-MM-dd"
     static let finalLogFileNameAfterCombine = "finalLog"
     static let deviceInfo = "deviceInfo"
