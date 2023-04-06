@@ -23,8 +23,8 @@ public class SLConstants
     static let finalLogFileNameAfterCombine = "finalLog"
     static let deviceInfo = "deviceInfo"
     
-    
-    static let emailSubject = "Bug Report"
+    static let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String ?? ""
+    static let emailSubject = "Bug report: " + appName
     
     static let textViewPlaceHolder = "Write here about your bug detail"
     
