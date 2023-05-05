@@ -19,6 +19,16 @@ class SLViewController: UIViewController {
         
         SLog.shared.initilization()
         
+        
+        SLog.shared.checkAppVersionUpdate(bForceUpdate: true, bMinorUpdate: true, appStoreID: "1492988563")
+
+        
+        
+
+        
+        
+        
+        
 //        //function Textview Editing Calls
 //        SLog.shared.setPassword(password: "QWERTY")
 //

@@ -16,12 +16,20 @@ public class SLConstants
     static let defaultTextViewFontSize = 14
     
     static let defaultDaysForFileDeletion = 7
-    static let logFileRootDirectoryName = "Logs"
-    static let logFileNewFolderName = "NewZip"
-    static let jsonFileFolderName = "jsonFile"
+    static let oldRootDirectoryName = "Logs"
+    static let rootDirectoryName = "SmartLogs"
+    
+    static let logZipFolder = "Logs"
     static let logFileDateFormat = "yyyy-MM-dd"
-    static let finalLogFileNameAfterCombine = "finalLog"
+    static let logFileNameAfterCombine = "SmartLog"
     static let deviceInfo = "deviceInfo"
+    
+    static let forceUpdateTitle = "App Update Required"
+    static let minorUpdateTitle = "App Update Available"
+    
+    static let forceUpdateMessage = "Please update the app, the new version includes features and critical bug fixes that will improve performance and usability"
+    static let minorUpdateMessage = "Please update the app, the new version includes bug fixes that will improve performance and usability."
+    
     
     static let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String ?? ""
     static let emailSubject = "Bug report: " + appName

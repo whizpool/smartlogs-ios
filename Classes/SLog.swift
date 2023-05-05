@@ -12,16 +12,30 @@ import MessageUI
 
 @objc public class SLog : NSObject {
     
+    // ********************* VersionUpdateType ENUMS *********************//
+    
+//    enum VersionUpdateType {
+//        case eNone
+//        case eForceUpdate
+//        case eOptionalUpdate
+//    }
+    
     // ********************* Variables *********************//
     
     // Instance of Slog file
     @objc public static let shared = SLog()
     
     //Initializer access level change now
-    private override init(){}
+    private override init() {}
     
     // Zip File Password
     var password = ""
+    var appStoreID       = ""
+    var minorUpdateTitle = ""
+    var minorUpdateMsg   = ""
+    var forceUpdateTitle = ""
+    var forceUpdateMsg   = ""
+    
     
     // Background Color
     var alertBackgroundColor : UIColor?
@@ -72,7 +86,7 @@ import MessageUI
     var emailSubject = SLConstants.emailSubject
     
     // after combine log file name
-    var finalLogFileNameAfterCombine = SLConstants.finalLogFileNameAfterCombine
+    var logFileNameAfterCombine = SLConstants.logFileNameAfterCombine
     
     // Textview Placeholder
     var textViewPlaceHolder = SLConstants.textViewPlaceHolder
@@ -100,7 +114,7 @@ import MessageUI
         let url = NSURL(fileURLWithPath: path)
         print(path)
         
-        if let pathComponent = url.appendingPathComponent(SLConstants.logFileRootDirectoryName)
+        if let pathComponent = url.appendingPathComponent(SLConstants.rootDirectoryName)
         {
             _ = Date()
             let dateFormatter = DateFormatter()
@@ -111,7 +125,7 @@ import MessageUI
             if !fileManager.fileExists(atPath: filePath)
             {
                 let DocumentDirectory = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
-                let DirPath = DocumentDirectory.appendingPathComponent(SLConstants.logFileRootDirectoryName)
+                let DirPath = DocumentDirectory.appendingPathComponent(SLConstants.rootDirectoryName)
                 do
                 {
                     try FileManager.default.createDirectory(atPath: DirPath!.path, withIntermediateDirectories: true, attributes: nil)
@@ -160,7 +174,7 @@ import MessageUI
     @objc public func deleteOldLogs(forcefullyDelete: Bool) -> Bool
     {
         let fileManager:FileManager = FileManager.default
-        let fileList = listFilesFromDocumentsFolder()
+        let fileList = listFilesFromDocumentsFolder(directoryName: SLConstants.rootDirectoryName)
         let fileCounts = fileList.count
         
         for fileCount in 0..<fileCounts
@@ -258,7 +272,7 @@ import MessageUI
     
     // function to set final log file name
     @objc public func setLogFileName (text:String) {
-        self.finalLogFileNameAfterCombine = text
+        self.logFileNameAfterCombine = text
     }
     
     // ****************************************************
@@ -275,6 +289,26 @@ import MessageUI
     @objc public func hideSendBtnIcon (bool: Bool)
     {
         self.bSendBtnIconHidden = bool
+    }
+    
+    //****************************************************
+    
+    // check App Update on appStore
+    @objc public func checkAppVersionUpdate (bForceUpdate : Bool, bMinorUpdate : Bool, appStoreID : String, minorUpdateTitle : String? = "", minorUpdateMessage : String? = "", forceUpdateTitle : String? = "", forceUpdateMessage : String? = "" )
+    {
+        self.appStoreID = appStoreID
+
+        self.minorUpdateTitle = minorUpdateTitle!.isEmpty ? SLConstants.minorUpdateTitle : minorUpdateTitle!
+        self.minorUpdateMsg   = minorUpdateMessage!.isEmpty ? SLConstants.minorUpdateMessage : minorUpdateMessage!
+        
+        self.forceUpdateTitle = forceUpdateTitle!.isEmpty ? SLConstants.forceUpdateTitle : forceUpdateTitle!
+        self.forceUpdateMsg   = forceUpdateMessage!.isEmpty ? SLConstants.forceUpdateMessage : forceUpdateMessage!
+        
+        /// if self.checkForAppUpdateOnStore() is true then check for the app update
+        /// and app store app id is required
+        if (bForceUpdate || bMinorUpdate) && !appStoreID.isEmpty {
+            self.checkForAppUpdateOnStore(bForceUpdate: bForceUpdate, bMinorUpdate: bMinorUpdate)
+        }
     }
     
     //****************************************************
@@ -429,6 +463,23 @@ import MessageUI
         }
     }
     
+    //****************************************************
+    
+    /// check the file name using the date formate
+    ///  For old data ... because we only check
+    private func checkFileNameWRTDateFormate (fileName : String) -> Bool
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = SLConstants.logFileDateFormat
+        let dateName = dateFormatter.date(from: fileName)
+        
+        if dateName == nil {
+            return false
+        }
+        
+        return true
+    }
+    
     // MARK: - ********************* Private Functions *********************// -
     
     // Function For Writing Logs files locally and store them on the phone
@@ -439,17 +490,71 @@ import MessageUI
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
         
-        if let pathComponent = url.appendingPathComponent(SLConstants.logFileRootDirectoryName)
+        //****************************************************
+        /// directory name changes and checking old directory if found any data then copied to new directory
+        /// deleting the older directory for safer version ... so that no data left behind after coping
+        if let oldPathComponent = url.appendingPathComponent(SLConstants.oldRootDirectoryName)
+        {
+            if oldPathComponent.isDirectory
+            {
+                print(oldPathComponent)
+                let fileList = listFilesFromDocumentsFolder(directoryName: SLConstants.oldRootDirectoryName)
+                
+                // get the list of the data from older directory
+                for fileName in fileList
+                {
+                    ///checking the files we need with the date formater we used for the file names.
+                    ///non other file will be copied
+                    if checkFileNameWRTDateFormate(fileName: fileName)
+                    {
+                        print("date format is correct")
+                        let newSmartLogPath = SLog.shared.getRootDirSmartLogsFilesPath()
+                        let newSmartLogUrl = URL(string: newSmartLogPath)
+                        let newFilePath = newSmartLogUrl!.appendingPathComponent("/\(fileName).txt")
+                        
+                        /// make sure the file not exist .. if it exist it will not be copied ...
+                        if !FileManager.default.fileExists(atPath: newFilePath.path)
+                        {
+                            do {
+                                let olderFiles = oldPathComponent.appendingPathComponent("\(fileName)")
+                                try FileManager.default.copyItem(atPath: olderFiles.path, toPath: newFilePath.path)
+                                
+                                print("\(fileName) file copied")
+                            }
+                            catch {
+                                print(error)
+                            }
+                        }
+                    }
+                }
+                
+                /// when all the files copied logs folder will be deleted
+                if FileManager.default.fileExists(atPath: oldPathComponent.path)
+                {
+                    do {
+                        try FileManager.default.removeItem(at: oldPathComponent)
+                    }
+                    catch {
+                        print(error)
+                    }
+                }
+            }
+        }
+        
+        //****************************************************
+        
+        if let pathComponent = url.appendingPathComponent(SLConstants.rootDirectoryName)
         {
             let date = Date()
             let dateFormatter = DateFormatter()
+            
             dateFormatter.dateFormat = SLConstants.logFileDateFormat
             let currentDate = dateFormatter.string(from: date)
             
             let LongDate = getCurrentDate()
             let updatedMessage = "\n\(LongDate)" + " " + "\(message)\n"
-            
-            let filename = pathComponent.appendingPathComponent(currentDate)
+
+            let filename = pathComponent.appendingPathComponent("\(currentDate).txt")
             let filePath = pathComponent.path
             let fileManager = FileManager.default
             
@@ -493,7 +598,7 @@ import MessageUI
                         freeSpace = Units(bytes: Space).getReadableUnit()
                     }
                     
-                    let deviceDetail = "\nappVersion : \(appVersion)" + "\nmanufacture : \(manufacture)" + "\ndeviceModel : \(deviceModel)" + "\nOSInstalled : \(OSInstalled)" + "\nfreeSpace : \(freeSpace)"
+                    let deviceDetail = "\nappName : \(SLConstants.appName)" + "\nappVersion : \(appVersion)" + "\nmanufacture : \(manufacture)" + "\ndeviceModel : \(deviceModel)" + "\nOSInstalled : \(OSInstalled)" + "\nfreeSpace : \(freeSpace)"
                     
                     let updatedMsgWithDeviceDetail = "\n\(deviceDetail)\n\n\n\(updatedMessage)"
                     
@@ -511,7 +616,7 @@ import MessageUI
             {
                 print("Folder NOT AVAILABLE")
                 let DocumentDirectory = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
-                let DirPath = DocumentDirectory.appendingPathComponent(SLConstants.logFileRootDirectoryName)
+                let DirPath = DocumentDirectory.appendingPathComponent(SLConstants.rootDirectoryName)
                 do
                 {
                     try FileManager.default.createDirectory(atPath: DirPath!.path, withIntermediateDirectories: true, attributes: nil)
@@ -545,17 +650,19 @@ import MessageUI
         composer.setSubject(SLog.shared.emailSubject)
         composer.setMessageBody("", isHTML: true)
         
-        let logFilePath = SLog.shared.getRootDirLogFilesPath()
+        let logFilePath = SLog.shared.getRootDirSmartLogsFilesPath()
         let logFileUrl = URL(string: logFilePath)
-        let logFileZipPath = logFileUrl!.appendingPathComponent("/\(SLConstants.logFileNewFolderName)")
+        let logFileZipPath = logFileUrl!.appendingPathComponent("/\(SLConstants.logZipFolder)")
         
         let jsonFilePath = SLog.shared.getRootDirJsonFilesPath()
         let jsonFileUrl = URL(string: jsonFilePath)
-//            let jsonPath = jsonFileUrl!.appendingPathComponent("/\(SLConstants.jsonFileFolderName)")
         
         do {
-            SLCommonMethods.createPasswordProtectedZipLogFile(at: logFileZipPath.path, composer: composer, controller: controller)
-            SLCommonMethods.createPasswordProtectedZipJsonFile(at: jsonFileUrl!.path, composer: composer, controller: controller)
+            
+            SLCommonMethods.createPasswordProtectedZipLogFile(at: logFileZipPath.path, name: self.logFileNameAfterCombine, composer: composer, controller: controller)
+            SLCommonMethods.createJsonFile(composer: composer, controller: controller)
+            
+            //SLCommonMethods.createPasswordProtectedZipJsonFile(at: jsonFileUrl!.path, composer: composer, controller: controller)
             SLCommonMethods.checkAttachedFiles(composer: composer)
             controller.present(composer, animated: true)
         }
@@ -569,7 +676,7 @@ import MessageUI
     func combineLogFiles(completion: (String, Error?) -> ())
     {
         // Delete Zip Folder
-        _ = SLog.shared.deleteFile(fileName: SLConstants.logFileNewFolderName)
+        _ = SLog.shared.deleteFile(fileName: SLConstants.logZipFolder)
 
         let fileManager = FileManager.default
         var files = [String]()
@@ -578,7 +685,7 @@ import MessageUI
         var finalLogString = ""
         
         // getting files from Slog Function
-        files = SLog.shared.listFilesFromDocumentsFolder()
+        files = SLog.shared.listFilesFromDocumentsFolder(directoryName: SLConstants.rootDirectoryName)
 
         // arrange Files in orderedAscending
         files = files.sorted(by: { $0.compare($1) == .orderedAscending })
@@ -588,8 +695,8 @@ import MessageUI
             if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
             {
                 //prepare file url
-                let fileURL = dir.appendingPathComponent("\(SLConstants.logFileRootDirectoryName)/")
-                let DirPath = fileURL.appendingPathComponent(SLConstants.logFileNewFolderName)
+                let fileURL = dir.appendingPathComponent("\(SLConstants.rootDirectoryName)/")
+                let DirPath = fileURL.appendingPathComponent(SLConstants.logZipFolder)
 
                 do
                 {
@@ -603,7 +710,7 @@ import MessageUI
                 print("Dir Path = \(DirPath)")
 
                 let newZipDirURL = fileURL.appendingPathComponent(file)
-                fileCombine = DirPath.appendingPathComponent(SLog.shared.finalLogFileNameAfterCombine)
+                fileCombine = DirPath.appendingPathComponent(self.logFileNameAfterCombine)
 
                 do {
                     let fileStartingString = "\n\n ******************************* \(file) *******************************\n"
@@ -692,7 +799,7 @@ import MessageUI
         }
         
         // Add Values in Dict
-        myDict = ["appVersion":appVersion,"OSInstalled":OSInstalled,"deviceModel":deviceModel,"manufacture":manufacture,"freeSpace":freeSpace]
+        myDict = ["appName":SLConstants.appName, "appVersion":appVersion,"OSInstalled":OSInstalled,"deviceModel":deviceModel,"manufacture":manufacture,"freeSpace":freeSpace]
         
         do {
             try saveJsonFileInDirectory(jsonObject: myDict, toFilename: SLConstants.deviceInfo, completion: { filePath, saveJsonErr in
@@ -724,19 +831,18 @@ import MessageUI
         
         if let url = urls.first
         {
-//            var fileURL = url.appendingPathComponent("\(SLConstants.logFileRootDirectoryName)/")
-            var zipFolderPath = url.appendingPathComponent("\(SLConstants.jsonFileFolderName)/")
-            let zipFolderUrl = zipFolderPath.appendingPathComponent(filename)
-            zipFolderPath = zipFolderUrl.appendingPathExtension("json")
+            var rootDirectory = url.appendingPathComponent("\(SLConstants.rootDirectoryName)/")
+            let deviceInfoJsonName = rootDirectory.appendingPathComponent(filename)
+            rootDirectory = deviceInfoJsonName.appendingPathExtension("json")
             let data = try JSONSerialization.data(withJSONObject: jsonObject, options: [.prettyPrinted])
             
-            if FileManager.default.fileExists(atPath: zipFolderPath.path)
+            if FileManager.default.fileExists(atPath: rootDirectory.path)
             {
                 print("FILE EXIST")
                 
                 do {
-                    try data.write(to: zipFolderPath, options: [.atomicWrite])
-                    completion(zipFolderPath.path, nil)
+                    try data.write(to: rootDirectory, options: [.atomicWrite])
+                    completion(rootDirectory.path, nil)
                 }
                 catch {
                     print(error.localizedDescription)
@@ -748,8 +854,7 @@ import MessageUI
                 if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
                 {
                     //prepare file url
-//                    let fileURL = dir.appendingPathComponent("\(SLConstants.logFileRootDirectoryName)/")
-                    let DirPath = dir.appendingPathComponent(SLConstants.jsonFileFolderName)
+                    let DirPath = dir.appendingPathComponent(SLConstants.rootDirectoryName)
                     
                     do
                     {
@@ -766,8 +871,8 @@ import MessageUI
                 
                 print("File created successfully.")
                 do {
-                    try data.write(to: zipFolderPath, options: [.atomicWrite])
-                    completion(zipFolderPath.path, nil)
+                    try data.write(to: rootDirectory, options: [.atomicWrite])
+                    completion(rootDirectory.path, nil)
                 }
                 catch {
                     print(error.localizedDescription)
@@ -854,7 +959,7 @@ import MessageUI
     // ****************************************************
     
     // Function For getting logs files from Directory and return Files List
-    func listFilesFromDocumentsFolder() -> [String]
+    func listFilesFromDocumentsFolder(directoryName: String) -> [String]
     {
         var fileListLogFile = [String]()
         fileListLogFile.removeAll()
@@ -862,11 +967,11 @@ import MessageUI
         if dirs != []
         {
             let dir = dirs[0]
-            let fileList = try! FileManager.default.contentsOfDirectory(atPath: dir + "/\(SLConstants.logFileRootDirectoryName)")
+            let fileList = try! FileManager.default.contentsOfDirectory(atPath: dir + "/\(directoryName)")
             
             for list in fileList
             {
-                if list == ".DS_Store" || list == SLConstants.logFileNewFolderName
+                if list == ".DS_Store" || list == SLConstants.logZipFolder || list == SLConstants.deviceInfo
                 {
                     continue
                 }
@@ -891,7 +996,7 @@ import MessageUI
         let fileManager = FileManager.default
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
-        if let pathComponent = url.appendingPathComponent("\(SLConstants.logFileRootDirectoryName)" + "/" + fileName)
+        if let pathComponent = url.appendingPathComponent("\(SLConstants.rootDirectoryName)" + "/" + fileName)
         {
             do {
                 try fileManager.removeItem(at: pathComponent)
@@ -927,13 +1032,13 @@ import MessageUI
     
     // ****************************************************
     
-    // Function For Getting root Directory folder path
-    func getRootDirLogFilesPath() -> String {
+    // Function For Getting root Directory Smart logs folder path
+    func getRootDirSmartLogsFilesPath() -> String {
         var PATH = ""
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
         
-        if let pathComponent = url.appendingPathComponent(SLConstants.logFileRootDirectoryName)
+        if let pathComponent = url.appendingPathComponent(SLConstants.rootDirectoryName)
         {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = SLConstants.logFileDateFormat
@@ -953,7 +1058,7 @@ import MessageUI
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
         
-        if let pathComponent = url.appendingPathComponent(SLConstants.jsonFileFolderName)
+        if let pathComponent = url.appendingPathComponent(SLConstants.rootDirectoryName)
         {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = SLConstants.logFileDateFormat
@@ -979,6 +1084,121 @@ import MessageUI
         }
         return freeSize.int64Value
     }
+    
+    // ****************************************************
+    
+    /// this function will check the main app version from the apple store
+    /// and compare it with the current version and show the dialouge
+   
+    func checkForAppUpdateOnStore(bForceUpdate : Bool, bMinorUpdate : Bool)
+    {
+        if let bundleId = Bundle.main.infoDictionary!["CFBundleIdentifier"] as? String
+        {
+            let urlString = "https://itunes.apple.com/lookup?bundleId=\(bundleId)"
+            
+            if let url = URL(string: urlString)
+            {
+                let request = NSMutableURLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData,timeoutInterval: Double.infinity)
+                request.addValue("application/json", forHTTPHeaderField: "Accept")
+                request.addValue("en", forHTTPHeaderField: "Accept-Language")
+                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                request.httpMethod = "GET"
+                
+                let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
+                    guard let data = data else {
+                        print(String(describing: error))
+                        return
+                    }
+                    
+                    if let responseV = response as? HTTPURLResponse
+                    {
+                        print("resp: \(responseV)")
+                    }
+                    
+                    do {
+                        if let responseJsonV = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+                        {
+                            if let jsonData = responseJsonV["results"] as? [[String: Any]]
+                            {
+                                DispatchQueue.main.async {
+                                    //
+                                    let versionString = jsonData.first?["version"] as? String
+                                    let vNumber = Double(versionString ?? "0.0")
+                                    
+                                    if let versionNumber = vNumber
+                                    {
+                                        let currentVersion = Double((Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String)!) ?? 0.0
+                                        
+                                        //check if its major version change
+                                        if (Int(versionNumber) > Int(currentVersion)) && bForceUpdate
+                                        {
+                                            /// force update
+                                            /// force and minor update giveing manually due to we need to move to the app's play store
+                                            /// only for force update .. not for minor update
+                                            
+                                            SLCommonMethods.showVersionCheckAlert (csTitle: self.forceUpdateTitle, csMessage: self.forceUpdateMsg, appStoreID: self.appStoreID, bForceUpdate: true, bMinorUpdate: false)
+                                        }
+                                        else if (versionNumber > currentVersion ) && bMinorUpdate
+                                        {
+                                            /// minor update
+                                            /// force and minor update giveing manually due to we need to move to the app's play store
+                                            /// only for force update .. not for minor update
+                                            
+                                            SLCommonMethods.showVersionCheckAlert (csTitle: self.minorUpdateTitle, csMessage: self.minorUpdateMsg, appStoreID: self.appStoreID, bForceUpdate: false, bMinorUpdate: true)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    catch let myJSONError {
+                        print(myJSONError)
+                    }
+                }
+                
+                task.resume()
+            }
+        }
+    }
+    
+    // ****************************************************
+    
+    /// shows the alert for the update cases on the basis of enums
+    /// optional update show alert once in a day
+    /// forceupdate show the alert every time when user comes to the main app
+//    func showAlertForUpdateCase(_ updateType:VersionUpdateType)
+//    {
+//        var bNeedToShow = false
+//        if updateType == .eForceUpdate
+//        {
+//            bNeedToShow = true
+//        }
+//        else if updateType == .eOptionalUpdate
+//        {
+//            //check if alert displayed for today
+//            let userDef = UserDefaults.standard
+//            if let lastChecked = userDef.object(forKey: "Last_checked") as? Date
+//            {
+//                if !Calendar.current.isDateInToday(lastChecked)
+//                {
+//                    bNeedToShow = true
+//                }
+//
+//                //show alert
+//                userDef.set(Date(), forKey: "Last_checked")
+//                userDef.synchronize()
+//            }
+//            else
+//            {
+//                bNeedToShow = true
+//            }
+//        }
+//
+//        if bNeedToShow
+//        {
+//            SLCommonMethods.showVersionCheckAlert (csTitle: "App Update Required", csMessage: "Please update your app, this major update may include new feature and fixes which helps in better performance.", appStoreID: self.appStoreID) /// handle bneedToShow
+//        }
+//    }
 }
 
 // MARK: - ********************* Extensions *********************// -
@@ -1149,5 +1369,11 @@ extension SLog:MFMailComposeViewControllerDelegate
             print("default")
         }
         controller.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension URL {
+    var isDirectory: Bool {
+       (try? resourceValues(forKeys: [.isDirectoryKey]))?.isDirectory == true
     }
 }

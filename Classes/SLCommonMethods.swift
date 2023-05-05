@@ -27,6 +27,45 @@ class SLCommonMethods
     
     /********************************************************/
     
+    static func showVersionCheckAlert(csTitle:String, csMessage:String, appStoreID:String, bForceUpdate:Bool, bMinorUpdate:Bool)
+    {
+        var topWindow: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
+        topWindow?.rootViewController = UIViewController()
+        topWindow?.windowLevel = UIWindow.Level.alert + 1
+        
+        var actionTitle = "OK"
+        
+        if bForceUpdate && !bMinorUpdate {
+            actionTitle = "Go To App Store"
+        }
+
+        let alert = UIAlertController(title: csTitle, message: csMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: actionTitle, style: .cancel) { _ in
+            // continue your work
+
+            // important to hide the window after work completed.
+            // this also keeps a reference to the window until the action is invoked.
+            topWindow?.isHidden = true // if you want to hide the topwindow then use this
+            topWindow = nil // if you want to hide the topwindow then use this
+            
+            /// if force update true then open the app in app store other wise dismiss
+            if bForceUpdate && !bMinorUpdate {
+                //// this will open the app in play store ...
+                if let url = URL(string: "itms-apps://itunes.apple.com/app/id\(appStoreID)"), UIApplication.shared.canOpenURL(url)
+                {
+                    UIApplication.shared.open(url)
+                }
+            }
+            
+         })
+
+        // show alert
+        topWindow?.makeKeyAndVisible()
+        topWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+    }
+    
+    /********************************************************/
+    
     static func showAlertWithHandler(viewContoller : UIViewController , title : String , message : String, leftButtonText : String? , rightButtonText :String? , leftButtonActionHandler: (()->())?, rightButtonActionHandler: (()->())? )
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -82,7 +121,7 @@ class SLCommonMethods
     /// when we report the bug of wants the log fiels it will combine all the log files
     /// then zip it and post it at the given email address
     /// Function create zip and create password on it
-    static func createPasswordProtectedZipLogFile(at logfilePath: String, composer viewController: MFMailComposeViewController, controller : UIViewController)
+    static func createPasswordProtectedZipLogFile(at logfilePath: String, name fileName: String, composer viewController: MFMailComposeViewController, controller : UIViewController)
     {
         var isZipped:Bool = false
         // calling combine all files into one file
@@ -104,7 +143,7 @@ class SLCommonMethods
                 // create a json file and call a function of makeJsonFile
                 if FileManager.default.fileExists(atPath: contentsPath)
                 {
-                    let createZipPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(SLog.shared.finalLogFileNameAfterCombine).zip").path
+                    let createZipPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(fileName).zip").path
 
                     if SLog.shared.password.isEmpty {
                         isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath)
@@ -118,7 +157,7 @@ class SLCommonMethods
                         var data = NSData(contentsOfFile: createZipPath) as Data?
                         if let data = data
                         {
-                            viewController.addAttachmentData(data, mimeType: "application/zip", fileName: ("\(SLog.shared.finalLogFileNameAfterCombine).zip"))
+                            viewController.addAttachmentData(data, mimeType: "application/zip", fileName: ("\(fileName).zip"))
                         }
                         data = nil
                     }
@@ -127,6 +166,35 @@ class SLCommonMethods
         }
     }
 
+    //****************************************************
+
+    static func createJsonFile(composer viewController: MFMailComposeViewController, controller : UIViewController)
+    {
+        SLog.shared.makeJsonFile { jsonfilePath, jsonErr in
+            //
+            if jsonErr != nil
+            {
+                SLCommonMethods.showAlertWithHandler(viewContoller: controller, title: SLConstants.alertTitle, message: jsonErr!.localizedDescription, leftButtonText: SLConstants.ok, rightButtonText: "") {
+                    return
+                } rightButtonActionHandler: {
+                    //
+                }
+            }
+            else
+            {
+                // create a json file and call a function of makeJsonFile
+                if FileManager.default.fileExists(atPath: jsonfilePath)
+                {
+                    var data = NSData(contentsOfFile: jsonfilePath) as Data?
+                    if let data = data
+                    {
+                        viewController.addAttachmentData(data, mimeType: "application/json", fileName: ("\(SLConstants.deviceInfo).json"))
+                    }
+                    data = nil
+                }
+            }
+        }
+    }
 
     //****************************************************
 

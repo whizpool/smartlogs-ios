@@ -7,62 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "32F754BA-B40E-492F-82EB-3D4FE7A63B34"
+            uuid = "004FB1CF-BF58-43F2-8179-C78D1444711A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Classes/SLAlertViewController.swift"
+            filePath = "../Classes/SLog.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "sendBtnAction(_:)"
+            startingLineNumber = "1133"
+            endingLineNumber = "1133"
+            landmarkName = "checkForAppUpdateOnStore(bForceUpdate:bMinorUpdate:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "32F754BA-B40E-492F-82EB-3D4FE7A63B34 - f17db315988bd0b0"
+                  uuid = "004FB1CF-BF58-43F2-8179-C78D1444711A - a724d9aac877a908"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SmartLogs.SLAlertViewController.sendBtnAction(__C.UIButton) -&gt; ()"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SmartLogs.SLog.checkForAppUpdateOnStore(bForceUpdate: Swift.Bool, bMinorUpdate: Swift.Bool) -&gt; ()"
                   moduleName = "SmartLogs"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/whizpool/Desktop/git/SmartLog_iOS/Classes/SLAlertViewController.swift"
+                  urlString = "file:///Users/whizpool/Desktop/git/SmartLog_iOS/Classes/SLog.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "5512">
+                  startingLineNumber = "1136"
+                  endingLineNumber = "1136"
+                  offsetFromSymbolStart = "1368">
                </Location>
                <Location
-                  uuid = "32F754BA-B40E-492F-82EB-3D4FE7A63B34 - f17db315988bd71f"
+                  uuid = "004FB1CF-BF58-43F2-8179-C78D1444711A - a724d9aac877a929"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SmartLogs.SLAlertViewController.sendBtnAction(__C.UIButton) -&gt; ()"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SmartLogs.SLog.checkForAppUpdateOnStore(bForceUpdate: Swift.Bool, bMinorUpdate: Swift.Bool) -&gt; ()"
                   moduleName = "SmartLogs"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/whizpool/Desktop/git/SmartLog_iOS/Classes/SLAlertViewController.swift"
+                  urlString = "file:///Users/whizpool/Desktop/git/SmartLog_iOS/Classes/SLog.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "5752">
-               </Location>
-               <Location
-                  uuid = "32F754BA-B40E-492F-82EB-3D4FE7A63B34 - f17db315988bd71f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SmartLogs.SLAlertViewController.sendBtnAction(__C.UIButton) -&gt; ()"
-                  moduleName = "SmartLogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/whizpool/Desktop/git/SmartLog_iOS/Classes/SLAlertViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "5040">
+                  startingLineNumber = "1137"
+                  endingLineNumber = "1137"
+                  offsetFromSymbolStart = "1368">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -70,96 +55,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F2E7C513-ECEF-4EA8-AD42-297C703A4268"
-            shouldBeEnabled = "Yes"
+            uuid = "2FF3873B-8D98-4EA1-ACAC-EECD8DF909EA"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/SLog.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "625"
-            endingLineNumber = "625"
-            landmarkName = "combineLogFiles(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "925C7A76-3AA0-4F8D-AB7A-CA859488ABF6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/SLog.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "731"
-            endingLineNumber = "731"
-            landmarkName = "saveJsonFileInDirectory(jsonObject:toFilename:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "925C7A76-3AA0-4F8D-AB7A-CA859488ABF6 - ef7b6a5d6c19d964"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SmartLogs.SLog.saveJsonFileInDirectory(jsonObject: Any, toFilename: Swift.String, completion: (Swift.String, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) throws -&gt; ()"
-                  moduleName = "SmartLogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/whizpool/Desktop/git/SmartLog_iOS/Classes/SLog.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "726"
-                  endingLineNumber = "726"
-                  offsetFromSymbolStart = "1284">
-               </Location>
-               <Location
-                  uuid = "925C7A76-3AA0-4F8D-AB7A-CA859488ABF6 - ef7b6a5d6c19d964"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SmartLogs.SLog.saveJsonFileInDirectory(jsonObject: Any, toFilename: Swift.String, completion: (Swift.String, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) throws -&gt; ()"
-                  moduleName = "SmartLogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/whizpool/Desktop/git/SmartLog_iOS/Classes/SLog.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "726"
-                  endingLineNumber = "726"
-                  offsetFromSymbolStart = "1288">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BEA2133F-14D8-43CC-B9F0-900E2F6A0021"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/SLog.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "748"
-            endingLineNumber = "748"
-            landmarkName = "saveJsonFileInDirectory(jsonObject:toFilename:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "78CC4147-AD41-4579-886C-2479FCDA26A4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/SLCommonMethods.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "createPasswordProtectedZipJsonFile(at:composer:controller:)"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
+            landmarkName = "checkAppVersionUpdate(bForceUpdate:bMinorUpdate:appStoreID:minorUpdateTitle:minorUpdateMessage:forceUpdateTitle:forceUpdateMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

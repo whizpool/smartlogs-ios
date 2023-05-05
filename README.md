@@ -105,6 +105,8 @@ SLog.shared.detailLog(text: "detail log will be saved in final log file (optiona
         // set email Subject
         SLog.shared.setSubjectToEmail(sub: "BUG REPORT ")
         
+        // setup check App version and show forced and minor alert for update. 
+        SLog.shared.checkAppVersionUpdate(bForceUpdate: true, bMinorUpdate: true, appStoreID: "1234567")
 
 ## Report Alert (end user UI)
         
