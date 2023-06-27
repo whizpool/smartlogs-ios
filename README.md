@@ -197,3 +197,80 @@ Whizpool, zzeeshan@gmail.com
 ## License
 
 SmartLogs is available under the MIT license. See the LICENSE file for more info.
+
+
+## Pod release and update new release
+
+
+
+ ****************************************  Steps SDK / POD creation and publishing to Cocoapod.Org ****************************************
+
+
+- Create the git hub repository with the official name for the SDK / POD 
+
+- repository should be public with the MIT License
+
+- now open the terminal go to the desktop and create the SDK support project by following command
+    - “ pod lib create POD_NAME ”
+
+- terminal will ask 5 question :- 
+    - 
+    - What platform do you want to use?? [ iOS / macOS ] -> iOS
+        - choose you plateform you are woking.
+
+    - What language do you want to use?? [ Swift / ObjC ] -> swift
+        - choose you language you are woking.
+
+    - Would you like to include a demo application with your library? [ Yes / No ] -> Yes
+        - choose respectively if you want the demo app inside the pod project.
+
+     - Which testing frameworks will you use? [ Quick / None ] -> None
+     - Would you like to do view based testing? [ Yes / No ] -> No
+
+
+- now your project is created and will be open automatically
+
+- do some code here in your SDK files and run it using example project inside the pod project to see the results
+
+- if you want to use any third party pod in the side the SDK library you need to mention the pod name in example Project and 
+POD_NAME.podspec file as well (eg) “ s.dependency ‘SSZipArchive’ ”
+
+
+    - for pod file pod ‘SSZipArchive’
+
+- now install the pod in the parent folder where the pod file exist 
+
+- review the pod spec file for example check the GitHub url, emails you want to register and pod name etc
+
+- in the end when the you SDK is ready push the initial commit to git hub using Github desktop
+
+- make the release with the same version mentioned in the pod spec file 
+
+- open the terminal at the main folder for the SDK and run the command
+
+    - pod lib lint 
+
+    - this will verify your pod and return success if none error found on the other hand it will return the errors and you have to
+    solve those error, without them pod will not be uploaded to the cocoapod.org
+
+    - once you get the success from pod lib lint after resolving the error push the latest code and make a new release 
+    on git hub (don’t forgot to increase / change the version number manually in pod spec file )
+
+    - now your version is 0.2.0
+
+// **********************************************
+    this email registration is done. only for the first time. 
+
+- go back to the terminal and run command to register your email shared in the pod spec file with this command
+    “ pod register ‘YOUR_EMAIL’ ‘OWNER NAME ’ ”
+
+- once your email / account is register run the command for the publishing / uploading the pod to the Cocoapod.org
+// **********************************************
+
+- run command “ pod trunk push “ 
+
+- CONGRATS YOU POD IS UPLOADED / PUBLISHED AND WILL BE AVAILABLE FOR OPERATIONAL PURPOSES 
+
+Note :- you must need to be opened terminal at the main folder of you SKD
+
+
