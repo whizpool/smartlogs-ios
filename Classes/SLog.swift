@@ -654,8 +654,8 @@ import MessageUI
         let logFileUrl = URL(string: logFilePath)
         let logFileZipPath = logFileUrl!.appendingPathComponent("/\(SLConstants.logZipFolder)")
         
-        let jsonFilePath = SLog.shared.getRootDirJsonFilesPath()
-        let jsonFileUrl = URL(string: jsonFilePath)
+//        let jsonFilePath = SLog.shared.getRootDirJsonFilesPath()
+//        let jsonFileUrl = URL(string: jsonFilePath)
         
         do {
             
@@ -827,7 +827,7 @@ import MessageUI
     {
         let fm = FileManager.default
         let urls = fm.urls(for: .documentDirectory, in: .userDomainMask)
-        var jsonErr : Error?
+//        let jsonErr : Error
         
         if let url = urls.first
         {
@@ -882,7 +882,7 @@ import MessageUI
         }
         else
         {
-            completion("", jsonErr)
+            completion("", nil)
         }
     }
     
@@ -1121,30 +1121,33 @@ import MessageUI
                             if let jsonData = responseJsonV["results"] as? [[String: Any]]
                             {
                                 DispatchQueue.main.async {
-                                    //
-                                    let versionString = jsonData.first?["version"] as? String
-                                    let vNumber = Double(versionString ?? "0.0")
+                                if let versionString = jsonData.first?["version"] as? String {
+                                                                        
+                                    ///split string
+                                    let versionStringComponent = versionString.split(separator: ".").compactMap { Int($0) }
+                                    let currentVersion = Double((Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String)!) ?? 0.0
+                                                                        
+                                    let currentVersionString = String(currentVersion)
                                     
-                                    if let versionNumber = vNumber
+                                    ///split string
+                                    let currentVersionComponent = currentVersionString.split(separator: ".").compactMap { Int($0) }
+                                                                        
+                                    ///check if its major version change
+                                    if currentVersionComponent.count > 0, versionStringComponent.count > 0, (versionStringComponent[0] > currentVersionComponent[0]) && bForceUpdate
                                     {
-                                        let currentVersion = Double((Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String)!) ?? 0.0
+                                        /// force update
+                                        /// force and minor update giveing manually due to we need to move to the app's play store
+                                        /// only for force update .. not for minor update
                                         
-                                        //check if its major version change
-                                        if (Int(versionNumber) > Int(currentVersion)) && bForceUpdate
-                                        {
-                                            /// force update
-                                            /// force and minor update giveing manually due to we need to move to the app's play store
-                                            /// only for force update .. not for minor update
-                                            
-                                            SLCommonMethods.showVersionCheckAlert (csTitle: self.forceUpdateTitle, csMessage: self.forceUpdateMsg, appStoreID: self.appStoreID, bForceUpdate: true, bMinorUpdate: false)
-                                        }
-                                        else if (versionNumber > currentVersion ) && bMinorUpdate
-                                        {
-                                            /// minor update
-                                            /// force and minor update giveing manually due to we need to move to the app's play store
-                                            /// only for force update .. not for minor update
-                                            
-                                            SLCommonMethods.showVersionCheckAlert (csTitle: self.minorUpdateTitle, csMessage: self.minorUpdateMsg, appStoreID: self.appStoreID, bForceUpdate: false, bMinorUpdate: true)
+                                        SLCommonMethods.showVersionCheckAlert (csTitle: self.forceUpdateTitle, csMessage: self.forceUpdateMsg, appStoreID: self.appStoreID, bForceUpdate: true, bMinorUpdate: false)
+                                    }
+                                    else if currentVersionComponent.count > 1, versionStringComponent.count > 1, (versionStringComponent[1] > currentVersionComponent[1]) && bMinorUpdate
+                                    {
+                                        /// minor update
+                                        /// force and minor update giveing manually due to we need to move to the app's play store
+                                        /// only for force update .. not for minor update
+                                        
+                                        SLCommonMethods.showVersionCheckAlert (csTitle: self.minorUpdateTitle, csMessage: self.minorUpdateMsg, appStoreID: self.appStoreID, bForceUpdate: false, bMinorUpdate: true)
                                         }
                                     }
                                 }

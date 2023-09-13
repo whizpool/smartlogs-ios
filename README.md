@@ -256,7 +256,7 @@ POD_NAME.podspec file as well (eg) “ s.dependency ‘SSZipArchive’ ”
     - once you get the success from pod lib lint after resolving the error push the latest code and make a new release 
     on git hub (don’t forgot to increase / change the version number manually in pod spec file )
 
-    - now your version is 0.2.0
+    - now your version is 0.4.0
 
 // **********************************************
     this email registration is done. only for the first time. 

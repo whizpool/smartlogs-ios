@@ -79,8 +79,8 @@ class SLAlertViewController: UIViewController {
             let logFileUrl = URL(string: logFilePath)
             let logFileZipPath = logFileUrl!.appendingPathComponent("/\(SLConstants.logZipFolder)")
             
-            let jsonFilePath = SLog.shared.getRootDirJsonFilesPath()
-            let jsonFileUrl = URL(string: jsonFilePath)
+//            let jsonFilePath = SLog.shared.getRootDirJsonFilesPath()
+//            let jsonFileUrl = URL(string: jsonFilePath)
             
             do {
                 SLCommonMethods.createPasswordProtectedZipLogFile(at: logFileZipPath.path, name: SLog.shared.logFileNameAfterCombine, composer: composer, controller: self)
