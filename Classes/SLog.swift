@@ -1125,10 +1125,8 @@ import MessageUI
                                                                         
                                     ///split string
                                     let versionStringComponent = versionString.split(separator: ".").compactMap { Int($0) }
-                                    let currentVersion = Double((Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String)!) ?? 0.0
-                                                                        
-                                    let currentVersionString = String(currentVersion)
-                                    
+                                    let currentVersionString = (Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String)!
+                                                                                                            
                                     ///split string
                                     let currentVersionComponent = currentVersionString.split(separator: ".").compactMap { Int($0) }
                                                                         
