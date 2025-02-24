@@ -103,12 +103,18 @@ class SLViewController: UIViewController {
     
     // ****************************************************
     
-    @IBAction func delteLogBtn(_ sender : UIButton)
+    @IBAction func addAttachmentsBtn(_ sender : UIButton)
     {
         if let filePath = Bundle.main.path(forResource: "Twitter", ofType: "png")
         {
             SLog.shared.addAttachment(url: filePath, mimeType: "image/png")
         }
+    }
+    // ****************************************************
+    
+    @IBAction func clearAllBtn(_ sender : UIButton)
+    {
+        SLog.shared.clearAllAttachments()
     }
     
     // ****************************************************

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,10 +21,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3R-0Q-Yai">
-                                <rect key="frame" x="66" y="109" width="261" height="230"/>
+                                <rect key="frame" x="66" y="109" width="261" height="310"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qQY-Ig-WVf">
-                                        <rect key="frame" x="0.0" y="0.0" width="261" height="230"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="261" height="310"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lve-Mb-3EC">
                                                 <rect key="frame" x="0.0" y="0.0" width="261" height="70"/>
@@ -53,9 +53,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ka-rO-668">
                                                         <rect key="frame" x="0.0" y="0.0" width="261" height="70"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="delete log"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="add attachments"/>
                                                         <connections>
-                                                            <action selector="delteLogBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rgG-Gi-dZp"/>
+                                                            <action selector="addAttachmentsBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kVm-ti-kJp"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -87,6 +87,27 @@
                                                     <constraint firstAttribute="bottom" secondItem="f9F-Pu-3zc" secondAttribute="bottom" id="XUI-w4-Bd5"/>
                                                     <constraint firstItem="f9F-Pu-3zc" firstAttribute="leading" secondItem="A20-Ya-SRW" secondAttribute="leading" id="eDn-VP-7eR"/>
                                                     <constraint firstItem="f9F-Pu-3zc" firstAttribute="top" secondItem="A20-Ya-SRW" secondAttribute="top" id="gri-rd-fl6"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NeB-kl-haB">
+                                                <rect key="frame" x="0.0" y="240" width="261" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEs-cz-khz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="261" height="70"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="clear all"/>
+                                                        <connections>
+                                                            <action selector="clearAllBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Why-yO-CYU"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="95U-Av-aUd"/>
+                                                    <constraint firstItem="JEs-cz-khz" firstAttribute="top" secondItem="NeB-kl-haB" secondAttribute="top" id="RMF-sr-9j2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="JEs-cz-khz" secondAttribute="bottom" id="WUs-uY-FtV"/>
+                                                    <constraint firstItem="JEs-cz-khz" firstAttribute="leading" secondItem="NeB-kl-haB" secondAttribute="leading" id="Xlm-eR-4Jq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JEs-cz-khz" secondAttribute="trailing" id="jVb-lA-K0H"/>
                                                 </constraints>
                                             </view>
                                         </subviews>

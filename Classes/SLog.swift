@@ -448,6 +448,18 @@ import MessageUI
     
     //****************************************************
     
+    //SS: remove all attached attachments 
+    @objc public func clearAllAttachments()
+    {
+        if self.addAttachmentArray.count > 0
+        {
+            self.addAttachmentArray.removeAll()
+            print("Attachments removed.")
+        }
+    }
+    
+    //****************************************************
+    
     // Send email to developer
     @objc public func sendReport(controller : UIViewController)
     {
