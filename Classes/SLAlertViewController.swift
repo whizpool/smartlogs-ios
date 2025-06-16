@@ -18,7 +18,6 @@ class SLAlertViewController: UIViewController {
     
     // Tittle Label Outlet
     @IBOutlet weak var titleLbl: UILabel!
-
     // Send Button outlet
     @IBOutlet weak var sendBtnImage : UIImageView!
     @IBOutlet weak var sendBtnLbl: UILabel!
@@ -137,7 +136,7 @@ class SLAlertViewController: UIViewController {
 // ********************* Extensions *********************//
 
 // Extension for mail composing delegate
-extension SLAlertViewController:MFMailComposeViewControllerDelegate
+extension SLAlertViewController:@preconcurrency MFMailComposeViewControllerDelegate
 {
     public func mailComposeController (_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         

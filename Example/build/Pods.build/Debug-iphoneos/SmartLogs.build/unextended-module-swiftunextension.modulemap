@@ -1,0 +1,4 @@
+
+module SmartLogs.__Swift {
+  exclude header "SmartLogs-Swift.h"
+}

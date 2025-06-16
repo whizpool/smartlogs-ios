@@ -1,0 +1,30 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "ziparchive",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/ZipArchive/ZipArchive",
+          "name" : "ZipArchive"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "df35718ea19a94e015b91dc4881dee028ce4cdba",
+            "version" : "2.6.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "ZipArchive"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

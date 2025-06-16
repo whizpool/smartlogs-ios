@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>colors</key>
+	<array>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/mac/Documents/GitHub/smartlogs-ios/Classes/asset.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACColorNameAlertView</string>
+			<key>relativePath</key>
+			<string>./alertView.colorset</string>
+			<key>swiftSymbol</key>
+			<string>alertView</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/mac/Documents/GitHub/smartlogs-ios/Classes/asset.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACColorNameColor</string>
+			<key>relativePath</key>
+			<string>./color.colorset</string>
+			<key>swiftSymbol</key>
+			<string>color</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/mac/Documents/GitHub/smartlogs-ios/Classes/asset.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACColorNameSendBtnColor</string>
+			<key>relativePath</key>
+			<string>./sendBtnColor.colorset</string>
+			<key>swiftSymbol</key>
+			<string>sendBtn</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/mac/Documents/GitHub/smartlogs-ios/Classes/asset.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACColorNameTextViewColor</string>
+			<key>relativePath</key>
+			<string>./textViewColor.colorset</string>
+			<key>swiftSymbol</key>
+			<string>textView</string>
+		</dict>
+	</array>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/mac/Documents/GitHub/smartlogs-ios/Classes/asset.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameSendIcon</string>
+			<key>relativePath</key>
+			<string>./sendIcon.imageset</string>
+			<key>swiftSymbol</key>
+			<string>sendIcon</string>
+		</dict>
+	</array>
+	<key>symbols</key>
+	<array/>
+</dict>
+</plist>

@@ -1,0 +1,68 @@
+{
+  "" : {
+    "diagnostics" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SmartLogs-master.dia",
+    "emit-module-dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SmartLogs-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SmartLogs-master-emit-module.dia",
+    "swift-dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SmartLogs-master.swiftdeps"
+  },
+  "/Users/mac/Documents/GitHub/smartlogs-ios/Classes/SLAlertViewController.swift" : {
+    "const-values" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLAlertViewController.swiftconstvalues",
+    "dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLAlertViewController.d",
+    "diagnostics" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLAlertViewController.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLAlertViewController.o",
+    "llvm-bc" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLAlertViewController.bc",
+    "object" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLAlertViewController.o",
+    "swift-dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLAlertViewController.swiftdeps",
+    "swiftmodule" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLAlertViewController~partial.swiftmodule"
+  },
+  "/Users/mac/Documents/GitHub/smartlogs-ios/Classes/SLCommonMethods.swift" : {
+    "const-values" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLCommonMethods.swiftconstvalues",
+    "dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLCommonMethods.d",
+    "diagnostics" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLCommonMethods.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLCommonMethods.o",
+    "llvm-bc" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLCommonMethods.bc",
+    "object" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLCommonMethods.o",
+    "swift-dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLCommonMethods.swiftdeps",
+    "swiftmodule" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLCommonMethods~partial.swiftmodule"
+  },
+  "/Users/mac/Documents/GitHub/smartlogs-ios/Classes/SLConstants.swift" : {
+    "const-values" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLConstants.swiftconstvalues",
+    "dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLConstants.d",
+    "diagnostics" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLConstants.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLConstants.o",
+    "llvm-bc" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLConstants.bc",
+    "object" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLConstants.o",
+    "swift-dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLConstants.swiftdeps",
+    "swiftmodule" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLConstants~partial.swiftmodule"
+  },
+  "/Users/mac/Documents/GitHub/smartlogs-ios/Classes/SLGrowingTextView.swift" : {
+    "const-values" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLGrowingTextView.swiftconstvalues",
+    "dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLGrowingTextView.d",
+    "diagnostics" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLGrowingTextView.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLGrowingTextView.o",
+    "llvm-bc" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLGrowingTextView.bc",
+    "object" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLGrowingTextView.o",
+    "swift-dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLGrowingTextView.swiftdeps",
+    "swiftmodule" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLGrowingTextView~partial.swiftmodule"
+  },
+  "/Users/mac/Documents/GitHub/smartlogs-ios/Classes/SLog.swift" : {
+    "const-values" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLog.swiftconstvalues",
+    "dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLog.d",
+    "diagnostics" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLog.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLog.o",
+    "llvm-bc" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLog.bc",
+    "object" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLog.o",
+    "swift-dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLog.swiftdeps",
+    "swiftmodule" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/SLog~partial.swiftmodule"
+  },
+  "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

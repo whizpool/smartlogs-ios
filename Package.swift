@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "SmartLogs",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v12)
     ],
     products: [
         .library(
@@ -23,6 +23,7 @@ let package = Package(
             ],
             path: "Classes",
             exclude: [],
+            publicHeadersPath: "include",
             resources: [
                 .process(".")
             ],

@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'SmartLogs' in project 'Pods'
+➜ Explicit dependency on target 'SSZipArchive' in project 'Pods'
+Target 'SSZipArchive' in project 'Pods' (no dependencies)

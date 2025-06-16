@@ -12,6 +12,7 @@ import SSZipArchive
 
 class SLCommonMethods
 {
+    @MainActor
     static func showAlertWith(csTitle:String, csMessage:String, viewController:UIViewController)
     {
         let alertVC = UIAlertController(title: csTitle, message: csMessage, preferredStyle: .alert)
@@ -26,7 +27,7 @@ class SLCommonMethods
     }
     
     /********************************************************/
-    
+    @MainActor
     static func showVersionCheckAlert(csTitle:String, csMessage:String, appStoreID:String, bForceUpdate:Bool, bMinorUpdate:Bool)
     {
         var topWindow: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
@@ -65,7 +66,7 @@ class SLCommonMethods
     }
     
     /********************************************************/
-    
+    @MainActor
     static func showAlertWithHandler(viewContoller : UIViewController , title : String , message : String, leftButtonText : String? , rightButtonText :String? , leftButtonActionHandler: (()->())?, rightButtonActionHandler: (()->())? )
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -91,6 +92,7 @@ class SLCommonMethods
     // ****************************************
     
     // screen width
+    @MainActor
     static func screenWidth () -> CGFloat{
         return UIScreen.main.bounds.width
     }
@@ -98,12 +100,14 @@ class SLCommonMethods
     // ****************************************
     
     // Screen height.
+    @MainActor
     static func screenHeight () -> CGFloat{
         return UIScreen.main.bounds.height
     }
     
     // ****************************************
     
+    @MainActor
     static func checkAttachedFiles(composer viewController: MFMailComposeViewController)
     {
         for file in SLog.shared.addAttachmentArray
@@ -121,6 +125,7 @@ class SLCommonMethods
     /// when we report the bug of wants the log fiels it will combine all the log files
     /// then zip it and post it at the given email address
     /// Function create zip and create password on it
+    @MainActor
     static func createPasswordProtectedZipLogFile(at logfilePath: String, name fileName: String, composer viewController: MFMailComposeViewController, controller : UIViewController)
     {
         var isZipped:Bool = false
@@ -167,7 +172,7 @@ class SLCommonMethods
     }
 
     //****************************************************
-
+    @MainActor
     static func createJsonFile(composer viewController: MFMailComposeViewController, controller : UIViewController)
     {
         SLog.shared.makeJsonFile { jsonfilePath, jsonErr in
@@ -197,7 +202,7 @@ class SLCommonMethods
     }
 
     //****************************************************
-
+    @MainActor
     static func createPasswordProtectedZipJsonFile(at logfilePath: String, composer viewController: MFMailComposeViewController, controller : UIViewController)
     {
         var isZipped:Bool = false

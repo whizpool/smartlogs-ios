@@ -96,9 +96,9 @@
 /* Begin PBXFileReference section */
 		00B4713D79B46330B82D584252E187D1 /* SLAlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLAlertViewController.swift; path = Classes/SLAlertViewController.swift; sourceTree = "<group>"; };
 		022CABE9DA4EEF2DE7FB886790BCE52A /* Pods-SmartLogs_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartLogs_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		05BA496A8A0DBBF665E12DF6C1C7F5F2 /* mz_strm_pkcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_pkcrypt.c; path = SSZipArchive/minizip/mz_strm_pkcrypt.c; sourceTree = "<group>"; };
+		05BA496A8A0DBBF665E12DF6C1C7F5F2 /* mz_strm_pkcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_pkcrypt.c; path = SSZipArchive/minizip/mz_strm_pkcrypt.c; sourceTree = "<group>"; };
 		0C53C132E91F1677F440DE32FF666C66 /* SmartLogs-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartLogs-prefix.pch"; sourceTree = "<group>"; };
-		0C97D4ED38CD0EFC01F9E745C9750ED6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		0C97D4ED38CD0EFC01F9E745C9750ED6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1107D381AE6683EF1242866B247ADE9D /* Pods-SmartLogs_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmartLogs_Example.modulemap"; sourceTree = "<group>"; };
 		127B497F7FA507BEB960B07FBDA61E4C /* SmartLogs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SmartLogs.modulemap; sourceTree = "<group>"; };
 		136F8DF226D600D939DB6A36151E175F /* SmartLogs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartLogs-umbrella.h"; sourceTree = "<group>"; };
@@ -106,21 +106,21 @@
 		17FCF959138302332352B5E8068E0AF1 /* mz_strm_pkcrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_pkcrypt.h; path = SSZipArchive/minizip/mz_strm_pkcrypt.h; sourceTree = "<group>"; };
 		1841ECA9D5DE60E15480E083C61DF306 /* Pods-SmartLogs_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartLogs_Tests-dummy.m"; sourceTree = "<group>"; };
 		1AFAA6AD2CD78DD4D1BD5518D8620DA9 /* SLAlertViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SLAlertViewController.xib; path = Classes/SLAlertViewController.xib; sourceTree = "<group>"; };
-		23ABD02F2CA5CB54AB141069B387FFDE /* mz_strm_split.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_split.c; path = SSZipArchive/minizip/mz_strm_split.c; sourceTree = "<group>"; };
+		23ABD02F2CA5CB54AB141069B387FFDE /* mz_strm_split.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_split.c; path = SSZipArchive/minizip/mz_strm_split.c; sourceTree = "<group>"; };
 		246EE1920ED99537A3432AC5286A0221 /* mz_strm_zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_zlib.h; path = SSZipArchive/minizip/mz_strm_zlib.h; sourceTree = "<group>"; };
 		2AF98945B035E780ADCA5F226E136158 /* SmartLogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartLogs.release.xcconfig; sourceTree = "<group>"; };
 		2C01C7BC48F9C059F36BE9382A4F195D /* Pods-SmartLogs_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartLogs_Example-umbrella.h"; sourceTree = "<group>"; };
 		2E3D0066B7B182ABB8273F4D905110E3 /* mz_strm_wzaes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_wzaes.h; path = SSZipArchive/minizip/mz_strm_wzaes.h; sourceTree = "<group>"; };
-		3A72147992643BBE15024E5BF9E86D1F /* mz_strm_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_mem.c; path = SSZipArchive/minizip/mz_strm_mem.c; sourceTree = "<group>"; };
+		3A72147992643BBE15024E5BF9E86D1F /* mz_strm_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_mem.c; path = SSZipArchive/minizip/mz_strm_mem.c; sourceTree = "<group>"; };
 		3D3F0D6223C1DCC995A43E311F3A801C /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
 		3E3BF4BF2521FA5808F989514C7EC9F6 /* SSZipArchive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.debug.xcconfig; sourceTree = "<group>"; };
 		427AA01759771C15EADA449A2961A778 /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
 		473928B20B63CD5CABF18DB0785419CB /* mz_strm_os.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_os.h; path = SSZipArchive/minizip/mz_strm_os.h; sourceTree = "<group>"; };
 		48F7904E29DC76AC92222DA3B2A9F96F /* SSZipArchive-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-umbrella.h"; sourceTree = "<group>"; };
-		49CD09986F496C08770DC5BF839CE774 /* mz_zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_zip.c; path = SSZipArchive/minizip/mz_zip.c; sourceTree = "<group>"; };
+		49CD09986F496C08770DC5BF839CE774 /* mz_zip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_zip.c; path = SSZipArchive/minizip/mz_zip.c; sourceTree = "<group>"; };
 		4C97796A68E3416C1E0F893499E1417B /* mz_zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_zip.h; path = SSZipArchive/minizip/mz_zip.h; sourceTree = "<group>"; };
-		4CDDEBCA568A303501173CF9553E1851 /* mz_zip_rw.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_zip_rw.c; path = SSZipArchive/minizip/mz_zip_rw.c; sourceTree = "<group>"; };
-		50CC78E13C1B969AC2415BB6DE845C0E /* mz_os.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_os.c; path = SSZipArchive/minizip/mz_os.c; sourceTree = "<group>"; };
+		4CDDEBCA568A303501173CF9553E1851 /* mz_zip_rw.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_zip_rw.c; path = SSZipArchive/minizip/mz_zip_rw.c; sourceTree = "<group>"; };
+		50CC78E13C1B969AC2415BB6DE845C0E /* mz_os.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_os.c; path = SSZipArchive/minizip/mz_os.c; sourceTree = "<group>"; };
 		57E95BB8727FBE207C72DB27C18DB28A /* mz_zip_rw.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_zip_rw.h; path = SSZipArchive/minizip/mz_zip_rw.h; sourceTree = "<group>"; };
 		583F14DC9BDC1C7EB8AFE86E279DE204 /* Pods-SmartLogs_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartLogs_Example-Info.plist"; sourceTree = "<group>"; };
 		5DA7227F92FF362BAF5873DDC317D29A /* Pods-SmartLogs_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartLogs_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,43 +136,43 @@
 		7E5B26B2A59C744D5AF2C750EFAE4B3D /* SLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLog.swift; path = Classes/SLog.swift; sourceTree = "<group>"; };
 		7FD0BACFCB3CC2F5223BD235163D45BF /* mz_strm_buf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_buf.h; path = SSZipArchive/minizip/mz_strm_buf.h; sourceTree = "<group>"; };
 		813B931EBBD527AC2E04B07881966C70 /* mz_crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_crypt.h; path = SSZipArchive/minizip/mz_crypt.h; sourceTree = "<group>"; };
-		844712351A5F4BE39D77B65957E25C6F /* mz_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_os_posix.c; path = SSZipArchive/minizip/mz_os_posix.c; sourceTree = "<group>"; };
+		844712351A5F4BE39D77B65957E25C6F /* mz_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_os_posix.c; path = SSZipArchive/minizip/mz_os_posix.c; sourceTree = "<group>"; };
 		8CA13501E27029FB75FE5945E2B98301 /* mz_compat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_compat.h; path = SSZipArchive/minizip/mz_compat.h; sourceTree = "<group>"; };
-		91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSZipArchive; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9423954ED25DDB008D2B61FC73D26B58 /* mz_strm_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_buf.c; path = SSZipArchive/minizip/mz_strm_buf.c; sourceTree = "<group>"; };
+		91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9423954ED25DDB008D2B61FC73D26B58 /* mz_strm_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_buf.c; path = SSZipArchive/minizip/mz_strm_buf.c; sourceTree = "<group>"; };
 		948C75D9746833B7F097F88B5473EC4A /* Pods-SmartLogs_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartLogs_Tests-Info.plist"; sourceTree = "<group>"; };
 		952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9658967D43530D7E8F25C085904C7E65 /* SLGrowingTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLGrowingTextView.swift; path = Classes/SLGrowingTextView.swift; sourceTree = "<group>"; };
 		97856ADC422803FC20655BABD2C8E98B /* Pods-SmartLogs_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartLogs_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9ABFB26506D2B985E96418482B8EB907 /* Pods-SmartLogs_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartLogs_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9AD4A6EDDBE062F8B67609F7A6C691C6 /* Pods-SmartLogs_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartLogs_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9D7DC9A66636027AA8D514CDE1141D9E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D7DC9A66636027AA8D514CDE1141D9E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; };
 		9F787961E0994AA5934713C5C4D8A51F /* mz_os.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_os.h; path = SSZipArchive/minizip/mz_os.h; sourceTree = "<group>"; };
 		A1610757E92EC78F6121B1CA0742912E /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
 		A1C41E24EBAD19D3B3B88B893E298A0F /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
 		A54C4BB32D5D51418952AED9D4618E87 /* SSZipArchive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.release.xcconfig; sourceTree = "<group>"; };
-		B612FAEFEA6DAF5ECDE4B48C7C4F428F /* mz_strm.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm.c; path = SSZipArchive/minizip/mz_strm.c; sourceTree = "<group>"; };
+		B612FAEFEA6DAF5ECDE4B48C7C4F428F /* mz_strm.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm.c; path = SSZipArchive/minizip/mz_strm.c; sourceTree = "<group>"; };
 		B9C9792493F427CE1B3F880539EAE334 /* SSZipArchive-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSZipArchive-Info.plist"; sourceTree = "<group>"; };
 		B9F3E27A5F13F050A9C663BAE5EAA7A9 /* Pods-SmartLogs_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartLogs_Example-dummy.m"; sourceTree = "<group>"; };
-		BC776CCA5F82B8FE06D934243286930B /* Pods-SmartLogs_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SmartLogs_Example"; path = Pods_SmartLogs_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC776CCA5F82B8FE06D934243286930B /* Pods_SmartLogs_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartLogs_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE665D3826A9C277095BC617C2C6533 /* Pods-SmartLogs_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartLogs_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		BD48AE5C77737912F09E7C8AFA8D7702 /* mz_compat.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_compat.c; path = SSZipArchive/minizip/mz_compat.c; sourceTree = "<group>"; };
+		BD48AE5C77737912F09E7C8AFA8D7702 /* mz_compat.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_compat.c; path = SSZipArchive/minizip/mz_compat.c; sourceTree = "<group>"; };
 		C154ED6019142E51D08C52282BB5AFA0 /* SmartLogs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmartLogs-dummy.m"; sourceTree = "<group>"; };
-		C29F02B018B0DC44C2AC05DFCFFA3EDE /* mz_strm_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_os_posix.c; path = SSZipArchive/minizip/mz_strm_os_posix.c; sourceTree = "<group>"; };
+		C29F02B018B0DC44C2AC05DFCFFA3EDE /* mz_strm_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_os_posix.c; path = SSZipArchive/minizip/mz_strm_os_posix.c; sourceTree = "<group>"; };
 		C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		C3B6FDD49E4EDF82F6616C112111FBEC /* Pods-SmartLogs_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartLogs_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C843C0A6D692889AB3D3047336D84868 /* Pods-SmartLogs_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmartLogs_Tests.modulemap"; sourceTree = "<group>"; };
-		C9E58B001EB497987FD1DFF3DE32CC3F /* mz_strm_wzaes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_wzaes.c; path = SSZipArchive/minizip/mz_strm_wzaes.c; sourceTree = "<group>"; };
-		CBA7C727700C05AE10A909260EBFDF1F /* mz_crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_crypt.c; path = SSZipArchive/minizip/mz_crypt.c; sourceTree = "<group>"; };
+		C9E58B001EB497987FD1DFF3DE32CC3F /* mz_strm_wzaes.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_wzaes.c; path = SSZipArchive/minizip/mz_strm_wzaes.c; sourceTree = "<group>"; };
+		CBA7C727700C05AE10A909260EBFDF1F /* mz_crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_crypt.c; path = SSZipArchive/minizip/mz_crypt.c; sourceTree = "<group>"; };
 		CE161202B7E79569F856E5E0E3269AD6 /* mz_strm_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_mem.h; path = SSZipArchive/minizip/mz_strm_mem.h; sourceTree = "<group>"; };
-		D2F48715569A09C217F3A798C152E1F5 /* mz_strm_zlib.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_zlib.c; path = SSZipArchive/minizip/mz_strm_zlib.c; sourceTree = "<group>"; };
+		D2F48715569A09C217F3A798C152E1F5 /* mz_strm_zlib.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_zlib.c; path = SSZipArchive/minizip/mz_strm_zlib.c; sourceTree = "<group>"; };
 		DCD76455AC89362BEDA92E31A6AE08AC /* SLCommonMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLCommonMethods.swift; path = Classes/SLCommonMethods.swift; sourceTree = "<group>"; };
-		E08A3C1A28B7B8494D802C8F03A3870C /* SmartLogs.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SmartLogs.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		EF943F9DE9BA8E515BF65736B5B9F444 /* Pods-SmartLogs_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SmartLogs_Tests"; path = Pods_SmartLogs_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F695523190812C78E0545050C9707A60 /* SmartLogs */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SmartLogs; path = SmartLogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E08A3C1A28B7B8494D802C8F03A3870C /* SmartLogs.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SmartLogs.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		EF943F9DE9BA8E515BF65736B5B9F444 /* Pods_SmartLogs_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartLogs_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F695523190812C78E0545050C9707A60 /* SmartLogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartLogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78F73AC1E27DF387460E6C9D3BFF7BD /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
-		F86615AF86FD3D110F4C387667DF2EAA /* mz_crypt_apple.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_crypt_apple.c; path = SSZipArchive/minizip/mz_crypt_apple.c; sourceTree = "<group>"; };
+		F86615AF86FD3D110F4C387667DF2EAA /* mz_crypt_apple.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_crypt_apple.c; path = SSZipArchive/minizip/mz_crypt_apple.c; sourceTree = "<group>"; };
 		F9A27455BD782250AC63D8A94365E34D /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/include/ZipArchive.h; sourceTree = "<group>"; };
 		FA3B1C52991C7B6184D813127BAFF166 /* Pods-SmartLogs_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmartLogs_Example-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -249,10 +249,10 @@
 		0B8AB9905F9723A2457BAF5C7AA68356 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC776CCA5F82B8FE06D934243286930B /* Pods-SmartLogs_Example */,
-				EF943F9DE9BA8E515BF65736B5B9F444 /* Pods-SmartLogs_Tests */,
-				F695523190812C78E0545050C9707A60 /* SmartLogs */,
-				91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive */,
+				BC776CCA5F82B8FE06D934243286930B /* Pods_SmartLogs_Example.framework */,
+				EF943F9DE9BA8E515BF65736B5B9F444 /* Pods_SmartLogs_Tests.framework */,
+				F695523190812C78E0545050C9707A60 /* SmartLogs.framework */,
+				91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -392,7 +392,6 @@
 				F9A27455BD782250AC63D8A94365E34D /* ZipArchive.h */,
 				F324569DC22301903DC55528E6F2E407 /* Support Files */,
 			);
-			name = SSZipArchive;
 			path = SSZipArchive;
 			sourceTree = "<group>";
 		};
@@ -482,7 +481,7 @@
 			);
 			name = "Pods-SmartLogs_Tests";
 			productName = Pods_SmartLogs_Tests;
-			productReference = EF943F9DE9BA8E515BF65736B5B9F444 /* Pods-SmartLogs_Tests */;
+			productReference = EF943F9DE9BA8E515BF65736B5B9F444 /* Pods_SmartLogs_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B940FB32F65C6DA607CC4FB0CD0EF4DA /* SmartLogs */ = {
@@ -501,7 +500,7 @@
 			);
 			name = SmartLogs;
 			productName = SmartLogs;
-			productReference = F695523190812C78E0545050C9707A60 /* SmartLogs */;
+			productReference = F695523190812C78E0545050C9707A60 /* SmartLogs.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		CE9A43C73AD22C981266381D4D821F31 /* Pods-SmartLogs_Example */ = {
@@ -521,7 +520,7 @@
 			);
 			name = "Pods-SmartLogs_Example";
 			productName = Pods_SmartLogs_Example;
-			productReference = BC776CCA5F82B8FE06D934243286930B /* Pods-SmartLogs_Example */;
+			productReference = BC776CCA5F82B8FE06D934243286930B /* Pods_SmartLogs_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */ = {
@@ -539,7 +538,7 @@
 			);
 			name = SSZipArchive;
 			productName = SSZipArchive;
-			productReference = 91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive */;
+			productReference = 91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -743,7 +742,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -934,8 +934,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -999,7 +998,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

@@ -1,0 +1,5 @@
+
+module SmartLogs.Swift {
+  header "SmartLogs-Swift.h"
+  requires objc
+}

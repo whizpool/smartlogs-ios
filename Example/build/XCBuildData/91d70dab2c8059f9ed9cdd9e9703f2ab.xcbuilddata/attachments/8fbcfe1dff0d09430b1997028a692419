@@ -1,0 +1,23 @@
+{
+  "version": 0,
+  "use-external-names": false,
+  "case-sensitive": false,
+  "roots": [{
+    "type": "directory",
+    "name": "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Debug-iphoneos/SmartLogs/SmartLogs.framework/Modules",
+    "contents": [{
+      "type": "file",
+      "name": "module.modulemap",
+      "external-contents": "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    "type": "directory",
+    "name": "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Debug-iphoneos/SmartLogs/SmartLogs.framework/Headers",
+    "contents": [{
+      "type": "file",
+      "name": "SmartLogs-Swift.h",
+      "external-contents": "/Users/mac/Documents/GitHub/smartlogs-ios/Example/build/Pods.build/Debug-iphoneos/SmartLogs.build/unextended-interface-header.h",
+    }]
+  }]
+}

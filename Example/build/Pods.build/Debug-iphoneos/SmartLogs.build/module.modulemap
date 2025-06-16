@@ -1,0 +1,11 @@
+framework module SmartLogs {
+  umbrella header "SmartLogs-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module SmartLogs.Swift {
+  header "SmartLogs-Swift.h"
+  requires objc
+}

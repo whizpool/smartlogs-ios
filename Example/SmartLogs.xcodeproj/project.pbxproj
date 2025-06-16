@@ -33,7 +33,7 @@
 		30BFA64B156686CB9753A3E4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3E62F6780DCE1372E759AE3E /* Pods_SmartLogs_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartLogs_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AEE1696278292E955A351F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		5742244D68D7B17331200AC9 /* SmartLogs.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SmartLogs.podspec; path = ../SmartLogs.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5742244D68D7B17331200AC9 /* SmartLogs.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SmartLogs.podspec; path = ../SmartLogs.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SmartLogs_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartLogs_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* SLAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLAppDelegate.swift; sourceTree = "<group>"; };

@@ -1,0 +1,10 @@
+framework module SmartLogs {
+  umbrella header "SmartLogs-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module SmartLogs.__Swift {
+  exclude header "SmartLogs-Swift.h"
+}
