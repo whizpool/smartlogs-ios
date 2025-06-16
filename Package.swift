@@ -1,4 +1,4 @@
-// swift-tools-version:5.9
+// swift-tools-version:6.0
 import PackageDescription
 
 let package = Package(
@@ -16,21 +16,16 @@ let package = Package(
         .package(url: "https://github.com/ZipArchive/ZipArchive", from: "2.4.2")
     ],
     targets: [
-        .target(
-            name: "SmartLogs",
-            dependencies: [
-                .product(name: "SSZipArchive", package: "ZipArchive")
-            ],
-            path: "Classes",
-            exclude: [],
-            publicHeadersPath: "include",
-            resources: [
-                .process(".")
-            ],
-            swiftSettings: [
-                .define("SPM")
-            ]
-        )
-    ]
+            .target(
+                name: "SmartLogs",
+                dependencies: [
+                    .product(name: "ZipArchive", package: "ZipArchive")
+                ],
+                path: "Classes",
+                swiftSettings: [
+                    .define("SPM")
+                ]
+            )
+        ]
 )
 
