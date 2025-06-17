@@ -22,6 +22,9 @@ let package = Package(
                     .product(name: "ZipArchive", package: "ZipArchive")
                 ],
                 path: "Classes",
+                resources: [
+                    .process("Resources")
+                ],
                 swiftSettings: [
                     .define("SPM")
                 ]

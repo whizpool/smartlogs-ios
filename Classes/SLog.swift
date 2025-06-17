@@ -477,7 +477,11 @@ import SSZipArchive
         }
         else
         {
+#if SWIFT_PACKAGE
+            let bundle = Bundle.module
+#else
             let bundle = Bundle(for: SLAlertViewController.self)
+#endif
             let controllerView = SLAlertViewController(nibName: "SLAlertViewController", bundle: bundle)
             controller.present(controllerView, animated: true, completion: nil)
         }
