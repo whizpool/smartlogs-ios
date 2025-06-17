@@ -10,25 +10,23 @@
 		03588B938BECEEF89042E2C73159BEA2 /* mz_strm_wzaes.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E3D0066B7B182ABB8273F4D905110E3 /* mz_strm_wzaes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		04146B5BF0204A5EB7045A3F348EE195 /* Pods-SmartLogs_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C01C7BC48F9C059F36BE9382A4F195D /* Pods-SmartLogs_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		090CC8DB2713055B65F3693A67A9F0AF /* mz_zip_rw.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDEBCA568A303501173CF9553E1851 /* mz_zip_rw.c */; };
-		0E8593C1DB3DDC03CBE2819D260D5214 /* SLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B26B2A59C744D5AF2C750EFAE4B3D /* SLog.swift */; };
+		0E8593C1DB3DDC03CBE2819D260D5214 /* SLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F4B1B4A37D9DE1FDF086507841B658 /* SLog.swift */; };
 		0F0D2A35105C00A15422514600E5D883 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F29E5F7EEDB83D0B063DAD0B5196072 /* Foundation.framework */; };
 		1309996F0B6B97646622FA45F0ECCF7C /* Pods-SmartLogs_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F3E27A5F13F050A9C663BAE5EAA7A9 /* Pods-SmartLogs_Example-dummy.m */; };
-		17E0D2F453111DB641A841998C29FDB4 /* SmartLogs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C154ED6019142E51D08C52282BB5AFA0 /* SmartLogs-dummy.m */; };
-		202CFAFABDE5DB014A0B0FA72BA4EC89 /* SmartLogs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 136F8DF226D600D939DB6A36151E175F /* SmartLogs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17E0D2F453111DB641A841998C29FDB4 /* SmartLogs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C8D863E5956D66AF8BB9BC01E3FDA /* SmartLogs-dummy.m */; };
+		202CFAFABDE5DB014A0B0FA72BA4EC89 /* SmartLogs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 869383D728E0760B000A924627570566 /* SmartLogs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27293E7084BFE6AF873BB233419CFA2D /* mz_strm_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A72147992643BBE15024E5BF9E86D1F /* mz_strm_mem.c */; };
 		2A00C983ECDC7107CA1C18961424E68B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F29E5F7EEDB83D0B063DAD0B5196072 /* Foundation.framework */; };
-		2BB6A045C905B6812399D545D1FD2546 /* SLAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAA6AD2CD78DD4D1BD5518D8620DA9 /* SLAlertViewController.xib */; };
 		34D0323F374257B2123AA063A2F38DA1 /* Pods-SmartLogs_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97856ADC422803FC20655BABD2C8E98B /* Pods-SmartLogs_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		352E63E404CED072E7F714C52FF93E49 /* mz_compat.c in Sources */ = {isa = PBXBuildFile; fileRef = BD48AE5C77737912F09E7C8AFA8D7702 /* mz_compat.c */; };
 		3683A04365A59519AAB2F47C5FA6FA3C /* mz_os_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = 844712351A5F4BE39D77B65957E25C6F /* mz_os_posix.c */; };
 		374FECA22750A2F7F17CA125C25DB352 /* mz_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA13501E27029FB75FE5945E2B98301 /* mz_compat.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3C2F7F994B9EA79A8E0442E9E463FF68 /* asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14086A39D89AA3F1A4D0D714DE133CA1 /* asset.xcassets */; };
 		4569AD436BB87FA37A01C5C982F025A2 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3F0D6223C1DCC995A43E311F3A801C /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		49900106BEFC9C1BEB3E96558C0C4AE8 /* mz_zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C97796A68E3416C1E0F893499E1417B /* mz_zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4C652DF3EC0F0F39B29287E72864FC11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F29E5F7EEDB83D0B063DAD0B5196072 /* Foundation.framework */; };
 		4C8A5ADD06D2DFC9E7FA2A1CA9DD565A /* mz_strm_pkcrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 05BA496A8A0DBBF665E12DF6C1C7F5F2 /* mz_strm_pkcrypt.c */; };
 		4E56BA148170B3A6E7FA6D312B06C784 /* mz_zip_rw.h in Headers */ = {isa = PBXBuildFile; fileRef = 57E95BB8727FBE207C72DB27C18DB28A /* mz_zip_rw.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		593903BA8E553544396A5F5A0803CBAA /* SLCommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD76455AC89362BEDA92E31A6AE08AC /* SLCommonMethods.swift */; };
+		593903BA8E553544396A5F5A0803CBAA /* SLCommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FCF8C942873047A4D370C045F5DDFC /* SLCommonMethods.swift */; };
 		60E384ABEF99F5104C99DCB596E2BE95 /* mz_crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = CBA7C727700C05AE10A909260EBFDF1F /* mz_crypt.c */; };
 		6577A9EB1AED47B915B7F77C3F8BF335 /* mz_os.c in Sources */ = {isa = PBXBuildFile; fileRef = 50CC78E13C1B969AC2415BB6DE845C0E /* mz_os.c */; };
 		68D4A83EA695C463981E04DAD037064F /* mz_strm_split.c in Sources */ = {isa = PBXBuildFile; fileRef = 23ABD02F2CA5CB54AB141069B387FFDE /* mz_strm_split.c */; };
@@ -40,10 +38,12 @@
 		835C687083E3D51DE87C2F2C4C681B1C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C330BC62C9ACD3F9E7AF138812EF298C /* Security.framework */; };
 		8415E191A2886EC3426A01BC86299E1F /* mz_strm_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 9423954ED25DDB008D2B61FC73D26B58 /* mz_strm_buf.c */; };
 		84B5FB65B38C19F534F49DE6471C0E5B /* mz_strm_zlib.c in Sources */ = {isa = PBXBuildFile; fileRef = D2F48715569A09C217F3A798C152E1F5 /* mz_strm_zlib.c */; };
-		8ED0B162366D4CD1FCE927945022D941 /* SLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631B934DA62EB82BAB7BB17E4FAA6941 /* SLConstants.swift */; };
+		8ED0B162366D4CD1FCE927945022D941 /* SLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7EA0399755F2051D5D2C252B873AF6 /* SLConstants.swift */; };
 		8F43694404EAFF6D73EE58928154C0F2 /* mz_strm_buf.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FD0BACFCB3CC2F5223BD235163D45BF /* mz_strm_buf.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		98A164E263DE836CB3D56EBAA1038C4E /* asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08A22BA57DE03002E05C8D72581945A7 /* asset.xcassets */; };
 		A190A9DFC23558006BE5D8D5B6DAE51C /* mz_strm_zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 246EE1920ED99537A3432AC5286A0221 /* mz_strm_zlib.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A71E222C76A20B18600A6DE4091CFB0E /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = F78F73AC1E27DF387460E6C9D3BFF7BD /* SSZipArchive.m */; };
+		A80A871A414E817B553ACF582007A5D8 /* SLAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD48859C6104DB9711F7F69AF634FEF6 /* SLAlertViewController.xib */; };
 		A90260F860E51EC89130250EA3E61F22 /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 427AA01759771C15EADA449A2961A778 /* SSZipArchive-dummy.m */; };
 		AAF2B7BD4C56295DBA1BB6039AC0EDD4 /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = F9A27455BD782250AC63D8A94365E34D /* ZipArchive.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AE0F1284A9C414203C1D5C66EDE95E8E /* mz_strm.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CAF80929B8E8764AB09B4C9CDA97C55 /* mz_strm.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -52,9 +52,9 @@
 		C64C28E8B15C171323473E543C608E68 /* mz_strm_os.h in Headers */ = {isa = PBXBuildFile; fileRef = 473928B20B63CD5CABF18DB0785419CB /* mz_strm_os.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C9AFC6682FD2C8231E779A4349DBDFD6 /* mz_strm_wzaes.c in Sources */ = {isa = PBXBuildFile; fileRef = C9E58B001EB497987FD1DFF3DE32CC3F /* mz_strm_wzaes.c */; };
 		CAA3CCDF9523220F6B54B941BDA2E570 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F29E5F7EEDB83D0B063DAD0B5196072 /* Foundation.framework */; };
-		D07A4585FAE430D17AD01AC8C291D027 /* SLGrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658967D43530D7E8F25C085904C7E65 /* SLGrowingTextView.swift */; };
+		D07A4585FAE430D17AD01AC8C291D027 /* SLGrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B758A435057F0F188DD0A5E709C79B9 /* SLGrowingTextView.swift */; };
 		D2E6ED217227452C59C9B29C62858F7C /* SSZipArchive-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48F7904E29DC76AC92222DA3B2A9F96F /* SSZipArchive-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D83F53A5123B1473AE6A1D81235A6210 /* SLAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4713D79B46330B82D584252E187D1 /* SLAlertViewController.swift */; };
+		D83F53A5123B1473AE6A1D81235A6210 /* SLAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DDEB14FC68503E3D27D143C032FA29 /* SLAlertViewController.swift */; };
 		D9C15A8B92E62396D95DB88415A38A8F /* mz_strm_split.h in Headers */ = {isa = PBXBuildFile; fileRef = 640494BB684109D53C602648DC944F02 /* mz_strm_split.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E283D8FF283E09D9CF863A27B55886EF /* mz_crypt_apple.c in Sources */ = {isa = PBXBuildFile; fileRef = F86615AF86FD3D110F4C387667DF2EAA /* mz_crypt_apple.c */; };
 		E5FA0235CD286C13C0F568946EB0AEA8 /* mz_strm_pkcrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 17FCF959138302332352B5E8068E0AF1 /* mz_strm_pkcrypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -63,28 +63,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		07748C6C74F4B717E1D7445B121C4A87 /* PBXContainerItemProxy */ = {
+		25CF325F78DEDAD1A19DD94AB3620393 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CE9A43C73AD22C981266381D4D821F31;
 			remoteInfo = "Pods-SmartLogs_Example";
 		};
-		20DE0A4C5A5DB60E5A53A9A20365A6D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B940FB32F65C6DA607CC4FB0CD0EF4DA;
-			remoteInfo = SmartLogs;
-		};
-		500DDB37B6A64EA13B8961A397532BCA /* PBXContainerItemProxy */ = {
+		30C2482E8207C03F4FBF94BEF9FFFF17 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F60E38364AFF5E1349FF07415B944396;
 			remoteInfo = SSZipArchive;
 		};
-		50C853DAB8914BB84FD6C6018CAF3471 /* PBXContainerItemProxy */ = {
+		47A380A6991913271731EAB5E8B0357F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B940FB32F65C6DA607CC4FB0CD0EF4DA;
+			remoteInfo = SmartLogs;
+		};
+		4DDE67AC8BE2892FC14086EC5BF25001 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -94,24 +94,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00B4713D79B46330B82D584252E187D1 /* SLAlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLAlertViewController.swift; path = Classes/SLAlertViewController.swift; sourceTree = "<group>"; };
 		022CABE9DA4EEF2DE7FB886790BCE52A /* Pods-SmartLogs_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartLogs_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		05BA496A8A0DBBF665E12DF6C1C7F5F2 /* mz_strm_pkcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_pkcrypt.c; path = SSZipArchive/minizip/mz_strm_pkcrypt.c; sourceTree = "<group>"; };
-		0C53C132E91F1677F440DE32FF666C66 /* SmartLogs-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartLogs-prefix.pch"; sourceTree = "<group>"; };
-		0C97D4ED38CD0EFC01F9E745C9750ED6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		08A22BA57DE03002E05C8D72581945A7 /* asset.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = asset.xcassets; path = Classes/asset.xcassets; sourceTree = "<group>"; };
 		1107D381AE6683EF1242866B247ADE9D /* Pods-SmartLogs_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmartLogs_Example.modulemap"; sourceTree = "<group>"; };
-		127B497F7FA507BEB960B07FBDA61E4C /* SmartLogs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SmartLogs.modulemap; sourceTree = "<group>"; };
-		136F8DF226D600D939DB6A36151E175F /* SmartLogs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartLogs-umbrella.h"; sourceTree = "<group>"; };
-		14086A39D89AA3F1A4D0D714DE133CA1 /* asset.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = asset.xcassets; path = Classes/asset.xcassets; sourceTree = "<group>"; };
 		17FCF959138302332352B5E8068E0AF1 /* mz_strm_pkcrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_pkcrypt.h; path = SSZipArchive/minizip/mz_strm_pkcrypt.h; sourceTree = "<group>"; };
 		1841ECA9D5DE60E15480E083C61DF306 /* Pods-SmartLogs_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartLogs_Tests-dummy.m"; sourceTree = "<group>"; };
-		1AFAA6AD2CD78DD4D1BD5518D8620DA9 /* SLAlertViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SLAlertViewController.xib; path = Classes/SLAlertViewController.xib; sourceTree = "<group>"; };
+		219C8D863E5956D66AF8BB9BC01E3FDA /* SmartLogs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmartLogs-dummy.m"; sourceTree = "<group>"; };
 		23ABD02F2CA5CB54AB141069B387FFDE /* mz_strm_split.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_split.c; path = SSZipArchive/minizip/mz_strm_split.c; sourceTree = "<group>"; };
 		246EE1920ED99537A3432AC5286A0221 /* mz_strm_zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_zlib.h; path = SSZipArchive/minizip/mz_strm_zlib.h; sourceTree = "<group>"; };
-		2AF98945B035E780ADCA5F226E136158 /* SmartLogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartLogs.release.xcconfig; sourceTree = "<group>"; };
 		2C01C7BC48F9C059F36BE9382A4F195D /* Pods-SmartLogs_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartLogs_Example-umbrella.h"; sourceTree = "<group>"; };
 		2E3D0066B7B182ABB8273F4D905110E3 /* mz_strm_wzaes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_wzaes.h; path = SSZipArchive/minizip/mz_strm_wzaes.h; sourceTree = "<group>"; };
 		2F29E5F7EEDB83D0B063DAD0B5196072 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		31DDEB14FC68503E3D27D143C032FA29 /* SLAlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLAlertViewController.swift; path = Classes/SLAlertViewController.swift; sourceTree = "<group>"; };
 		3A72147992643BBE15024E5BF9E86D1F /* mz_strm_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_mem.c; path = SSZipArchive/minizip/mz_strm_mem.c; sourceTree = "<group>"; };
 		3D3F0D6223C1DCC995A43E311F3A801C /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
 		3E3BF4BF2521FA5808F989514C7EC9F6 /* SSZipArchive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.debug.xcconfig; sourceTree = "<group>"; };
@@ -125,41 +120,44 @@
 		57E95BB8727FBE207C72DB27C18DB28A /* mz_zip_rw.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_zip_rw.h; path = SSZipArchive/minizip/mz_zip_rw.h; sourceTree = "<group>"; };
 		583F14DC9BDC1C7EB8AFE86E279DE204 /* Pods-SmartLogs_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartLogs_Example-Info.plist"; sourceTree = "<group>"; };
 		5DA7227F92FF362BAF5873DDC317D29A /* Pods-SmartLogs_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartLogs_Example.release.xcconfig"; sourceTree = "<group>"; };
-		631B934DA62EB82BAB7BB17E4FAA6941 /* SLConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLConstants.swift; path = Classes/SLConstants.swift; sourceTree = "<group>"; };
 		640494BB684109D53C602648DC944F02 /* mz_strm_split.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_split.h; path = SSZipArchive/minizip/mz_strm_split.h; sourceTree = "<group>"; };
-		693FB2BD7AF4BB1CA7F5D4381A2BE47A /* SmartLogs-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SmartLogs-Info.plist"; sourceTree = "<group>"; };
 		6C5A3CE4FBB92CCA696E22CF3079EC34 /* mz.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz.h; path = SSZipArchive/minizip/mz.h; sourceTree = "<group>"; };
 		6CAF80929B8E8764AB09B4C9CDA97C55 /* mz_strm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm.h; path = SSZipArchive/minizip/mz_strm.h; sourceTree = "<group>"; };
 		6EB240007DFD1A9DDB28F1085E0E9266 /* Pods-SmartLogs_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartLogs_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		6F9E12421B03E44B4AEBC4E098F30945 /* SmartLogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartLogs.debug.xcconfig; sourceTree = "<group>"; };
 		73D6209CC945BD67A830C14A73B124DF /* Pods-SmartLogs_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartLogs_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7AE3274AE9BC305DC84991875A728E0C /* SSZipArchive.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSZipArchive.modulemap; sourceTree = "<group>"; };
-		7E5B26B2A59C744D5AF2C750EFAE4B3D /* SLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLog.swift; path = Classes/SLog.swift; sourceTree = "<group>"; };
+		7B758A435057F0F188DD0A5E709C79B9 /* SLGrowingTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLGrowingTextView.swift; path = Classes/SLGrowingTextView.swift; sourceTree = "<group>"; };
+		7D11E6E4B4C07A2AC4BD9A78464732A7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		7FD0BACFCB3CC2F5223BD235163D45BF /* mz_strm_buf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_buf.h; path = SSZipArchive/minizip/mz_strm_buf.h; sourceTree = "<group>"; };
 		813B931EBBD527AC2E04B07881966C70 /* mz_crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_crypt.h; path = SSZipArchive/minizip/mz_crypt.h; sourceTree = "<group>"; };
 		844712351A5F4BE39D77B65957E25C6F /* mz_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_os_posix.c; path = SSZipArchive/minizip/mz_os_posix.c; sourceTree = "<group>"; };
+		869383D728E0760B000A924627570566 /* SmartLogs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartLogs-umbrella.h"; sourceTree = "<group>"; };
 		8CA13501E27029FB75FE5945E2B98301 /* mz_compat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_compat.h; path = SSZipArchive/minizip/mz_compat.h; sourceTree = "<group>"; };
+		90FCF8C942873047A4D370C045F5DDFC /* SLCommonMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLCommonMethods.swift; path = Classes/SLCommonMethods.swift; sourceTree = "<group>"; };
 		91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSZipArchive; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9423954ED25DDB008D2B61FC73D26B58 /* mz_strm_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_buf.c; path = SSZipArchive/minizip/mz_strm_buf.c; sourceTree = "<group>"; };
 		948C75D9746833B7F097F88B5473EC4A /* Pods-SmartLogs_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartLogs_Tests-Info.plist"; sourceTree = "<group>"; };
-		9658967D43530D7E8F25C085904C7E65 /* SLGrowingTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLGrowingTextView.swift; path = Classes/SLGrowingTextView.swift; sourceTree = "<group>"; };
 		97856ADC422803FC20655BABD2C8E98B /* Pods-SmartLogs_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartLogs_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9ABFB26506D2B985E96418482B8EB907 /* Pods-SmartLogs_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartLogs_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9AD4A6EDDBE062F8B67609F7A6C691C6 /* Pods-SmartLogs_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartLogs_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9D7DC9A66636027AA8D514CDE1141D9E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F787961E0994AA5934713C5C4D8A51F /* mz_os.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_os.h; path = SSZipArchive/minizip/mz_os.h; sourceTree = "<group>"; };
+		A13BD0299732EDB9F0E122F5F7B8DD58 /* SmartLogs-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartLogs-prefix.pch"; sourceTree = "<group>"; };
 		A1610757E92EC78F6121B1CA0742912E /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
 		A1C41E24EBAD19D3B3B88B893E298A0F /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
+		A2E113BFD85922671F64D85D9062B6E0 /* SmartLogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartLogs.release.xcconfig; sourceTree = "<group>"; };
 		A54C4BB32D5D51418952AED9D4618E87 /* SSZipArchive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.release.xcconfig; sourceTree = "<group>"; };
+		A7140C97398CDCFB6B70C3CBEF029154 /* SmartLogs.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SmartLogs.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AB3E44448ADCB325810D570E98A8A1CE /* SmartLogs-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SmartLogs-Info.plist"; sourceTree = "<group>"; };
+		AD48859C6104DB9711F7F69AF634FEF6 /* SLAlertViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = SLAlertViewController.xib; sourceTree = "<group>"; };
 		B612FAEFEA6DAF5ECDE4B48C7C4F428F /* mz_strm.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm.c; path = SSZipArchive/minizip/mz_strm.c; sourceTree = "<group>"; };
 		B9C9792493F427CE1B3F880539EAE334 /* SSZipArchive-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSZipArchive-Info.plist"; sourceTree = "<group>"; };
 		B9F3E27A5F13F050A9C663BAE5EAA7A9 /* Pods-SmartLogs_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartLogs_Example-dummy.m"; sourceTree = "<group>"; };
 		BC776CCA5F82B8FE06D934243286930B /* Pods-SmartLogs_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SmartLogs_Example"; path = Pods_SmartLogs_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE665D3826A9C277095BC617C2C6533 /* Pods-SmartLogs_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartLogs_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		BD48AE5C77737912F09E7C8AFA8D7702 /* mz_compat.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_compat.c; path = SSZipArchive/minizip/mz_compat.c; sourceTree = "<group>"; };
-		C154ED6019142E51D08C52282BB5AFA0 /* SmartLogs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmartLogs-dummy.m"; sourceTree = "<group>"; };
 		C29F02B018B0DC44C2AC05DFCFFA3EDE /* mz_strm_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_os_posix.c; path = SSZipArchive/minizip/mz_strm_os_posix.c; sourceTree = "<group>"; };
+		C324C38D9D64C15376E2DA6F6051C4FF /* SmartLogs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SmartLogs.modulemap; sourceTree = "<group>"; };
 		C330BC62C9ACD3F9E7AF138812EF298C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		C3B6FDD49E4EDF82F6616C112111FBEC /* Pods-SmartLogs_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartLogs_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C843C0A6D692889AB3D3047336D84868 /* Pods-SmartLogs_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmartLogs_Tests.modulemap"; sourceTree = "<group>"; };
@@ -167,14 +165,16 @@
 		CBA7C727700C05AE10A909260EBFDF1F /* mz_crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_crypt.c; path = SSZipArchive/minizip/mz_crypt.c; sourceTree = "<group>"; };
 		CE161202B7E79569F856E5E0E3269AD6 /* mz_strm_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_mem.h; path = SSZipArchive/minizip/mz_strm_mem.h; sourceTree = "<group>"; };
 		D2F48715569A09C217F3A798C152E1F5 /* mz_strm_zlib.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_zlib.c; path = SSZipArchive/minizip/mz_strm_zlib.c; sourceTree = "<group>"; };
-		DCD76455AC89362BEDA92E31A6AE08AC /* SLCommonMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLCommonMethods.swift; path = Classes/SLCommonMethods.swift; sourceTree = "<group>"; };
-		E08A3C1A28B7B8494D802C8F03A3870C /* SmartLogs.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SmartLogs.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D5E3A11DF5B7FFEB17591CB734303CD9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		EDF3D2F3AD69D2F99A3E4C43D1D4F039 /* SmartLogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartLogs.debug.xcconfig; sourceTree = "<group>"; };
 		EF943F9DE9BA8E515BF65736B5B9F444 /* Pods-SmartLogs_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SmartLogs_Tests"; path = Pods_SmartLogs_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2F4B1B4A37D9DE1FDF086507841B658 /* SLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLog.swift; path = Classes/SLog.swift; sourceTree = "<group>"; };
 		F695523190812C78E0545050C9707A60 /* SmartLogs */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SmartLogs; path = SmartLogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78F73AC1E27DF387460E6C9D3BFF7BD /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
 		F86615AF86FD3D110F4C387667DF2EAA /* mz_crypt_apple.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_crypt_apple.c; path = SSZipArchive/minizip/mz_crypt_apple.c; sourceTree = "<group>"; };
 		F9A27455BD782250AC63D8A94365E34D /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/include/ZipArchive.h; sourceTree = "<group>"; };
 		FA3B1C52991C7B6184D813127BAFF166 /* Pods-SmartLogs_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmartLogs_Example-frameworks.sh"; sourceTree = "<group>"; };
+		FD7EA0399755F2051D5D2C252B873AF6 /* SLConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SLConstants.swift; path = Classes/SLConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,21 +214,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03F08215866CC279A31840E47C77D7AD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				127B497F7FA507BEB960B07FBDA61E4C /* SmartLogs.modulemap */,
-				C154ED6019142E51D08C52282BB5AFA0 /* SmartLogs-dummy.m */,
-				693FB2BD7AF4BB1CA7F5D4381A2BE47A /* SmartLogs-Info.plist */,
-				0C53C132E91F1677F440DE32FF666C66 /* SmartLogs-prefix.pch */,
-				136F8DF226D600D939DB6A36151E175F /* SmartLogs-umbrella.h */,
-				6F9E12421B03E44B4AEBC4E098F30945 /* SmartLogs.debug.xcconfig */,
-				2AF98945B035E780ADCA5F226E136158 /* SmartLogs.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SmartLogs";
-			sourceTree = "<group>";
-		};
 		06C9CD58CD96816D358ADE2EF33645C9 /* Pods-SmartLogs_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,21 +250,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2BBD2F98E631BEB94786ECAE880EEDFD /* SmartLogs */ = {
+		1A9DF86E92E54057F477F158FD3A380E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				14086A39D89AA3F1A4D0D714DE133CA1 /* asset.xcassets */,
-				00B4713D79B46330B82D584252E187D1 /* SLAlertViewController.swift */,
-				1AFAA6AD2CD78DD4D1BD5518D8620DA9 /* SLAlertViewController.xib */,
-				DCD76455AC89362BEDA92E31A6AE08AC /* SLCommonMethods.swift */,
-				631B934DA62EB82BAB7BB17E4FAA6941 /* SLConstants.swift */,
-				9658967D43530D7E8F25C085904C7E65 /* SLGrowingTextView.swift */,
-				7E5B26B2A59C744D5AF2C750EFAE4B3D /* SLog.swift */,
-				5CB5228F9E3BF43F5410584E6FE9355B /* Pod */,
-				03F08215866CC279A31840E47C77D7AD /* Support Files */,
+				AD48859C6104DB9711F7F69AF634FEF6 /* SLAlertViewController.xib */,
 			);
-			name = SmartLogs;
-			path = ../..;
+			name = Resources;
+			path = Classes/Resources;
 			sourceTree = "<group>";
 		};
 		3DDFDE7927E4AF51E7FD2E47B8292469 /* Targets Support Files */ = {
@@ -299,12 +276,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		5CB5228F9E3BF43F5410584E6FE9355B /* Pod */ = {
+		5B9C55C0145721FCEE9458C01C83596B /* SmartLogs */ = {
 			isa = PBXGroup;
 			children = (
-				9D7DC9A66636027AA8D514CDE1141D9E /* LICENSE */,
-				0C97D4ED38CD0EFC01F9E745C9750ED6 /* README.md */,
-				E08A3C1A28B7B8494D802C8F03A3870C /* SmartLogs.podspec */,
+				08A22BA57DE03002E05C8D72581945A7 /* asset.xcassets */,
+				31DDEB14FC68503E3D27D143C032FA29 /* SLAlertViewController.swift */,
+				90FCF8C942873047A4D370C045F5DDFC /* SLCommonMethods.swift */,
+				FD7EA0399755F2051D5D2C252B873AF6 /* SLConstants.swift */,
+				7B758A435057F0F188DD0A5E709C79B9 /* SLGrowingTextView.swift */,
+				F2F4B1B4A37D9DE1FDF086507841B658 /* SLog.swift */,
+				5D9B3EF19E636E6FCEE9FA5CE50D8FB9 /* Pod */,
+				1A9DF86E92E54057F477F158FD3A380E /* Resources */,
+				E1BB75E976AB0CD5B7090F710F5413BA /* Support Files */,
+			);
+			name = SmartLogs;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		5D9B3EF19E636E6FCEE9FA5CE50D8FB9 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				7D11E6E4B4C07A2AC4BD9A78464732A7 /* LICENSE */,
+				D5E3A11DF5B7FFEB17591CB734303CD9 /* README.md */,
+				A7140C97398CDCFB6B70C3CBEF029154 /* SmartLogs.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -321,7 +315,7 @@
 		825D98DDBACE01F004E99C7C6389C47B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2BBD2F98E631BEB94786ECAE880EEDFD /* SmartLogs */,
+				5B9C55C0145721FCEE9458C01C83596B /* SmartLogs */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -394,6 +388,21 @@
 			);
 			name = SSZipArchive;
 			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		E1BB75E976AB0CD5B7090F710F5413BA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C324C38D9D64C15376E2DA6F6051C4FF /* SmartLogs.modulemap */,
+				219C8D863E5956D66AF8BB9BC01E3FDA /* SmartLogs-dummy.m */,
+				AB3E44448ADCB325810D570E98A8A1CE /* SmartLogs-Info.plist */,
+				A13BD0299732EDB9F0E122F5F7B8DD58 /* SmartLogs-prefix.pch */,
+				869383D728E0760B000A924627570566 /* SmartLogs-umbrella.h */,
+				EDF3D2F3AD69D2F99A3E4C43D1D4F039 /* SmartLogs.debug.xcconfig */,
+				A2E113BFD85922671F64D85D9062B6E0 /* SmartLogs.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SmartLogs";
 			sourceTree = "<group>";
 		};
 		F324569DC22301903DC55528E6F2E407 /* Support Files */ = {
@@ -478,7 +487,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A00BA222274DEE2373578716D24B2CEC /* PBXTargetDependency */,
+				CDD27D80BB377208C6DEF99395082DB7 /* PBXTargetDependency */,
 			);
 			name = "Pods-SmartLogs_Tests";
 			productName = Pods_SmartLogs_Tests;
@@ -492,12 +501,12 @@
 				E262A837ACC5809E4799ADBA43FECD43 /* Headers */,
 				5587D2ABBB536BC823D1CC56D6932BF3 /* Sources */,
 				D38CC79A33A27857B3589A8AE73D6466 /* Frameworks */,
-				A4F4A754576C1E07DAD92B466E4B2FE0 /* Resources */,
+				0870A7D11FCB1654A1400179BA1F8C91 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2CC8BA95BFC89D63889B187A30060C1A /* PBXTargetDependency */,
+				5B07BE2B6C7B5543C628438CBC7A9111 /* PBXTargetDependency */,
 			);
 			name = SmartLogs;
 			productName = SmartLogs;
@@ -516,8 +525,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				37AEDD8A1A73D05498488ADB9F5A6EEE /* PBXTargetDependency */,
-				BA7EA3EEA69036A560BBCAA942D40994 /* PBXTargetDependency */,
+				56CEE5118CDA75EAB43597FEE0412C96 /* PBXTargetDependency */,
+				2DAE69D1B40CF6F14DC22C68E1A1163F /* PBXTargetDependency */,
 			);
 			name = "Pods-SmartLogs_Example";
 			productName = Pods_SmartLogs_Example;
@@ -575,6 +584,15 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0870A7D11FCB1654A1400179BA1F8C91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98A164E263DE836CB3D56EBAA1038C4E /* asset.xcassets in Resources */,
+				A80A871A414E817B553ACF582007A5D8 /* SLAlertViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68B18CAE9D89E3559204AEEBF86D5F3B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -586,15 +604,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A4F4A754576C1E07DAD92B466E4B2FE0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C2F7F994B9EA79A8E0442E9E463FF68 /* asset.xcassets in Resources */,
-				2BB6A045C905B6812399D545D1FD2546 /* SLAlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,29 +673,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2CC8BA95BFC89D63889B187A30060C1A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SSZipArchive;
-			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
-			targetProxy = 500DDB37B6A64EA13B8961A397532BCA /* PBXContainerItemProxy */;
-		};
-		37AEDD8A1A73D05498488ADB9F5A6EEE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SSZipArchive;
-			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
-			targetProxy = 50C853DAB8914BB84FD6C6018CAF3471 /* PBXContainerItemProxy */;
-		};
-		A00BA222274DEE2373578716D24B2CEC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-SmartLogs_Example";
-			target = CE9A43C73AD22C981266381D4D821F31 /* Pods-SmartLogs_Example */;
-			targetProxy = 07748C6C74F4B717E1D7445B121C4A87 /* PBXContainerItemProxy */;
-		};
-		BA7EA3EEA69036A560BBCAA942D40994 /* PBXTargetDependency */ = {
+		2DAE69D1B40CF6F14DC22C68E1A1163F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SmartLogs;
 			target = B940FB32F65C6DA607CC4FB0CD0EF4DA /* SmartLogs */;
-			targetProxy = 20DE0A4C5A5DB60E5A53A9A20365A6D7 /* PBXContainerItemProxy */;
+			targetProxy = 47A380A6991913271731EAB5E8B0357F /* PBXContainerItemProxy */;
+		};
+		56CEE5118CDA75EAB43597FEE0412C96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSZipArchive;
+			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
+			targetProxy = 4DDE67AC8BE2892FC14086EC5BF25001 /* PBXContainerItemProxy */;
+		};
+		5B07BE2B6C7B5543C628438CBC7A9111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSZipArchive;
+			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
+			targetProxy = 30C2482E8207C03F4FBF94BEF9FFFF17 /* PBXContainerItemProxy */;
+		};
+		CDD27D80BB377208C6DEF99395082DB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SmartLogs_Example";
+			target = CE9A43C73AD22C981266381D4D821F31 /* Pods-SmartLogs_Example */;
+			targetProxy = 25CF325F78DEDAD1A19DD94AB3620393 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -727,7 +736,7 @@
 		};
 		24074C6A14AEE1A3DEE8BB98ED02514C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AF98945B035E780ADCA5F226E136158 /* SmartLogs.release.xcconfig */;
+			baseConfigurationReference = A2E113BFD85922671F64D85D9062B6E0 /* SmartLogs.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -896,7 +905,7 @@
 		};
 		B55C14D5D40467E497DF622F44130E92 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F9E12421B03E44B4AEBC4E098F30945 /* SmartLogs.debug.xcconfig */;
+			baseConfigurationReference = EDF3D2F3AD69D2F99A3E4C43D1D4F039 /* SmartLogs.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

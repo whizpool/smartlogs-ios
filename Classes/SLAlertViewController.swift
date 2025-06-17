@@ -41,6 +41,7 @@ class SLAlertViewController: UIViewController {
     // Bugs TextView Outlet
     @IBOutlet weak var bugsTextview: SLGrowingTextView!
     
+    
     var bDarkMode = false
     
     //MARK: - // ********************* ViewDidLoad *********************// -
@@ -48,10 +49,27 @@ class SLAlertViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        let customTextView = SLGrowingTextView(frame: textFieldView.bounds)
+        customTextView.translatesAutoresizingMaskIntoConstraints = false
+        textFieldView.addSubview(customTextView)
+        
+        // Add constraints to fit it in the container
+        NSLayoutConstraint.activate([
+            customTextView.topAnchor.constraint(equalTo: textFieldView.topAnchor),
+            customTextView.bottomAnchor.constraint(equalTo: textFieldView.bottomAnchor),
+            customTextView.leadingAnchor.constraint(equalTo: textFieldView.leadingAnchor),
+            customTextView.trailingAnchor.constraint(equalTo: textFieldView.trailingAnchor)
+        ])
+        
+        self.bugsTextview = customTextView
+        
         // Textview Editing function
         textviewEditing()
         
         self.bDarkMode = self.checkDarkMode()
+        
+        
     }
     
     // MARK: - // ********************* ACTION MEHTODS *********************// -
@@ -172,12 +190,12 @@ extension SLAlertViewController:@preconcurrency MFMailComposeViewControllerDeleg
 
 
 // Extension for Textview Editing or Delegate
-extension SLAlertViewController:UITextViewDelegate {
+extension SLAlertViewController: UITextViewDelegate {
     
     // setting textview, buttons colors and set app name to tittle label
     func textviewEditing() {
         
-        DispatchQueue.main.async {
+//        DispatchQueue.main.async {
             //
             self.bugsTextview.delegate = self
             self.bugsTextview.layer.cornerRadius = SLConstants.defaultRadius
@@ -270,7 +288,7 @@ extension SLAlertViewController:UITextViewDelegate {
             {
                 self.sendBtnLbl.text = SLog.shared.sendBtnText
             }
-        }
+//        }
     }
     
     //****************************************************
