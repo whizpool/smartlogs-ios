@@ -1,7 +1,7 @@
 PODS:
-  - SmartLogs (1.2.0):
-    - SSZipArchive (~> 2.4.2)
-  - SSZipArchive (2.4.3)
+  - SmartLogs (1.3.6):
+    - SSZipArchive (= 2.4.2)
+  - SSZipArchive (2.4.2)
 
 DEPENDENCIES:
   - SmartLogs (from `../`)
@@ -16,9 +16,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SmartLogs: 2639aebd5d66ab1e53fd0e070d3287233b98bfb2
-  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
+  SmartLogs: eccf684c5ae5021451b6fc42febba6a2c596decf
+  SSZipArchive: e7b4f3d9e780c2acc1764cd88fbf2de28f26e5b2
 
 PODFILE CHECKSUM: e01c8e88058ff3d584280a4726795f1c62b4d1f3
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.16.2

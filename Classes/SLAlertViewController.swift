@@ -6,7 +6,13 @@
 //
 
 import UIKit
+#if canImport(ZipArchive)
+import ZipArchive
+#elseif canImport(SSZipArchive)
 import SSZipArchive
+#else
+#error("Neither ZipArchive nor SSZipArchive is available.")
+#endif
 import Foundation
 import MessageUI
 

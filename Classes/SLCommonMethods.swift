@@ -8,7 +8,13 @@
 import UIKit
 import Foundation
 import MessageUI
+#if canImport(ZipArchive)
+import ZipArchive
+#elseif canImport(SSZipArchive)
 import SSZipArchive
+#else
+#error("Neither ZipArchive nor SSZipArchive is available.")
+#endif
 
 class SLCommonMethods
 {
