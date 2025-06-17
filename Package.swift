@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/ZipArchive/ZipArchive", from: "2.4.2")
+        .package(url: "https://github.com/ZipArchive/ZipArchive", exact: "2.4.2")
     ],
     targets: [
             .target(
